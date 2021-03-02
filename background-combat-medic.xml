@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Combat Medic" type="Background" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_BACKGROUND_COMBAT_MEDIC">
+        <description>
+            <p>You were someone who aided soldiers and the wounded in warfare. Trained as both a doctor and a soldier, you focused on trying to help your allies and innocents to ease their pain. Perhaps you were stationed on the front lines and had to deal with massive casualties. Or, you may have stayed in an outpost or medical center, providing treatment to any wounded who came in.</p>
+            <p class="indent">When you choose this background, work with your DM to determine which military organization you were a part of, how your medical career progressed in the military, and what kind of experiences you had during your time as a combat medic. Was it a standing army or militia? Or was it a private army or mercenary group?</p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> Medicine, and one of: Investigation, Nature, or Survival</li>
+                <li><strong>Tool Proficiencies:</strong> Healer’s Kit, vehicles (land)</li>
+                <li><strong>Equipment:</strong> A set of common clothes, a military uniform, a healer’s kit, a bottle of sterilizing alcohol, a bottle of clean water, a waterskin, and a small pouch containing 10 gp</li>
+            </ul>
+            <div element="ID_BACKGROUND_FEATURE_YAG_IMPROVISED_MEDICINE" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>The life of a combat medic is a grim one. These people often see the true horrors of war, and the harm that it can cause to civilian and soldier alike. As such, many combat medics are quiet people, and their personalities and be drastically altered by their service.</p>
+        </description>
+        <setters>
+            <set name="short">Medicine, 1 Skill, Healer's Kit, Land Vehicles</set>
+        </setters>
+        <rules>
+            <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_YAG_IMPROVISED_MEDICINE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_MEDICINE" />
+            <select type="Proficiency" name="Skill Proficiency, Combat Medic" supports="ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_SURVIVAL" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_VEHICLES_LAND" />
+            <select type="List" name="Personality Trait" number="2" optional="true">
+                <item id="1">I try to speak softly and assuringly.</item>
+                <item id="2">I am proud of my service and medical talents.</item>
+                <item id="3">When I have moments to myself, I try to focus on pleasant things.</item>
+                <item id="4">I try to not get attached to people too easily.</item>
+                <item id="5">I constantly feel on edge.</item>
+                <item id="6">There is not enough respect shown to medics in warfare.</item>
+                <item id="7">I try everything I can to help people in need.</item>
+                <item id="8">I suffer from terrible nightmares about the things I have seen.</item>
+            </select>
+            <select type="List" name="Ideal" optional="true">
+                <item id="1">Medicine. I will use my talents to aid my side. (Any)</item>
+                <item id="2">Aid. I will help anyone, whether it is a civilian, ally, or enemy. (Lawful)</item>
+                <item id="3">urvivability. War is unpredictable, and so you must be at the ready. (Chaotic)</item>
+                <item id="4">Cruel. If you are not on my side, you must suffer. (Evil)</item>
+                <item id="5">Honor. It is my duty to assist in any way that I can. (Good)</item>
+                <item id="6">Grit. I have to do what I can, regardless of any ethical implications. (Neutral)</item>
+            </select>
+            <select type="List" name="Bond" optional="true">
+                <item id="1">While treating the wounded, I made friends with an enemy soldier.</item>
+                <item id="2">I lost my best friend to a battle.</item>
+                <item id="3">I once treated the wounds of one of my commanding officers.</item>
+                <item id="4">I aim to keep my family safe and proud.</item>
+                <item id="5">I feel as though I am nothing but a stalling point for death.</item>
+                <item id="6">I won’t let the horrors I see get to me.</item>
+            </select>
+            <select type="List" name="Flaw" optional="true">
+                <item id="1">I get scared very easily.</item>
+                <item id="2">I secretly pray to the gods when I am nervous.</item>
+                <item id="3">I try to avoid especially grievous wounds and injuries.</item>
+                <item id="4">I have a hard time trying to relax.</item>
+                <item id="5">I have an addiction.</item>
+                <item id="6">I have difficulty in showing emotion.</item>
+            </select>
+        </rules>
+    </element>
+
+    <element name="Feature: Improvised Medicine" type="Background Feature" source="Yorviing's Arcane Grimoire" id="ID_BACKGROUND_FEATURE_YAG_IMPROVISED_MEDICINE">
+        <description>
+            <p>You have a military rank as a combat medic. Soldiers and other members of militaries recognize your skills and value, and they defer to you if they are of a lower rank or are in need of medical assistance. You can usually gain access to friendly military encampments and fortresses where your rank and skills are recognized.</p>
+            <p class="indent">Additionally, you can usually find ways to create makeshift medical supplies, provided that the land or surroundings offer such.</p>
+        </description>
+        <sheet alt="Improvised Medicine">
+            <description>You have a military rank as a combat medic. Soldiers and other members of militaries recognize your skills and value, and they defer to you if they are of a lower rank or are in need of medical assistance. You can usually gain access to friendly military encampments and fortresses where your rank and skills are recognized. Additionally, you can usually find ways to create makeshift medical supplies, provided that the land or surroundings offer such.</description>
+        </sheet>
+    </element>
+    
+</elements>

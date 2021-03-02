@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Prodigy" type="Background" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_BACKGROUND_PRODIGY">
+        <description>
+            <p>You are someone with an innate talent and prowess at a particular skill, or even several. Beginning at a young age, others watched as you outshone all of your peers with an incredible display of your talents. You may have been someone blessed at birth, or even prophesied. Or perhaps you were someone who just simply had a knack for a particular skill.</p>
+            <p class="indent">When you choose this background, work with your DM to determine what skills or abilities you are prodigious in, how others have reacted to your talents, and what kind of experiences this life has brought you. Was it that you were a brilliant academic or intellectual? Or was it the case that you had mastered a specific skill or techniques regarding combat?</p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> Two skills of your choice</li>
+                <li><strong>Tool Proficiencies:</strong> Two tool sets or instruments of your choice</li>
+                <li><strong>Languages:</strong> Two of your choice</li>
+                <li><strong>Equipment:</strong> A set of common clothes, a quill, an inkpot, a blank journal, one tool set of your choice, and a small pouch containing 10 gp</li>
+            </ul>
+            <div element="ID_BACKGROUND_FEATURE_YAG_PRODIGIOUS_SKILL" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>The life of a prodigy is one riddled with success after success, and they are often the talk of the town. Some prodigies have to learn how to deal with the attention they receive, while others acquire confidence and even cockiness with the acknowledgement of their unique abilities.</p>
+        </description>
+        <setters>
+            <set name="short">2 Skill, 2 Language, 2 Tools</set>
+        </setters>
+        <rules>
+            <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_YAG_PRODIGIOUS_SKILL" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <select type="Language" name="Language, Prodigy" supports="Standard||Exotic" number="2" />
+            <select type="Proficiency" name="Tool Proficiency, Prodigy" supports="Tool" number="2" />
+            <select type="Proficiency" name="Skill Proficiency, Prodigy" supports="Skill" number="2" />
+            <select type="List" name="Personality Trait" number="2" optional="true">
+                <item id="1">I like any time that I get to display my talents.</item>
+                <item id="2">While I understand my talents are impressive, I think that I always have room to improve.</item>
+                <item id="3">	I try not to draw too much attention to myself. It can be unsettling.</item>
+                <item id="4">My talents are a major part of what defines me.</item>
+                <item id="5">I often find myself trying to focus on things I can’t do well.</item>
+                <item id="6">I like knowing that there are things that I do surprisingly well.</item>
+                <item id="7">I like to sit and listen to others discuss their methods and techniques.</item>
+                <item id="8">I sometimes pretend to mess up to let others have a moment to show their skills.</item>
+            </select>
+            <select type="List" name="Ideal" optional="true">
+                <item id="1">Selfish. My talents are special, and I should be treated with respect and great treatment. (Evil).</item>
+                <item id="2">Display. I take any moment to show off. (Chaotic)</item>
+                <item id="3">Divinity. I believe that my skills are a blessing from the gods. (Any)</item>
+                <item id="4">Instructional. I try to use my skills and knowledge to help others. (Good)</item>
+                <item id="5">Humble. I know I have talent, but I try to make a point to not show off (Good)</item>
+                <item id="6">Results. I don’t focus on anything except the outcome. (Neutral)</item>
+            </select>
+            <select type="List" name="Bond" optional="true">
+                <item id="1">My parents always tried to show me off and push my limits.</item>
+                <item id="2">I have someone that I tutor and teach about the subject and skill I am</item>
+                <item id="3">I have had to deal with jealous people all my life.</item>
+                <item id="4">I just want to be treated like a normal person.</item>
+                <item id="5">I have quite a few people who are admirers of my skills.</item>
+                <item id="6">I deserve all of the great treatment that people give me.</item>
+            </select>
+            <select type="List" name="Flaw" optional="true">
+                <item id="1">I can get very cocky. A lot.</item>
+                <item id="2">Even though I have skill, I always compare myself to others.</item>
+                <item id="3">I wish I could have people notice other aspects of my personality and not just my skills.</item>
+                <item id="4">I see myself as merely an efficient tool.</item>
+                <item id="5">I can’t seem to shake the feeling that I am just being used.</item>
+                <item id="6">I act really confident to hide my doubt.</item>
+            </select>
+        </rules>
+    </element>
+
+    <element name="Feature: Prodigious Skill" type="Background Feature" source="Yorviing's Arcane Grimoire" id="ID_BACKGROUND_FEATURE_YAG_PRODIGIOUS_SKILL">
+        <description>
+            <p>Your talents and skills mark you as a very special individual. Wherever you go, curious glances are sent your way, and you are often the point of affection, admiration, or even jealousy.</p>
+            <p class="indent">You can use this attention to gain access to people and places that others might not otherwise have, and for your traveling companions. Experts or masters in a field related to your talents will be particularly curious and may even ask you to show off your skills.</p>
+        </description>
+        <sheet alt="Prodigious Skill">
+            <description>Your talents and skills mark you as a very special individual. Wherever you go, curious glances are sent your way, and you are often the point of affection, admiration, or even jealousy. You can use this attention to gain access to people and places that others might not otherwise have, and for your traveling companions. Experts or masters in a field related to your talents will be particularly curious and may even ask you to show off your skills.</description>
+        </sheet>
+    </element>
+    
+</elements>

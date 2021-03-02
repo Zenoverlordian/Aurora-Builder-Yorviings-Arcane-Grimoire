@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Metallurgy" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_METALLURGY">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>There are those students of magic who study the ways of modifying and controls certain materials and elements. Students of the tradition of Metallurgy are no exception, insisting that metal should be classified in the same category of important elements as those of fire, air, earth, and water. These wizards favor spells that control metal and effect weapons and armor.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_METALLURGY_METAL_SAVANT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_METALLURGY_STEEL_SHIELD" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_METALLURGY_METALLIC_MAGE" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_METALLURGY_IRONBLOOD" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_METALLURGY_MAGNETIC_WIZARD" />
+        </description>
+        <sheet display="false">
+            <description>Students of the tradition of Metallurgy are no exception, insisting that metal should be classified in the same category of important elements as those of fire, air, earth, and water.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_METALLURGY_METAL_SAVANT" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_METALLURGY_STEEL_SHIELD" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_METALLURGY_METALLIC_MAGE" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_METALLURGY_IRONBLOOD" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_METALLURGY_MAGNETIC_WIZARD" level="14" />
+        </rules>
+    </element>
+
+    <element name="Metal Savant" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_METALLURGY_METAL_SAVANT">
+        <description>
+            <p>Starting at 2nd level, your study of metals has granted you greater insight and knowledge regarding how work metal. You gain proficiency in either smith’s tools or tinker’s tools. In addition, whenever you make an Intelligence (History) check related to the origin of metalwork or technology, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.</p>
+            <p class="indent">You also learn the mold earth cantrip, and it does not count towards the total number of cantrips that you know. When you cast mold earth, you can choose for it to affect metal objects instead, provided that they are not magical. All other aspects of the spell apply.</p>
+        </description>
+        <sheet>
+            <description>Whenever you make an Intelligence (History) check related to the origin of metalwork or technology, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus. When you cast mold earth, you can choose for it to affect metal objects instead, provided that they are not magical. All other aspects of the spell apply.</description>
+        </sheet>
+        <rules>
+            <select type="Proficiency" name="Tool Proficiency, Metal Savant" supports="ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
+            <grant type="Spell" id="ID_XGTE_SPELL_MOLD_EARTH" spellcasting="Wizard" prepared="true" />
+        </rules>
+    </element>
+    <element name="Steel Shield" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_METALLURGY_STEEL_SHIELD">
+        <description>
+            <p>By 2nd level, you know to use metal objects to protect you from harm. Whenever you are subjected to an affect that allows you to make a Dexterity saving throw to take only half damage, you can use your reaction to summon metal shards to float around you, and you instead take no damage if you succeed on the saving throw, and only half damage if you fail. The metal shards drop to the ground after you have completed the saving throw.</p>
+            <p class="indent">You can use this feature a number of times equal to your Intelligence modifier per long rest.</p>
+        </description>
+        <sheet>
+            <description usage="{{intelligence:modifier}}/Long Rest" action="Reaction">Whenever you are subjected to an affect that allows you to make a Dexterity saving throw to take only half damage, you can use your reaction to summon metal shards to float around you, and you instead take no damage if you succeed on the saving throw, and only half damage if you fail. The metal shards drop to the ground after you have completed the saving throw.</description>
+        </sheet>
+    </element>
+    <element name="Metallic Mage" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_METALLURGY_METALLIC_MAGE">
+        <description>
+            <p>By 6th level, you have learned how to manipulate metals around you. You add the heat metal spell to your spellbook, and it counts as a wizard spell for you. Whenever you cast heat metal, you can instead change the property of the metal from heating up to conducting electricity, melting, or becoming covered in metal spikes. When you do so, you can change the damage type of this spell from fire damage to lightning, acid, or piercing damage.</p>
+        </description>
+        <sheet>
+            <description>Whenever you cast heat metal, you can instead change the property of the metal from heating up to conducting electricity, melting, or becoming covered in metal spikes. When you do so, you can change the damage type of this spell from fire damage to lightning, acid, or piercing damage.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_HEAT_METAL" spellcasting="Wizard" />
+        </rules>
+    </element>
+    <element name="Ironblood" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_METALLURGY_IRONBLOOD">
+        <description>
+            <p>At 10th level, your body has magically attuned to the iron in your blood. You gain immunity to disease and the poisoned condition, and whenever you have your Steel Shield feature active, your AC increases by an amount equal to your Intelligence modifier until the beginning of your next turn.</p>
+        </description>
+        <sheet>
+            <description>You gain immunity to disease and the poisoned condition, and whenever you have your Steel Shield feature active, your AC increases by {{intelligence:modifier}} until the beginning of your next turn.</description>
+        </sheet>
+    </element>
+    <element name="Magnetic Wizard" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_METALLURGY_MAGNETIC_WIZARD">
+        <description>
+            <p>At 14th level, you have become a master of metal. You add the spell telekinesis to your spellbook. If you already know it, you may choose another spell to add instead. Whenever you cast telekinesis, the range of the spell for you is doubled when applied to manipulating metal, and creatures wearing either magical and nonmagical metal or are made of metal have disadvantage on their Strength checks made against the spell's effects.</p>
+        </description>
+        <sheet>
+            <description>Whenever you cast telekinesis, the range of the spell for you is doubled when applied to manipulating metal, and creatures wearing either magical and nonmagical metal or are made of metal have disadvantage on their Strength checks made against the spell's effects.</description>
+        </sheet>
+        <rules>
+            <select type="Spell" name="Magnetic Wizard" supports="$(spellcasting:list), $(spellcasting:slots)" spellcasting="Wizard" default="ID_PHB_SPELL_TELEKINESIS" level="14" />
+        </rules>
+    </element>
+    
+</elements>

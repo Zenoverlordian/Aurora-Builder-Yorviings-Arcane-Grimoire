@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Quantumurgy" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_QUANTUMURGY">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>You are a student of quantumurgy, a rare and dangerous new school of magic that involves spells that manipulate and wield atomic energy and particles. You can affect the molecular structure of creatures and objects, and call upon the untapped power within the smallest parts of the universe. The magic you can wield makes you incredibly powerful, allowing you to bend matter and energy to your will.</p>
+            <p class="indent">Known as quantumurgists or ‘quantum mages’, these wizards can be leading experts regarding physics and the ways in which magic, the Weave, and the universe all interconnect with one another, given their incredible knowledge of mathematical properties and physics. Others seek the raw and unfathomable power that quantumurgy can bring, hoping to master this dangerous and unusual school of magic in order to control its unique power.</p>
+            <p class="indent"><strong><em>Note.</em></strong> This Arcane Tradition uses a new school of magic called 'quantumurgy', the details of which are listed in Part 5 of this compendium.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_QUANTUMURGY_SAVANT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_QUANTUMURGY_ATOMIC_RECONSTRUCTION" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_QUANTUMURGY_QUANTUM_LEAP" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_QUANTUMURGY_ATOMIC_ATTUNEMENT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_QUANTUMURGY_PARALLEL_SPELL" />
+        </description>
+        <sheet display="false">
+            <description></description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_QUANTUMURGY_SAVANT" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_QUANTUMURGY_ATOMIC_RECONSTRUCTION" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_QUANTUMURGY_QUANTUM_LEAP" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_QUANTUMURGY_ATOMIC_ATTUNEMENT" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_QUANTUMURGY_PARALLEL_SPELL" level="14" />
+        </rules>
+    </element>
+
+    <element name="Quantumurgy Savant" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_QUANTUMURGY_SAVANT">
+        <description>
+            <p>Beginning when you select this school at 2nd level, the gold and time you must spend to copy a quantumurgy spell into your spellbook is halved.</p>
+        </description>
+        <sheet>
+            <description>The gold and time you must spend to copy a quantumurgy spell into your spellbook is halved.</description>
+        </sheet>
+    </element>
+    <element name="Atomic Reconstruction" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_QUANTUMURGY_ATOMIC_RECONSTRUCTION">
+        <description>
+            <p>Starting at 2nd level when you select this school, you can temporarily alter the physical properties of one nonmagical object, changing it from one object into another. You perform a special atomic procedure on one object that you must touch, transforming it into a different one. The new object must also be nonmagical, and the new object must be in equal mass to the old object. After 1 hour, the object reverts to its original state.</p>
+            <p class="indent">The duration of the change increases to 8 hours at 6th level, 16 hours at 10th level, and 24 hours at 14th level.</p>
+        </description>
+        <sheet>
+            <description level="2">You can temporarily alter the physical properties of one nonmagical object, changing it from one object into another. You perform a special atomic procedure on one object that you must touch, transforming it into a different one. The new object must also be nonmagical, and the new object must be in equal mass to the old object. After 1 hour, the object reverts to its original state.</description>
+            <description level="6">You can temporarily alter the physical properties of one nonmagical object, changing it from one object into another. You perform a special atomic procedure on one object that you must touch, transforming it into a different one. The new object must also be nonmagical, and the new object must be in equal mass to the old object. After 8 hours, the object reverts to its original state.</description>
+            <description level="10">You can temporarily alter the physical properties of one nonmagical object, changing it from one object into another. You perform a special atomic procedure on one object that you must touch, transforming it into a different one. The new object must also be nonmagical, and the new object must be in equal mass to the old object. After 16 hours, the object reverts to its original state.</description>
+            <description level="14">You can temporarily alter the physical properties of one nonmagical object, changing it from one object into another. You perform a special atomic procedure on one object that you must touch, transforming it into a different one. The new object must also be nonmagical, and the new object must be in equal mass to the old object. After 1 day, the object reverts to its original state.</description>
+        </sheet>
+    </element>
+    <element name="Quantum Leap" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_QUANTUMURGY_QUANTUM_LEAP">
+        <description>
+            <p>At 6th level, you have learned how to increase your power by absorbing light. As a bonus action, you can absorb light from a light source within 30 feet of you, ranging from a torch to sunlight. Absorbing light from its source does not affect the brightness of the source. For 1 minute, whenever you cast a quantumurgy spell of 1st level or higher, you add one additional damage die to the spell's damage.</p>
+            <p class="indent">Once you have used this feature, you cannot do so until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action" usage="1/Long Rest">As a bonus action, you can absorb light from a light source within 30 feet of you, ranging from a torch to sunlight. Absorbing light from its source does not affect the brightness of the source. For 1 minute, whenever you cast a quantumurgy spell of 1st level or higher, you add one additional damage die to the spell's damage.</description>
+        </sheet>
+    </element>
+    <element name="Atomic Attunement" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_QUANTUMURGY_ATOMIC_ATTUNEMENT">
+        <description>
+            <p>By 10th level, you have become further attuned to the magic of quantumurgy. You gain resistance to force and radiant damage.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FORCE" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT" />
+        </rules>
+    </element>
+    <element name="Parallel Spell" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_QUANTUMURGY_PARALLEL_SPELL">
+        <description>
+            <p>By 14th level, your knowledge of possibilities and outcomes has allowed you to choose between them. When you cast a quantumurgy spell of 1st level or higher that targets a single target, and the spell attack misses or the target succeeds on their saving throw against the spell’s effects, you can pull forth from an alternate reality the spell succeeding, and the creature instead fails its saving throw against the spell's effects.</p>
+            <p class="indent">Once you have used this feature, you cannot do so again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description usage="1/Long Rest">When you cast a quantumurgy spell of 1st level or higher that targets a single target, and the spell attack misses or the target succeeds on their saving throw against the spell’s effects, you can pull forth from an alternate reality the spell succeeding, and the creature instead fails its saving throw against the spell's effects.</description>
+        </sheet>
+    </element>
+    
+</elements>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Witch Doctor" type="Background" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_BACKGROUND_WITCH_DOCTOR">
+        <description>
+            <p>You are a local authority on magic, medicine, nature, or spirits. You are well versed in a variety of fields, and many come to you when they have trouble or need guidance. You may be known as a medicine man or wise woman, or are known simply as a witch doctor. Many may look up to you, while others may fear you and your abilities.</p>
+            <p class="indent">When you choose this background, work with your DM to determine what kind of witch doctor you are, how the local common folk and nobility view you, and what kind of experiences you have had as a witch doctor. Are you someone who communicates often with spirits and animals? Or are you someone who focuses on medicine, magic, and herbology?</p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> Choose two from Arcana, Medicine, Nature, or Religion,</li>
+                <li><strong>Tool Proficiencies:</strong> Herbalism Kit, Poisoner’s Kit</li>
+                <li><strong>Languages:</strong> One exotic language (Abyssal, Celestial, Deep Speech, Draconic, Infernal, Primordial, Sylvan, or Undercommon)</li>
+                <li><strong>Equipment:</strong> A set of common clothes, an herbalism kit, a dozen small bones, a walking stick, a small dagger, a vial of holy water, a small book discussing otherworldly creatures, three scarves, and a black candle</li>
+            </ul>
+            <div element="ID_BACKGROUND_FEATURE_YAG_WITCH_KNOWLEDGE" />
+        </description>
+        <setters>
+            <set name="short">2 Arcana/Medicine/Nature/Religion, Herbalism Kit, Poisoner's Kit, 1 Exotic Language</set>
+        </setters>
+        <rules>
+            <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_YAG_WITCH_KNOWLEDGE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <select type="Proficiency" name="Skill Proficiency, Witch Doctor" supports="ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_RELIGION" number="2" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_POISONERS_KIT" />
+            <select type="Language" name="Language, Witch Doctor" supports="Exotic" />
+            <select type="List" name="Personality Trait" number="2" optional="true">
+                <item id="1">I like to dress in simple clothing, or even barefoot.</item>
+                <item id="2">If more people focused on the old ways, there would be fewer problems in the world.</item>
+                <item id="3">I take pity on those who fear death and the dead.</item>
+                <item id="4">People are too scared of what they don’t understand.</item>
+                <item id="5">I like knowing that I can help out others in troubling times.</item>
+                <item id="6">When I have to take from nature, I try to give something in return.</item>
+                <item id="7">Those who harm nature or animals without cause are vile.</item>
+                <item id="8">I like to study the arcane as much as I do the divine.</item>
+            </select>
+            <select type="List" name="Ideal" optional="true">
+                <item id="1">Nature. Nature does not wait for anyone. (Neutral)</item>
+                <item id="2">Trickery. I often play pranks on others and delight in deception. (Chaotic)</item>
+                <item id="3">Assistance. I try to help out those who come to see me. (Good)</item>
+                <item id="4">Death. Death is not the end, as some make it out to be. (Any)</item>
+                <item id="5">Greed. I only help those who do favors for me or can provide me great compensation. (Evil)</item>
+                <item id="6">Order. I try to work in regards to the natural order and laws of the land. (Lawful)</item>
+            </select>
+            <select type="List" name="Bond" optional="true">
+                <item id="1">The one who taught my was a village elder.</item>
+                <item id="2">Animals and the dead are more friends to me than the living are.</item>
+                <item id="3">I speak with spirits as often as I can.</item>
+                <item id="4">I once had a small village work for me and my command.</item>
+                <item id="5">I have many friends in local tribes and villages.</item>
+                <item id="6">For the past few years, I have been in hiding from local witch hunter and authorities.</item>
+            </select>
+            <select type="List" name="Flaw" optional="true">
+                <item id="1">I don’t help people unless they have something they can give in return.</item>
+                <item id="2">I am slow to trust people from larger cities.</item>
+                <item id="3">I envy those who never have to deal with spirits.</item>
+                <item id="4">I secretly think that those who cannot use magic are lesser than me.</item>
+                <item id="5">I am secretly afraid of ghosts and undead.</item>
+                <item id="6">I don’t like to share secrets of my trade.</item>
+            </select>
+        </rules>
+    </element>
+
+    <element name="Feature: Witch Knowledge" type="Background Feature" source="Yorviing's Arcane Grimoire" id="ID_BACKGROUND_FEATURE_YAG_WITCH_KNOWLEDGE">
+        <description>
+            <p>You occasionally see spirits or visions during your journeys that others cannot see. These spirits and visions can be pleasant, or can be ominous and frightening. Your DM may occasionally use this as a guide, or may tie it into a story or plot. Your DM may also allow you to voluntarily evoke these visions through some mechanic of their choice.</p>
+            <p class="indent">Additionally, you have an excellent knowledge of not only the local territory, but also its terrain and natural resources. You can usually call upon the hospitality of locals, and some may even approach you to employ your services regarding the afterlife, medicine, or nature.</p>
+        </description>
+        <sheet alt="Witch Knowledge">
+            <description>You occasionally see spirits or visions during your journeys that others cannot see. These spirits and visions can be pleasant, or can be ominous and frightening. Your DM may occasionally use this as a guide, or may tie it into a story or plot. Your DM may also allow you to voluntarily evoke these visions through some mechanic of their choice. Additionally, you have an excellent knowledge of not only the local territory, but also its terrain and natural resources. You can usually call upon the hospitality of locals, and some may even approach you to employ your services regarding the afterlife, medicine, or nature.</description>
+        </sheet>
+    </element>
+    
+</elements>

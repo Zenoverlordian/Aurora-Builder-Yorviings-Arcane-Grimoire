@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Engineer" type="Background" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_BACKGROUND_ENGINEER">
+        <description>
+            <p>Clockwork, machinery, and technology have all played parts of high importance in your life. You have apprenticed and trained to become a skilled engineer, learning how to work with a variety of tools and even vehicles throughout your life. You might have been an inventor whose creations helped out the place you came from, or you may have been someone who worked on constructs or weapons of war.</p>
+            <p class="indent">When you choose this background, work with your DM to determine where and on what you worked on regarding your engineering skills, how far your skills have progressed, and what kind of experiences you have had due to your trade. Were you and engineer who worked on machines of war? Or were you someone who helped to build newer tools and technology for a city?</p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> History, Investigation</li>
+                <li><strong>Tool Proficiencies:</strong> Tinker’s Tools, vehicles (land)</li>
+                <li><strong>Equipment:</strong> A pouch containing 15 gp, a set of Tinker’s Tools, a small bundle of copper wire, a dozen small gears, a set of protective eyewear, a small hammer, and a set of common clothes</li>
+            </ul>
+            <div element="ID_BACKGROUND_FEATURE_YAG_SKILLED_ENGINEERING" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>The life of an engineer means working with a variety of equipment and creations. This has led you to have a different outlook on life based on your work with machines and technology.</p>
+        </description>
+        <setters>
+            <set name="short">History, Investigation, Land Vehicles, Tinker's Tools</set>
+        </setters>
+        <rules>
+            <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_YAG_SKILLED_ENGINEERING" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_VEHICLES_LAND" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS" />
+            <select name="Specialty" type="List" optional="true">
+				<item id="1">Gunsmith</item>
+				<item id="2">Construct Creator</item>
+				<item id="3">Electrical Engineer</item>
+				<item id="4">War Machinery</item>
+				<item id="5">Gadgetry</item>
+				<item id="6">Vehicles</item>
+			</select>
+            <select type="List" name="Personality Trait" number="2" optional="true">
+                <item id="1">I always read any type of manual or instructions regarding a new piece of equipment.</item>
+                <item id="2">I never go anywhere without my trusty tools.</item>
+                <item id="3">I am always fiddling and tinkering with something, looking for new ways to improve it.</item>
+                <item id="4">I like making sure my work station is clean and tidy, and my equipment is clean, in great condition, and tidy.</item>
+                <item id="5">I am constantly fascinated with new developments in technology.</item>
+                <item id="6">I find great companionship in automations and constructs.</item>
+                <item id="7">I tend to think logically, preferring to adhere to schedules and structure.</item>
+                <item id="8">I don’t mind getting myself dirty, so long as I am productive.</item>
+            </select>
+            <select type="List" name="Ideal" optional="true">
+                <item id="1">Knowledge. Through technology and my engineering skills, I can acquire fantastic knowledge. (Any).</item>
+                <item id="2">Logic. I tend to favor logic as opposed to my emotions. (Neutral)</item>
+                <item id="3">Innovation. I aim to create new machinery that can benefit the lives of others. (Good)</item>
+                <item id="4">Profit. I see my creations as a viable way to make money, regardless of what my creations can do. (Evil)</item>
+                <item id="5">Power. I aim to show the world how strong my creations can be. (Chaotic)</item>
+                <item id="6">Foresight. I know that civilization would benefit from well conducted research into engineering. (Lawful)</item>
+            </select>
+            <select type="List" name="Bond" optional="true">
+                <item id="1">I find relationships with constructs more valuable to me than with people.</item>
+                <item id="2">Knowledge should be shared, and I’m always willing to teach others how things work.</item>
+                <item id="3">My tools were given to me by my instructor. I will use them to make them proud.</item>
+                <item id="4">I find that working on a specific lifelong project distracts me from any pain or sadness I may feel.</item>
+                <item id="5">I will prove myself by way of my creations.</item>
+                <item id="6">It is my duty to serve civilization by making helpful creations.</item>
+            </select>
+            <select type="List" name="Flaw" optional="true">
+                <item id="1">If something doesn’t make logical sense to me, I get easily flustered.</item>
+                <item id="2">I focus on fixing anything but myself.</item>
+                <item id="3">If something I make fails or breaks down, I feel incredibly sad or angry about it.</item>
+                <item id="4">I often find myself chatting on and on and on about machinery and what I make.</item>
+                <item id="5">I sometimes forget how loud my work can get.</item>
+                <item id="6">I often scoff at primitive technology.</item>
+            </select>
+        </rules>
+    </element>
+
+    <element name="Feature: Skilled Engineering" type="Background Feature" source="Yorviing's Arcane Grimoire" id="ID_BACKGROUND_FEATURE_YAG_SKILLED_ENGINEERING">
+        <description>
+            <p>You have considerable knowledge regarding engineering. You know much about famous engineers and tinkerers, and what they are famous for. You also always have free room and board in any place where engineers reside, and the individuals in such a settlement might grant you use of their shops or tools.</p>
+            <p class="indent">In addition, you can generally find the materials needed to repair various tools, equipment, or even constructs, and can inspect them to understand exactly what went wrong and how to repair them.</p>
+        </description>
+        <sheet alt="Skilled Engineering">
+            <description>You have considerable knowledge regarding engineering. You know much about famous engineers and tinkerers, and what they are famous for. You also always have free room and board in any place where engineers reside, and the individuals in such a settlement might grant you use of their shops or tools. In addition, you can generally find the materials needed to repair various tools, equipment, or even constructs, and can inspect them to understand exactly what went wrong and how to repair them.</description>
+        </sheet>
+    </element>
+    
+</elements>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Revolutionary" type="Background" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_BACKGROUND_REVOLUTIONARY">
+        <description>
+            <p>You are someone who has felt the spark of revolution within you. You are brave, and know that a change is needed for society to progress. It could be that there is an oligarchy or dictatorship that has your homeland under harsh rule. Or, it could be that the social and political systems of your country are failing to change with the times.</p>
+            <p class="indent">When you choose this background, work with your DM to determine the nature of your revolutionary position, how others are reacting to these views, and what impact your views have had so far. Is it the case that you are one of many, and there is a revolution currently underway? Or is it the case that you are one of the few who think this way, and the road ahead will be a difficult one?</p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> History, Persuasion</li>
+                <li><strong>Languages:</strong> Two of your choice</li>
+                <li><strong>Equipment:</strong> A set of common clothes, a dagger, a book of history from your homeland, a flag or banner, a small broach or pin bearing an insignia, and a small pouch containing 10 gp</li>
+            </ul>
+            <div element="ID_BACKGROUND_FEATURE_YAG_ONE_OF_THE_PEOPLE" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>Those who hold onto and act upon revolutionary ideas are going to face many obstacles in their lives. Even if many feel the same, there are those, particularly those in power, who will try to stop you. This leads many revolutionaries to hold a specific world view.</p>
+        </description>
+        <setters>
+            <set name="short">History, Persuasion, 2 Languages</set>
+        </setters>
+        <rules>
+            <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_YAG_ONE_OF_THE_PEOPLE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+            <select type="Language" name="Language, Revolutionary" supports="Standard||Exotic" number="2" />
+            <select type="List" name="Personality Trait" number="2" optional="true">
+                <item id="1">I often read books about politics and economics.</item>
+                <item id="2">I live life in the moment, knowing that any day could be my last.</item>
+                <item id="3">I actually have no personal quarrel with those in power, but the system has to change.</item>
+                <item id="4">I despise any type of nobility or royalty.</item>
+                <item id="5">I know that there are both good and bad people in every walk of life.</item>
+                <item id="6">If you want to know anything about my homelands culture, I am the one to go to.</item>
+                <item id="7">I am most at home when amongst the common folk.</item>
+                <item id="8">I am joyous with my friends, and harsh to those in power.</item>
+            </select>
+            <select type="List" name="Ideal" optional="true">
+                <item id="1">Change. I will try everything I can to bring about a new paradigm in my homeland. (Any)</item>
+                <item id="2">Anarchy. The current system does not work, yet none will. (Chaotic)</item>
+                <item id="3">Defiance. The current leaders do nothing to help those in need. I aim to change that. (Good)</item>
+                <item id="4">Spite. I aim to overthrow the rules of my land purely because I do not like them. (Evil)</item>
+                <item id="5">Catalyst. I know the current system doesn’t work, but I don’t care or know what system will replace it. (Neutral)</item>
+                <item id="6">Revision. I aim to set forth a new system that will help with all who live in my country. (Lawful)</item>
+            </select>
+            <select type="List" name="Bond" optional="true">
+                <item id="1">I have a close friend who is a member of a royal family.</item>
+                <item id="2">I am secretly the illegitimate child of one of the leaders.</item>
+                <item id="3">I will live to see change happen, or die trying.</item>
+                <item id="4">I dream of a day where we can all live in peace again, though things must happen before that can be obtained.</item>
+                <item id="5">My family was harmed by the rules of my homeland.</item>
+                <item id="6">I have seen many of my close friends die in service to the cause.</item>
+            </select>
+            <select type="List" name="Flaw" optional="true">
+                <item id="1">I secretly doubt that any real change will happen.</item>
+                <item id="2">I am slow to trust any outside of my close circle.</item>
+                <item id="3">I am too trusting of some of the common folk.</item>
+                <item id="4">I am suspicious of every guard, watchman, or noble.</item>
+                <item id="5">I have an addiction.</item>
+                <item id="6">I am quick to action, slow to words.</item>
+            </select>
+        </rules>
+    </element>
+
+    <element name="Feature: One of the People" type="Background Feature" source="Yorviing's Arcane Grimoire" id="ID_BACKGROUND_FEATURE_YAG_ONE_OF_THE_PEOPLE">
+        <description>
+            <p>Your connection to other revolutionaries gives you a feel of how the populace, or at least a part of them, are feeling. You can easily find outposts and hidden groups who are a part of or are similar to your revolution and its ideals, and you can pick out the places of underground political activity in a community.</p>
+        </description>
+        <sheet alt="One of the People">
+            <description>Your connection to other revolutionaries gives you a feel of how the populace, or at least a part of them, are feeling. You can easily find outposts and hidden groups who are a part of or are similar to your revolution and its ideals, and you can pick out the places of underground political activity in a community.</description>
+        </sheet>
+    </element>
+    
+</elements>

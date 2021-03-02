@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Occult Detective" type="Background" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_BACKGROUND_OCCULT_DETECTIVE">
+        <description>
+            <p>You are an investigator, one who studies magic or otherworldly entities and deities. You specialize in finding out the reasons and people behind occult activities, and trying to put a stop to them. Perhaps you were inspired to choose this life because of a terrible past. Or, you may have an innate talent for rooting out the unfamiliar.</p>
+            <p class="indent">When you choose this background, work with your DM to determine what kind of occult investigations you often do, how your skills have developed, and what kinds of occult findings you have discovered. Was it a religious group trying to perform some forbidden ritual? Or is it some type of monster that has been killing the people it has been hiding amongst?</p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> Investigation, and one from: Arcana, Religion, or Survival</li>
+                <li><strong>Languages:</strong> Two exotic languages (Abyssal, Celestial, Deep Speech, Draconic, Infernal, Primordial, Sylvan, or Undercommon)</li>
+                <li><strong>Equipment:</strong> A vial of holy water, a set of travelers clothes, three wooden stakes, a silver ring, an empty vial, a book discussing local religions and religious movements, and a whip</li>
+            </ul>
+            <div element="ID_BACKGROUND_FEATURE_YAG_OCCULT_AWARENESS" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>Many occult detectives and investigators see a lot of strange and frightening things in their lifetimes, from horrible crimes to witnessing creatures from other realms be summoned in places they should not be. As such, to grow old in this profession is seen as incredible, and those that do are often shaped by their experiences into living a hardened and sometimes lonely life.</p>
+        </description>
+        <setters>
+            <set name="short">Investigation, Arcana/Religion/Survival, 2 Exotic Languages</set>
+        </setters>
+        <rules>
+            <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <select type="Language" name="Language, Occult Detective" supports="Exotic" number="2" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+            <select type="Proficiency" name="Skill Proficiency, Occult Detective" supports="ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_SURVIVAL" />
+            <select type="List" name="Personality Trait" number="2" optional="true">
+                <item id="1">I take my profession seriously, and hope to rid the world of terrors.</item>
+                <item id="2">While I do enjoy company, I am wary to make lifelong friends, as I have had many end in terrible ways.</item>
+                <item id="3">The gods don’t do enough in the world.</item>
+                <item id="4">I can’t help but inspect every corner of every room at least once. You can never be too sure.</item>
+                <item id="5">I have a small hobby that keeps me sane.</item>
+                <item id="6">I don’t think I could ever have a family. Not after what I have seen.</item>
+                <item id="7">I laugh and taunt my foes when I have the upper hand.</item>
+                <item id="8">Not all I track down are evil. Some are just people trying to experiment with new things.</item>
+            </select>
+            <select type="List" name="Ideal" optional="true">
+                <item id="1">Justice. I will bring every monster and dark practitioner of magic to answer to the law. (Good)</item>
+                <item id="2">Tenets. There are strict rules that I must adhere to while working. (Lawful)</item>
+                <item id="3">Temptation. I can be persuaded to look the other way, if provided the right compensation. (Evil)</item>
+                <item id="4">Methodology. I get the job done, anyway I can. (Chaotic)</item>
+                <item id="5">Knowledge. I long to know why most people do the things they do. (Any)</item>
+                <item id="6">Focus. I don’t involve myself in the morality of situations and motivations. I just focus on the job at hand. (Neutral)</item>
+            </select>
+            <select type="List" name="Bond" optional="true">
+                <item id="1">It is because of the occult that I no longer have a family.</item>
+                <item id="2">I don’t view all occult practices as bad. I’m just good at tracking them.</item>
+                <item id="3">I picked up a thing or too after having fallen for a member of a secretive religious group.</item>
+                <item id="4">I try to protect the innocent from things beyond their control.</item>
+                <item id="5">I try to show mercy whenever I can.</item>
+                <item id="6">I try not to focus on what happened on a job once its done. If I do, it will wear me down.</item>
+            </select>
+            <select type="List" name="Flaw" optional="true">
+                <item id="1">Deep down, I have a lot of things I am afraid of. I just can’t speak of them.</item>
+                <item id="2">I drown myself in drinks and gambling when my mind is heavy.</item>
+                <item id="3">I don’t want to find myself slipping into becoming some of the things I have seen.</item>
+                <item id="4">It’s hard for me to open up to others.</item>
+                <item id="5">I am too confident in my abilities and tracking skills.</item>
+                <item id="6">I want to have a family one day, yet I don’t know if I will live long enough to see that happen.</item>
+            </select>
+        </rules>
+    </element>
+
+    <element name="Feature: Occult Awareness" type="Background Feature" source="Yorviing's Arcane Grimoire" id="ID_BACKGROUND_FEATURE_YAG_OCCULT_AWARENESS">
+        <description>
+            <p>Though others may have to go through a variety of loops and paperwork to gain access to areas heavy with occult activity, you have an easier time with acquiring access to scenes and places rife with paranormal occurrences, or know of people who can get you into them.</p>
+            <p class="indent">You also have a wealth of knowledge related to obscure or underground religious groups and sects, and have an easier time noticing clues and traces of the occult. Additionally, you are likely to gain special treatment by those who have hired you for their services in tracking foul creatures and other occult signs.</p>
+        </description>
+        <sheet alt="Occult Awareness">
+            <description>Though others may have to go through a variety of loops and paperwork to gain access to areas heavy with occult activity, you have an easier time with acquiring access to scenes and places rife with paranormal occurrences, or know of people who can get you into them. You also have a wealth of knowledge related to obscure or underground religious groups and sects, and have an easier time noticing clues and traces of the occult. Additionally, you are likely to gain special treatment by those who have hired you for their services in tracking foul creatures and other occult signs.</description>
+        </sheet>
+    </element>
+    
+</elements>

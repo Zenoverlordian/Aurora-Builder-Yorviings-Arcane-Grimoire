@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Haemomancy" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_HAEMOMANCY">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>The ancient and forbidden tradition of Haemomancy teaches that there is incredible magic that flows within blood, and that those who can tap into this magic can obtain power unlike any other. Called Haemomancers or ‘blood mages’, followers of the tradition of Haemomancy focus on spells that can affect both the blood of others, as well as their own.</p>
+            <p class="indent">Many of these wizards practice their art in secret, fearing those that hunt wielders of blood magic. However, those who possess the talents of Haemomancy can utilize their knowledge and practice of such magic to work as specialized doctors, shamans, or even assassins.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HAEMOMANCY_SANGUINE_SAVANT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HAEMOMANCY_BLOOD_REBUKE" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HAEMOMANCY_CRIMSON_HARVEST" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HAEMOMANCY_EMPOWERED_VEINS" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HAEMOMANCY_CRUOR_LORD" />
+        </description>
+        <sheet display="false">
+            <description>The ancient and forbidden tradition of Haemomancy teaches that there is incredible magic that flows within blood, and that those who can tap into this magic can obtain power unlike any other.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HAEMOMANCY_SANGUINE_SAVANT" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HAEMOMANCY_BLOOD_REBUKE" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HAEMOMANCY_CRIMSON_HARVEST" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HAEMOMANCY_EMPOWERED_VEINS" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HAEMOMANCY_CRUOR_LORD" level="14" />
+        </rules>
+    </element>
+
+    <element name="Sanguine Savant" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HAEMOMANCY_SANGUINE_SAVANT">
+        <description>
+            <p>By 2nd level, your knowledge of blood gives you insights into anatomy. You gain proficiency in the Medicine skill.</p>
+            <p class="indent">Additionally, you have learned how to use the magic within blood to see into a creature's essence. You can perform a ritual with a vial's worth of a creature's blood over the course of 10 minutes. At the conclusion of the ritual, the blood is consumed and you learn your choice of one of the following pieces of information in a vision:</p>
+            <ul>
+                <li>The creature's name and creature type</li>
+                <li>In what manner the creature died, such as disease or poison. If it is not dead, you instead learn this fact.</li>
+                <li>The last minute of the creature's life as perceived by the creature. If it is not dead, you instead learn this fact.</li>
+                <li>The current location of the creature or its corpse (provided that you are on the same plane)</li>
+                <li>What was the last task the creature was doing</li>
+            </ul>
+            <p class="indent">Once you have used this feature, you cannot do so again until you finish a short or long rest. You learn one additional piece of information at 6th, 10th, and 14th levels.</p>
+        </description>
+        <sheet>
+            <description usage="1/Short Rest" level="2">You can perform a ritual with a vial's worth of a creature's blood over the course of 10 minutes. At the conclusion of the ritual, the blood is consumed and you learn your choice of one of the following pieces of information in a vision:
+            The creature's name and creature type
+            In what manner the creature died, such as disease or poison. If it is not dead, you instead learn this fact.
+            The last minute of the creature's life as perceived by the creature. If it is not dead, you instead learn this fact.
+            The current location of the creature or its corpse (provided that you are on the same plane)
+            What was the last task the creature was doing</description>
+            <description usage="1/Short Rest" level="6">You can perform a ritual with a vial's worth of a creature's blood over the course of 10 minutes. At the conclusion of the ritual, the blood is consumed and you learn your choice of two of the following pieces of information in a vision:
+            The creature's name and creature type
+            In what manner the creature died, such as disease or poison. If it is not dead, you instead learn this fact.
+            The last minute of the creature's life as perceived by the creature. If it is not dead, you instead learn this fact.
+            The current location of the creature or its corpse (provided that you are on the same plane)
+            What was the last task the creature was doing</description>
+            <description usage="1/Short Rest" level="10">You can perform a ritual with a vial's worth of a creature's blood over the course of 10 minutes. At the conclusion of the ritual, the blood is consumed and you learn your choice of three of the following pieces of information in a vision:
+            The creature's name and creature type
+            In what manner the creature died, such as disease or poison. If it is not dead, you instead learn this fact.
+            The last minute of the creature's life as perceived by the creature. If it is not dead, you instead learn this fact.
+            The current location of the creature or its corpse (provided that you are on the same plane)
+            What was the last task the creature was doing</description>
+            <description usage="1/Short Rest" level="14">You can perform a ritual with a vial's worth of a creature's blood over the course of 10 minutes. At the conclusion of the ritual, the blood is consumed and you learn your choice of four of the following pieces of information in a vision:
+            The creature's name and creature type
+            In what manner the creature died, such as disease or poison. If it is not dead, you instead learn this fact.
+            The last minute of the creature's life as perceived by the creature. If it is not dead, you instead learn this fact.
+            The current location of the creature or its corpse (provided that you are on the same plane)
+            What was the last task the creature was doing</description>
+        </sheet>
+    </element>
+    <element name="Blood Rebuke" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HAEMOMANCY_BLOOD_REBUKE">
+        <description>
+            <p>Beginning at 2nd level, you have learned how to draw power from your blood to harm others. When an attacker that you can see hits you with a melee attack, you can use your reaction to cause the attacker to take necrotic damage equal to half your wizard level, as you emit volatile energy from your open wounds.</p>
+            <p class="indent">You can use this feature a number of times equal to your Intelligence modifier (a minimum of once). You regain all expended uses when you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description action="Reaction" usage="{{intelligence:modifier}}/Long Rest">When an attacker that you can see hits you with a melee attack, you can use your reaction to cause the attacker to take {{level:wizard:half}} necrotic damage, as you emit volatile energy from your open wounds.</description>
+        </sheet>
+    </element>
+    <element name="Crimson Harvest" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HAEMOMANCY_CRIMSON_HARVEST">
+        <description>
+            <p>At 6th level, you can heal your body with blood magic. Once per turn when you damage one or more creatures with a spell of 1st level or higher that deals necrotic damage, you regain hit points equal to your Intelligence modifier (minimum of 1).</p>
+        </description>
+        <sheet>
+            <description>Once per turn when you damage one or more creatures with a spell of 1st level or higher that deals necrotic damage, you regain {{intelligence:modifier}} hit points (minimum of 1).</description>
+        </sheet>
+    </element>
+    <element name="Empowered Veins" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HAEMOMANCY_EMPOWERED_VEINS">
+        <description>
+            <p>By 10th level, you have become attuned to the magic in your blood. Your maximum hit points can no longer be reduced. Additionally, you become immune to disease and the poisoned condition, and gain resistance to poison damage.</p>
+        </description>
+        <sheet>
+            <description>Your maximum hit points can no longer be reduced. Additionally, you become immune to disease and the poisoned condition.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+        </rules>
+    </element>
+    <element name="Cruor Lord" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HAEMOMANCY_CRUOR_LORD">
+        <description>
+            <p>At 14th level, you have mastered the art of blood magic. Whenever you deal damage to a creature with a spell of 1st level or higher, you can use your bonus action to draw some of their blood to you to consume, though creatures that do not have blood are immune to this effect. When you do so, choose one of the following effects. You cannot use this feature again until you finish a long rest.</p>
+            <p class="indent"><strong><em>Blood Reservoir.</em></strong> You consume the life force of the creature. You regain hit points equal to half of the amount of damage dealt to the creature from your spell, and your hit point maximum increases by the same amount. This effect lasts until you finish a long rest.</p>
+            <p class="indent"><strong><em>Bloodshape.</em></strong> You consume the essence of the creature. Until you finish a long rest, you can use your action to change your appearance to be that of the creature for up to 4 hours. Your statistics remain the same, but your size changes to be that of the creature, and you gain any of the creature's special speeds or senses. You have advantage on Charisma checks made to pass yourself off as the creature for the duration.</p>
+            <p class="indent"><strong><em>Blood Defense.</em></strong> You consume the strength of the creature. Until you finish a long rest, you gain one damage resistance or condition immunity that the creature had.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action" usage="1/Long Rest">Whenever you deal damage to a creature with a spell of 1st level or higher, you can use your bonus action to draw some of their blood to you to consume, though creatures that do not have blood are immune to this effect. When you do so, choose one of the following effects.
+            You regain hit points equal to half of the amount of damage dealt to the creature from your spell, and your hit point maximum increases by the same amount. This effect lasts until you finish a long rest.
+            Until you finish a long rest, you can use your action to change your appearance to be that of the creature for up to 4 hours. Your statistics remain the same, but your size changes to be that of the creature, and you gain any of the creature's special speeds or senses. You have advantage on Charisma checks made to pass yourself off as the creature for the duration.
+            Until you finish a long rest, you gain one damage resistance or condition immunity that the creature had.</description>
+        </sheet>
+    </element>
+    
+</elements>

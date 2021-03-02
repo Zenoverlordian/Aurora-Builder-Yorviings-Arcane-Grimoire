@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Fleshwarping" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_FLESHWARPING">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>The ancient and often forbidden arcane tradition of Fleshwarping is one that involves the magical manipulation of the flesh. Called ‘Fleshwarpers’ or derogatively ‘skin mages’, wizards who follow this tradition prefer spells that change their body and those of others, for better or for worse, and can sometimes be found as doctors, specialized surgeons, or lone practitioners of their craft.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FLESHWARPING_HARDENED_FLESH" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FLESHWARPING_SKIN_SCULPTOR" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FLESHWARPING_SKIN_ALTERATION" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FLESHWARPING_SHIELDED_FLESH" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FLESHWARPING_DERMA_MAGE" />
+        </description>
+        <sheet display="false">
+            <description>The ancient and often forbidden arcane tradition of Fleshwarping is one that involves the magical manipulation of the flesh.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FLESHWARPING_HARDENED_FLESH" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FLESHWARPING_SKIN_SCULPTOR" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FLESHWARPING_SKIN_ALTERATION" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FLESHWARPING_SHIELDED_FLESH" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FLESHWARPING_DERMA_MAGE" level="14" />
+        </rules>
+    </element>
+
+    <element name="Hardened Flesh" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FLESHWARPING_HARDENED_FLESH">
+        <description>
+            <p>By 2nd level, your studies of skin and flesh have granted you medical insight, as well as altering your own body. You gain proficiency in the Medicine skill. In addition, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Constitution modifier.</p>
+        </description>
+        <sheet>
+            <description>While you are wearing no armor and not wielding a shield, your AC equals 10 + your Constitution modifier.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_MEDICINE" />
+            <stat name="ac:hardened flesh" value="10" />
+            <stat name="ac:hardened flesh" value="constitution:modifier" />
+            <stat name="ac:calculation" value="ac:hardened flesh" bonus="calculation" equipped="[armor:none],[shield:none]" alt="Hardened Flesh (Wizard)" />
+        </rules>
+    </element>
+    <element name="Skin Sculptor" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FLESHWARPING_SKIN_SCULPTOR">
+        <description>
+            <p>Beginning at 2nd level, you gain the ability to affect the body of others through your spells. Whenever you successfully hit a single creature that has flesh with a spell of 1st level or higher or if they fail a saving throw against your spell, you can force that creature to make a Constitution saving throw against your wizard spell save DC. On a failed save, the creature’s flesh begins to warp and twist violently, and you can choose which of the following abilities affects the creature. A creature can only be affected by one of these effects at a time, and each of these abilities last until the end of the creature's next turn.</p>
+            <p class="indent"><strong><em>Skin Bloating.</em></strong> The creature’s flesh begins to expand and become bloated. The creature’s movement speed is reduced by half, and the creature makes Dexterity saving throws at disadvantage.</p>
+            <p class="indent"><strong><em>Skin Shrinking.</em></strong> The creature’s flesh begins drying up and shriveling. The creature suffers a -1 to their AC, and the creature makes Strength saving throws at disadvantage.</p>
+            <p class="indent"><strong><em>Skin Tearing.</em></strong> The creature’s flesh begins to shred into different sections, as if repulsed by the body it is surrounding. The creature takes slashing damage equal to half your wizard level, and the creature has disadvantage on Constitution saving throws for the duration of this ability.</p>
+            <p class="indent"><strong><em>Skin Mending.</em></strong> The creature’s flesh begins to connect together by magical threads, as fingers and toes begin to stick to each other. The creature has disadvantage on checks and saving throws made to hold or interact with items or objects for the duration of this ability.</p>
+        </description>
+        <sheet>
+            <description>Whenever you successfully hit a single creature that has flesh with a spell of 1st level or higher or if they fail a saving throw against your spell, you can force that creature to make a Constitution saving throw against your wizard spell save DC. On a failed save, the creature’s flesh begins to warp and twist violently, and you can choose which of the following abilities affects the creature. A creature can only be affected by one of these effects at a time, and each of these abilities last until the end of the creature's next turn.
+            The creature’s movement speed is reduced by half, and the creature makes Dexterity saving throws at disadvantage.
+            The creature suffers a -1 to their AC, and the creature makes Strength saving throws at disadvantage.
+            The creature takes {{level:wizard:half}} slashing damage, and the creature has disadvantage on Constitution saving throws for the duration of this ability.
+            The creature has disadvantage on checks and saving throws made to hold or interact with items or objects for the duration of this ability.</description>
+        </sheet>
+    </element>
+    <element name="Skin Alteration" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FLESHWARPING_SKIN_ALTERATION">
+        <description>
+            <p>At 6th level, you have learned how to change your body for any occasion. You add the <em>alter self</em> spell into your spellbook, if it is not there already. When you cast alter self, you can cast it as a bonus action, and can have up to two different effects active at the same time.</p>
+            <p class="indent">Additionally, as a bonus action, you can change the appearance of your skin to make you look younger, older, have a different skin color, or transform a part of your body to your liking, such as elongating your ears or shortening your nose.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action">When you cast alter self, you can cast it as a bonus action, and can have up to two different effects active at the same time. Additionally, as a bonus action, you can change the appearance of your skin to make you look younger, older, have a different skin color, or transform a part of your body to your liking, such as elongating your ears or shortening your nose.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_ALTER_SELF" spellcasting="Wizard" />
+        </rules>
+    </element>
+    <element name="Shielded Flesh" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FLESHWARPING_SHIELDED_FLESH">
+        <description>
+            <p>By 10th level, you have imbued your skin and flesh with magic to protect it. You become immune to any spell or effect that would alter your form that you are unwilling to be effected by.</p>
+        </description>
+        <sheet>
+            <description>You become immune to any spell or effect that would alter your form that you are unwilling to be effected by.</description>
+        </sheet>
+    </element>
+    <element name="Derma Mage" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FLESHWARPING_DERMA_MAGE">
+        <description>
+            <p>At 14th level, transforming flesh has become second nature to you. Whenever you cast a spell that affects multiple creatures, you can use your Skin Sculptor feature on more than one creature.</p>
+        </description>
+        <sheet>
+            <description>Whenever you cast a spell that affects multiple creatures, you can use your Skin Sculptor feature on more than one creature.</description>
+        </sheet>
+    </element>
+    
+</elements>

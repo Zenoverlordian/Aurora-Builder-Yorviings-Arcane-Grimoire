@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Concealment" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_CONCEALMENT">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>Followers of the tradition of Concealment are wizards who specialize in not being seen, practicing magic in secret places and focusing on hiding their spellcasting from others. These wizards, often called ‘stealth mages’ or ‘silent sages’, combine elements of illusion and transmutation magic with a skill set of stealth and maneuverability, and often work as spies, assassins, or undercover operatives.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CONCEALMENT_CLANDESTINE_SAVANT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CONCEALMENT_QUIET_CASTER" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CONCEALMENT_MOBILE_CASTER" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CONCEALMENT_HIDDEN_SPELL" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CONCEALMENT_STEALTH_MAGE" />
+        </description>
+        <sheet display="false">
+            <description>Followers of the tradition of Concealment are wizards who specialize in not being seen, practicing magic in secret places and focusing on hiding their spellcasting from others.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CONCEALMENT_CLANDESTINE_SAVANT" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CONCEALMENT_QUIET_CASTER" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CONCEALMENT_MOBILE_CASTER" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CONCEALMENT_HIDDEN_SPELL" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CONCEALMENT_STEALTH_MAGE" level="14" />
+        </rules>
+    </element>
+
+    <element name="Clandestine Savant" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CONCEALMENT_CLANDESTINE_SAVANT">
+        <description>
+            <p>Beginning at 2nd level, you have acquired a wide array of skills. You gain proficiency in two of the following skills: Acrobatics, Deception, Insight, Perception, Sleight of Hand, or Stealth. You also gain proficiency in either the Disguise Kit or Thieves’ Tools.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Proficiency" name="Skill Proficiency, Clandestine Savant" supports="ID_PROFICIENCY_SKILL_ACROBATICS|ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_SLEIGHTOFHAND|ID_PROFICIENCY_SKILL_STEALTH" number="2" />
+            <select type="Proficiency" name="Skill Proficiency, Clandestine Savant" supports="ID_PROFICIENCY_TOOL_PROFICIENCY_DISGUISE_KIT|ID_PROFICIENCY_TOOL_PROFICIENCY_THIEVES_TOOLS" />
+        </rules>
+    </element>
+    <element name="Quiet Caster" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CONCEALMENT_QUIET_CASTER">
+        <description>
+            <p>Starting at 2nd level, you have acquired a knack for casting spells silently. Whenever you cast a spell, creatures cannot hear the verbal component of the spell, however, the spell still requires you to recite the verbal components, albeit silently.</p>
+        </description>
+        <sheet>
+            <description>Whenever you cast a spell, creatures cannot hear the verbal component of the spell, however, the spell still requires you to recite the verbal components, albeit silently.</description>
+        </sheet>
+    </element>
+    <element name="Mobile Caster" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CONCEALMENT_MOBILE_CASTER">
+        <description>
+            <p>At 6th level, you’ve become more agile, and you’ve developed a knack of casting spells while moving. Once on each of your turns, when you cast a spell with a casting time of one action, you can use your bonus action to take the Disengage or Hide action.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action">Once on each of your turns, when you cast a spell with a casting time of one action, you can use your bonus action to take the Disengage or Hide action.</description>
+        </sheet>
+    </element>
+    <element name="Hidden Spell" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CONCEALMENT_HIDDEN_SPELL">
+        <description>
+            <p>By 10th level, your skills with concealing your presence while casting spells have increased. Casting a spell while hidden doesn't reveal your position.</p>
+            <p class="indent">Additionally, whenever you cast a spell with a casting time of one action while hidden, as part of the casting of the spell, you can cause the spell to appear invisible. If the spell requires an attack roll, you gain advantage on the roll. If the spell requires a target to make a saving throw, the target makes the saving throw at disadvantage.</p>
+        </description>
+        <sheet>
+            <description>Casting a spell while hidden doesn't reveal your position. Additionally, whenever you cast a spell with a casting time of one action while hidden, as part of the casting of the spell, you can cause the spell to appear invisible. If the spell requires an attack roll, you gain advantage on the roll. If the spell requires a target to make a saving throw, the target makes the saving throw at disadvantage.</description>
+        </sheet>
+    </element>
+    <element name="Stealth Mage" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CONCEALMENT_STEALTH_MAGE">
+        <description>
+            <p>At 14th level, you gain the ability to know when you have been detected. You automatically know when you have been detected, either through a creature's senses or through the use of magic, though you don't necessarily know which.</p>
+        </description>
+        <sheet>
+            <description>You automatically know when you have been detected, either through a creature's senses or through the use of magic, though you don't necessarily know which.</description>
+        </sheet>
+    </element>
+    
+</elements>

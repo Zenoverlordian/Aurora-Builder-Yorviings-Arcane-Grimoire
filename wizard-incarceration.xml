@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Incarceration" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_INCARCERATION">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>Whenever dangerous creatures, powerful monsters, or infamous criminals need to be hunted down, apprehended and locked away, people often call upon wizards of the tradition of Incarceration. Known as ‘arcane jailers’ or ‘bounty mages’, these wizards combine elements of abjuration and conjuration magic into a specialized skill set consisting of spells and abilities that allow them to track and capture their enemies. Followers of this tradition often work alongside other bounty and monster hunters.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_INCARCERATION_MAGICAL_HUNTER" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_INCARCERATION_ARCANE_ARREST" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_INCARCERATION_LOCK_KEY" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_INCARCERATION_CAPTURE_MAGE" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_INCARCERATION_MASTER_WARDEN" />
+        </description>
+        <sheet display="false">
+            <description>Whenever dangerous creatures, powerful monsters, or infamous criminals need to be hunted down, apprehended and locked away, people often call upon wizards of the tradition of Incarceration.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_INCARCERATION_MAGICAL_HUNTER" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_INCARCERATION_ARCANE_ARREST" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_INCARCERATION_LOCK_KEY" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_INCARCERATION_CAPTURE_MAGE" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_INCARCERATION_MASTER_WARDEN" level="14" />
+        </rules>
+    </element>
+
+    <element name="Magical Hunter" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_INCARCERATION_MAGICAL_HUNTER">
+        <description>
+            <p>Beginning at 2nd level, your time hunting down, capturing, and interrogating creatures has made you adept at many techniques. You gain proficiency in two of the following skills: Insight, Intimidation, Perception, Persuasion, Stealth, or Survival.</p>
+            <p class="indent">Additionally, whenever you make a check related to tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.</p>
+        </description>
+        <sheet>
+            <description>Whenever you make a check related to tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.</description>
+        </sheet>
+        <rules>
+            <select type="Proficiency" name="Skill Proficiency, Magical Hunter" supports="ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_PERSUASION|ID_PROFICIENCY_SKILL_STEALTH|ID_PROFICIENCY_SKILL_SURVIVAL" number="2" />
+        </rules>
+    </element>
+    <element name="Arcane Arrest" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_INCARCERATION_ARCANE_ARREST">
+        <description>
+            <p>Starting at 2nd level, you have developed tricks to keep others from getting away. As an action, choose one creature that you can see within 15 feet of you. If the target can see or hear you, it must succeed on a Strength saving throw against your wizard spell save DC, or become wrapped and bound by spectral chains and manacles. The chained creature's speed drops to 0, and the creature is restrained.</p>
+            <p class="indent">On subsequent turns, you can use your action to maintain this effect, extending its duration until the end of your next turn. During this time, you can add your Intelligence modifier to the result of any Charisma based skill check you make when interacting with the chained creature. However, the effect ends if you move more than 15 feet away from the creature or if the creature takes damage.</p>
+            <p class="indent">Once the effect ends, or if the creature succeeds on its initial saving throw against this effect, you can't use this feature on that creature again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description action="Action">As an action, choose one creature that you can see within 15 feet of you. If the target can see or hear you, it must succeed on a Strength saving throw against your wizard spell save DC, or become wrapped and bound by spectral chains and manacles. The chained creature's speed drops to 0, and the creature is restrained.
+            On subsequent turns, you can use your action to maintain this effect, extending its duration until the end of your next turn. During this time, you can add {{intelligence:modifier}} to the result of any Charisma based skill check you make when interacting with the chained creature. However, the effect ends if you move more than 15 feet away from the creature or if the creature takes damage.
+            Once the effect ends, or if the creature succeeds on its initial saving throw against this effect, you can't use this feature on that creature again until you finish a long rest.</description>
+        </sheet>
+    </element>
+    <element name="Lock &amp; Key" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_INCARCERATION_LOCK_KEY">
+        <description>
+            <p>At 6th level, you know the ins and outs of locks, manacles, and cells. You add the arcane lock and knock spells into your spellbook, if they are not there already, and they are always prepared for you. Whenever you cast these spells, you ignore the material components. Additionally, whenever you cast knock, the spell makes no sound.</p>
+        </description>
+        <sheet>
+            <description>Whenever you cast the arcane lock and knock spells, you ignore the material components. Additionally, whenever you cast knock, the spell makes no sound.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_ARCANE_LOCK" spellcasting="Wizard" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_KNOCK" spellcasting="Wizard" prepared="true" />
+        </rules>
+    </element>
+    <element name="Capture Mage" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_INCARCERATION_CAPTURE_MAGE">
+        <description>
+            <p>By 10th level, you have become an expert at capturing others. Whenever you cast a spell that grapples, restrains, or reduces the movement speed to 0 of another creature, you have advantage on concentration checks to maintain the spell.</p>
+            <p class="indent">Additionally, creatures under the effects of your Arcane Arrest feature must make a Charisma saving throw against your wizard spell save DC in order to perform any spell or other ability that allows for extradimensional movement, such as teleportation or travelling to another plane of existence.</p>
+        </description>
+        <sheet>
+            <description>Whenever you cast a spell that grapples, restrains, or reduces the movement speed to 0 of another creature, you have advantage on concentration checks to maintain the spell. Additionally, creatures under the effects of your Arcane Arrest feature must make a Charisma saving throw against your wizard spell save DC in order to perform any spell or other ability that allows for extradimensional movement, such as teleportation or travelling to another plane of existence.</description>
+        </sheet>
+    </element>
+    <element name="Master Warden" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_INCARCERATION_MASTER_WARDEN">
+        <description>
+            <p>At 14th level, you have mastered the art of imprisonment. You add the forcecage spell to your spellbook, if it is not there already. You can cast forcecage without using material components. When you do so, you can choose to alter the spell in one of the following ways:</p>
+            <ul>
+                <li>You can extend the duration of the spell up to 4 hours.</li>
+                <li>You can double the size and dimensions of the cage or box.</li>
+                <li>You can have chains surround each creature within the cage or box, imposing disadvantage on the creature’s Charisma saving throw to escape the prison.</li>
+                <li>You can infuse magical energy into the prison. Choose one of the following damage types: acid, cold, fire, lightning, or necrotic, or radiant. Whenever a creature fails their Charisma saving throw to escape the prison, the creature takes damage equal to your wizard level of the chosen damage type.</li>
+            </ul>
+            <p class="indent">Once you cast forcecage in this way, you can't do so again until you finish a long rest, though you can still cast it normally using an available spell slot.</p>
+        </description>
+        <sheet>
+            <description usage="1/Long Rest">You can cast forcecage without using material components. When you do so, you can choose to alter the spell in one of the following ways:
+            You can extend the duration of the spell up to 4 hours.
+            You can double the size and dimensions of the cage or box.
+            You can have chains surround each creature within the cage or box, imposing disadvantage on the creature’s Charisma saving throw to escape the prison.
+            You can infuse magical energy into the prison. Choose one of the following damage types: acid, cold, fire, lightning, or necrotic, or radiant. Whenever a creature fails their Charisma saving throw to escape the prison, the creature takes {{level:wizard}} damage of the chosen damage type.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_FORCECAGE" spellcasting="Wizard" />
+        </rules>
+    </element>
+    
+</elements>

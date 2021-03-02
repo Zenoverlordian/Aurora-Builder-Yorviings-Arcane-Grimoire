@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Arcane Knight" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_ARCANE_KNIGHT">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>In lands filled with warfare and strife, special wizards known as Arcane Knights rise up to meet the call to battle. Followers of this unique tradition of Arcane Knights focus their studies drawing forth arcane energy to enhance their strength in a special blend of magic called their War Form, that aids them with incredible might and power that can allow them to enter the fray alongside other soldiers and warriors.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_KNIGHT_COMBATIVE_SAVANT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_KNIGHT_WAR_FORM" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_KNIGHT_EXTRA_ATTACK" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_KNIGHT_EMPOWERED_COMBAT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_KNIGHT_ARCANE_WAR_FORM" />
+        </description>
+        <sheet display="false">
+            <description>Followers of this unique tradition of Arcane Knights focus their studies drawing forth arcane energy to enhance their strength in a special blend of magic called their War Form</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_KNIGHT_COMBATIVE_SAVANT" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_KNIGHT_WAR_FORM" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_KNIGHT_EXTRA_ATTACK" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_KNIGHT_EMPOWERED_COMBAT" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_KNIGHT_ARCANE_WAR_FORM" level="14" />
+        </rules>
+    </element>
+
+    <element name="Combative Savant" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_KNIGHT_COMBATIVE_SAVANT">
+        <description>
+            <p>Beginning when you select this tradition at 2nd level, you have become trained in the art of warfare. You gain proficiency in light, medium, and heavy armor, as well as melee martial weapons.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_MELEE_WEAPONS" />
+        </rules>
+    </element>
+    <element name="War Form" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_KNIGHT_WAR_FORM">
+        <description>
+            <p>Starting at 2nd level, you can enter into a magical combative state known as your War Form. It empowers you with incredible defense, might, and strength.</p>
+            <p class="indent">You can use a bonus action to start the War Form, which lasts for 1 minute. It ends early if you are incapacitated or reduced to 0 hit points, or if you don a different set of armor, or wield a different shield or weapon. You can also dismiss your War Form at any time you choose (no action required).</p>
+            <p class="indent">While your War Form is active, you gain the following benefits:</p>
+            <ul>
+                <li>Your weapon’s damage type changes to force damage.</li>
+                <li>You gain temporary hit points equal to three times your wizard level.</li>
+                <li>You have advantage on Strength (Athletics) checks.</li>
+                <li>You can add your Intelligence modifier to one damage roll of any wizard cantrip that you cast against a target within 15 feet of you.</li>
+            </ul>
+            <p class="indent">You can use this feature twice. You regain all expeded uses of it when you finish a short or long rest.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action" usage="2/Short Rest">You can use a bonus action to start the War Form, which lasts for 1 minute. It ends early if you are incapacitated or reduced to 0 hit points, or if you don a different set of armor, or wield a different shield or weapon. You can also dismiss your War Form at any time you choose (no action required). While your War Form is active, you gain the following benefits:
+            Your weapon’s damage type changes to force damage. You gain {{war form:hp}} temporary hit points. You have advantage on Strength (Athletics) checks. You can add {{intelligence:modifier}} to one damage roll of any wizard cantrip that you cast against a target within 15 feet of you.</description>
+        </sheet>
+        <rules>
+            <stat name="war form:hp" value="level:wizard" />
+            <stat name="war form:hp" value="level:wizard" />
+            <stat name="war form:hp" value="level:wizard" />
+        </rules>
+    </element>
+    <element name="Magical Warfare" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_KNIGHT_EXTRA_ATTACK">
+        <description>
+            <p>Starting at 6th level, while your War Form is active, when you use your action to cast a cantrip, you can make one melee weapon attack as a bonus action.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action">While your War Form is active, when you use your action to cast a cantrip, you can make one melee weapon attack as a bonus action.</description>
+        </sheet>
+    </element>
+    <element name="Empowered Combat" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_KNIGHT_EMPOWERED_COMBAT">
+        <description>
+            <p>By 10th level, you have become adept at fighting while casting spells. While you maintain concentration on a spell, once per turn, you can add your Intelligence modifier to your weapon’s damage rolls.</p>
+        </description>
+        <sheet>
+            <description>While you maintain concentration on a spell, once per turn, you can add {{intelligence:modifier}} to your weapon’s damage rolls.</description>
+        </sheet>
+    </element>
+    <element name="Arcane War Form" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_KNIGHT_ARCANE_WAR_FORM">
+        <description>
+            <p>By 14th level, you have learned how to infuse arcane energy into your War Form. Whenever you first summon forth your War Form, you can choose one of the following effects. Each effect lasts for the duration of your War Form.</p>
+            <p class="indent"><strong><em>Elemental Armor.</em></strong> You infuse your armor with elemental protection. Choose one of the following: acid, cold, fire, lightning, or thunder. You gain resistance to that damage type.</p>
+            <p class="indent"><strong><em>Arcane Strikes.</em></strong> You infuse your bonded weapon’s strikes with elemental energy. Choose one of the following damage types: acid, cold, fire, lightning, or thunder. Once on each of your turns when you hit a creature with a weapon attack, you can deal an additional 2d8 damage of that damage type to the target.</p>
+        </description>
+        <sheet>
+            <description>Whenever you first summon forth your War Form, you can choose one of the following effects. Each effect lasts for the duration of your War Form.
+            You infuse your armor with elemental protection. Choose one of the following: acid, cold, fire, lightning, or thunder. You gain resistance to that damage type.
+            You infuse your bonded weapon’s strikes with elemental energy. Choose one of the following damage types: acid, cold, fire, lightning, or thunder. Once on each of your turns when you hit a creature with a weapon attack, you can deal an additional 2d8 damage of that damage type to the target.</description>
+        </sheet>
+    </element>
+    
+</elements>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Hexmastery" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_HEXMASTERY">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>The ancient and often forbidden arcane art of Hexmastery involves a specialized focus of the enchantment school of magic to creature one deadly and dangerous tradition. Followers of this tradition, known as ‘hex mages’ or ‘curse masters’, learn how to acquire deadly hexes, a special type of magic that can curse and debilitate others. These wizards learn how to acquire more of these hexes, and learn how to make them incredibly efficient.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_CURSED_SAVANT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_BOOK_OF_CURSES" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_DISTANT_CASTING" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_HEIGHTENED_MALEDICTION" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_CURSE_LORD" />
+        </description>
+        <sheet display="false">
+            <description>The ancient and often forbidden arcane art of Hexmastery involves a specialized focus of the enchantment school of magic to creature one deadly and dangerous tradition.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_CURSED_SAVANT" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_BOOK_OF_CURSES" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_DISTANT_CASTING" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_HEIGHTENED_MALEDICTION" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_CURSE_LORD" level="14" />
+        </rules>
+    </element>
+
+    <element name="Cursed Savant" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_CURSED_SAVANT">
+        <description>
+            <p>By 2nd level, you know how to identity curses, and have acquired additional hexes and curses of your own. Whenever you make an Intelligence (Arcana) related to curses and hexes, you are considered proficient in the Arcana skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.</p>
+            <p class="indent">Additionally, whenever you gain a wizard level, you can replace one of the wizard spells you add to your spellbook with a spell from the cleric or warlock spell list, so long as it belongs to the school of enchantment. The spell must be of a level for which you have spell slots. Any cleric or warlock spell you gain from this feature is considered a wizard spell for you, but other wizards can’t copy cleric and warlock spells from your spellbook into their own spellbooks.</p>
+        </description>
+        <sheet>
+            <description>Whenever you make an Intelligence (Arcana) related to curses and hexes, you are considered proficient in the Arcana skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.
+            Additionally, whenever you gain a wizard level, you can replace one of the wizard spells you add to your spellbook with a spell from the cleric or warlock spell list, so long as it belongs to the school of enchantment. The spell must be of a level for which you have spell slots. Any cleric or warlock spell you gain from this feature is considered a wizard spell for you, but other wizards can’t copy cleric and warlock spells from your spellbook into their own spellbooks.</description>
+        </sheet>
+        <spellcasting name="Wizard" extend="true">
+            <extend>Cleric, Enchantment</extend>
+            <extend>Warlock, Enchantment</extend>
+        </spellcasting>
+    </element>
+    <element name="Book of Curses" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_BOOK_OF_CURSES">
+        <description>
+            <p>Beginning when you choose this tradition at 2nd level, you can acquire unique magical hexes into your spellbook. These hexes do not require concentration, and any hex that requires a saving target to make a saving throw does so against your wizard spell save DC. A creature affected by a hex cannot be affected by another hex until the effects of the first hex wear off.</p>
+            <p class="indent"><strong><em>Hexes.</em></strong> You learn two hexes of your choice at 2nd level, which are listed in the Hexes List at the end of this subclass. You learn two additional hexes of your choice at 6th, 10th, and 14th level. Each time you learn new hex to add to your Book of Curses, you can also replace one hex you know with a different one.</p>
+        </description>
+        <sheet>
+            <description>These hexes do not require concentration, and any hex that requires a saving target to make a saving throw does so against your wizard spell save DC. A creature affected by a hex cannot be affected by another hex until the effects of the first hex wear off.</description>
+        </sheet>
+        <rules>
+            <select type="Archetype Feature" name="Hexes (2)" supports="YAG Hexes" number="2" level="2" />
+            <select type="Archetype Feature" name="Hexes (6)" supports="YAG Hexes" number="2" level="6" />
+            <select type="Archetype Feature" name="Hexes (10)" supports="YAG Hexes" number="2" level="10" />
+            <select type="Archetype Feature" name="Hexes (14)" supports="YAG Hexes" number="2" level="14" />
+        </rules>
+    </element>
+    <element name="Distant Casting" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_DISTANT_CASTING">
+        <description>
+            <p>At 6th level, you have learned how to curse others from afar. Whenever you cast an enchantment spell of 1st level or higher or use your action to cast one of your hexes, the range of the spell or hex is doubled.</p>
+        </description>
+        <sheet>
+            <description>Whenever you cast an enchantment spell of 1st level or higher or use your action to cast one of your hexes, the range of the spell or hex is doubled.</description>
+        </sheet>
+    </element>
+    <element name="Heightened Malediction" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_HEIGHTENED_MALEDICTION">
+        <description>
+            <p>By 10th level, you have become adept at implementing hexes and curses. Whenever you cast one of your hexes that affects only one target, you can affect two targets, provided that they are both within range of the hex.</p>
+        </description>
+        <sheet>
+            <description>Whenever you cast one of your hexes that affects only one target, you can affect two targets, provided that they are both within range of the hex.</description>
+        </sheet>
+    </element>
+    <element name="Curse Lord" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_CURSE_LORD">
+        <description>
+            <p>At 14th level, your curses and hexes have become legendary for their potency. Other creatures have disadvantage on saving throws against your hexes.</p>
+            <p class="indent">Additionally, you can target creatures within range of your hexes even if you cannot see the target, provided you have seen the target in the last minute and the target is within range.</p>
+        </description>
+        <sheet>
+            <description>Other creatures have disadvantage on saving throws against your hexes. Additionally, you can target creatures within range of your hexes even if you cannot see the target, provided you have seen the target in the last minute and the target is within range.</description>
+        </sheet>
+    </element>
+
+    <element name="Soothing Hex" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_HEX_SOOTHING">
+        <supports>YAG Hexes</supports>
+        <description>
+            <p>You attempt to quell the anger within another. As an action, choose a creature that you can see within 30 feet of you to make a Charisma saving throw. On a failed save, the creature is calmed, and cannot use its action, bonus action, or reaction to attack another creature until the end of its next turn.</p>
+        </description>
+        <sheet>
+            <description action="Action">As an action, choose a creature that you can see within 30 feet of you to make a Charisma saving throw. On a failed save, the creature is calmed, and cannot use its action, bonus action, or reaction to attack another creature until the end of its next turn.</description>
+        </sheet>
+    </element>
+    <element name="Fragile Hex" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_HEX_FRAGILE">
+        <supports>YAG Hexes</supports>
+        <description>
+            <p>You attempt to bring debilitating pain to another. As an action, choose a creature that you can see within 30 feet of you to make a Constitution saving throw. On a failed save, the target’s speed is reduced to 0 until the end of the creature’s next turn, and the target falls prone.</p>
+        </description>
+        <sheet>
+            <description action="Action">As an action, choose a creature that you can see within 30 feet of you to make a Constitution saving throw. On a failed save, the target’s speed is reduced to 0 until the end of the creature’s next turn, and the target falls prone.</description>
+        </sheet>
+    </element>
+    <element name="Levitating Hex" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_HEX_LEVITATING">
+        <supports>YAG Hexes</supports>
+        <description>
+            <p>You attempt to make a creature float into the air. As an action, choose a creature that you can see within 60 feet of you to make a Strength saving throw. On a failed save, the target begins to float into the air at a rate of 10 feet per round, and the creature cannot use any other form of movement. This effect lasts for 1 minute. The affected creature can repeat the saving throw at the end of each of their turns, ending the effect on a successful save.</p>
+        </description>
+        <sheet>
+            <description action="Action">As an action, choose a creature that you can see within 60 feet of you to make a Strength saving throw. On a failed save, the target begins to float into the air at a rate of 10 feet per round, and the creature cannot use any other form of movement. This effect lasts for 1 minute. The affected creature can repeat the saving throw at the end of each of their turns, ending the effect on a successful save.</description>
+        </sheet>
+    </element>
+    <element name="Debilitating Hex" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_HEX_DEBILITATING">
+        <supports>YAG Hexes</supports>
+        <description>
+            <p>You attempt to bring a withering curse upon another creature. As an action, choose a creature that you can see within 30 feet of you to make a Constitution saving throw. On a failed save, the target’s body begins to shrivel and dry out, and until the end of their next turn, whenever the creature makes a saving throw, the creature must subtract an amount equal to your Intelligence modifier from the roll result.</p>
+        </description>
+        <sheet>
+            <description action="Action">As an action, choose a creature that you can see within 30 feet of you to make a Constitution saving throw. On a failed save, the target’s body begins to shrivel and dry out, and until the end of their next turn, whenever the creature makes a saving throw, the creature must subtract {{intelligence:modifier}} from the roll result.</description>
+        </sheet>
+    </element>
+    <element name="Weakening Hex" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_HEX_WEAKENING">
+        <supports>YAG Hexes</supports>
+        <description>
+            <p>You attempt to weaken the protection of another creature. As an action, choose a creature that you can see within 60 feet of you to make a Constitution saving throw. On a failed save, the target’s AC is reduced by 4 until the end of their next turn.</p>
+        </description>
+        <sheet>
+            <description action="Action">As an action, choose a creature that you can see within 60 feet of you to make a Constitution saving throw. On a failed save, the target’s AC is reduced by 4 until the end of their next turn.</description>
+        </sheet>
+    </element>
+    <element name="Deadly Hex" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_HEX_DEADLY">
+        <supports>YAG Hexes</supports>
+        <description>
+            <p>You attempt to remove a creature’s ability to regenerate. As an action, choose a creature that you can see within 30 feet of you to make a Constitution saving throw. On a failed save, the creature cannot have any of its hit points restored until the end of its next turn.</p>
+        </description>
+        <sheet>
+            <description action="Action">As an action, choose a creature that you can see within 30 feet of you to make a Constitution saving throw. On a failed save, the creature cannot have any of its hit points restored until the end of its next turn.</description>
+        </sheet>
+    </element>
+    <element name="Unintelligible Hex" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_HEX_UNINTELLIGIBLE">
+        <supports>YAG Hexes</supports>
+        <description>
+            <p>You attempt to curse a creature’s ability to speak. As an action, choose a creature within 30 feet of you to make a Wisdom saving throw. On a failed save, the creature loses its ability to speak clearly. The creature has disadvantage on all Charisma checks and cannot cast spells that include vocal components until the end of its next turn.</p>
+        </description>
+        <sheet>
+            <description action="Action">As an action, choose a creature within 30 feet of you to make a Wisdom saving throw. On a failed save, the creature loses its ability to speak clearly. The creature has disadvantage on all Charisma checks and cannot cast spells that include vocal components until the end of its next turn.</description>
+        </sheet>
+    </element>
+    <element name="Combative Hex" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_HEX_COMBATIVE">
+        <supports>YAG Hexes</supports>
+        <description>
+            <p>You attempt to curse a creature to fight with itself. As an action, choose a creature you can see within 30 feet of you to make a Wisdom saving throw. On a failed save, whenever the creature takes the Attack action, the creature takes half the damage dealt. This effect lasts until the end of the creature’s next turn.</p>
+        </description>
+        <sheet>
+            <description action="Action">As an action, choose a creature you can see within 30 feet of you to make a Wisdom saving throw. On a failed save, whenever the creature takes the Attack action, the creature takes half the damage dealt. This effect lasts until the end of the creature’s next turn.</description>
+        </sheet>
+    </element>
+    <element name="Clumsy Hex" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_HEX_CLUMSY">
+        <supports>YAG Hexes</supports>
+        <description>
+            <p>You attempt to curse a creature with unstable movement. Choose a creature within 30 feet of you to make a Wisdom saving throw. On a failed save, the creature has disadvantage on Dexterity saving throws until the end of its next turn.</p>
+        </description>
+        <sheet>
+            <description action="Action">Choose a creature within 30 feet of you to make a Wisdom saving throw. On a failed save, the creature has disadvantage on Dexterity saving throws until the end of its next turn.</description>
+        </sheet>
+    </element>
+    <element name="Doomed Hex" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_HEX_DOOMED">
+        <supports>YAG Hexes</supports>
+        <description>
+            <p>You attempt to sow doom for another. Choose a target within 30 feet of you that you can see to make a Dexterity saving throw. On a failed save, blackened energy surrounds the target, and the next attack made against the target is considered a critical hit. This effect lasts until the end of the creature’s next turn, or until it has been attacked once while this hex is active.</p>
+        </description>
+        <sheet>
+            <description action="Action">Choose a target within 30 feet of you that you can see to make a Dexterity saving throw. On a failed save, blackened energy surrounds the target, and the next attack made against the target is considered a critical hit. This effect lasts until the end of the creature’s next turn, or until it has been attacked once while this hex is active.</description>
+        </sheet>
+    </element>
+    <element name="Drowning Hex" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_HEX_DROWNING">
+        <supports>YAG Hexes</supports>
+        <description>
+            <p>You attempt to drown a creature in blackened water. Choose a creature within 30 feet of you to make a Constitution saving throw. On a failed save, the creature feels its lungs and mouth suddenly fill with blackened water. The creature begins suffocating, and must spend its next turn trying to cough up the water. This effect lasts until the end of its next turn.</p>
+        </description>
+        <sheet>
+            <description action="Action">Choose a creature within 30 feet of you to make a Constitution saving throw. On a failed save, the creature feels its lungs and mouth suddenly fill with blackened water. The creature begins suffocating, and must spend its next turn trying to cough up the water. This effect lasts until the end of its next turn.</description>
+        </sheet>
+    </element>
+    <element name="Bloody Hex" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_HEXMASTERY_HEX_">
+        <supports>YAG Hexes</supports>
+        <description>
+            <p>You attempt to increase the severity of a creature’s wounds. Choose a creature within 30 feet of you that is below its hit point maximum to make a Constitution saving throw. On a failed save, whenever the creature takes damage, it takes additional damage equal to your Intelligence modifier. This effect lasts until the end of its next turn.</p>
+        </description>
+        <sheet>
+            <description action="Action">Choose a creature within 30 feet of you that is below its hit point maximum to make a Constitution saving throw. On a failed save, whenever the creature takes damage, it takes {{intelligence:modifier}} additional damage. This effect lasts until the end of its next turn.</description>
+        </sheet>
+    </element>
+    
+</elements>

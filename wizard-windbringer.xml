@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Windbringer" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_WINDBRINGER">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>Your studies focus on the primordial might of the winds, harnessing the strength of the sky to aid you. Known as Windbringers, wizards who follow this tradition of sky magic feel most at home near or in the open air, and often study weather patterns, creatures of the air, or the Elemental Plane of Air. Windbringers prefer spells that aid their maneuverability and bring the winds down upon their foes.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_WINDBRINGER_SKY_SPEAKER" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_WINDBRINGER_SHIELDING_AIR" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_WINDBRINGER_GALE_MAGE" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_WINDBRINGER_AIRBORNE_PRODIGY" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_WINDBRINGER_WIND_MASTERY" />
+        </description>
+        <sheet display="false">
+            <description>Your studies focus on the primordial might of the winds, harnessing the strength of the sky to aid you.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_WINDBRINGER_SKY_SPEAKER" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_WINDBRINGER_SHIELDING_AIR" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_WINDBRINGER_GALE_MAGE" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_WINDBRINGER_AIRBORNE_PRODIGY" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_WINDBRINGER_WIND_MASTERY" level="14" />
+        </rules>
+    </element>
+
+    <element name="Sky Speaker" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_WINDBRINGER_SKY_SPEAKER">
+        <description>
+            <p>Starting at 2nd level, you have begun your studies of the sky and air. You learn how to read, write, and speak Auran, and you learn the gust cantrip. When you cast gust, you can cast it as a bonus action, and can affect creatures of size Large or smaller.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action">When you cast gust, you can cast it as a bonus action, and can affect creatures of size Large or smaller.</description>
+        </sheet>
+        <rules>
+            <grant type="Language" id="ID_MM_LANGUAGE_AURAN" />
+            <grant type="Spell" id="ID_XGTE_SPELL_GUST" spellcasting="Wizard" prepared="true" />
+        </rules>
+    </element>
+    <element name="Shielding Air" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_WINDBRINGER_SHIELDING_AIR">
+        <description>
+            <p>Beginning when you select this tradition at 2nd level, you can use mighty winds to protect you. Whenever you cast a spell of 1st level or higher, you can surround yourself with whirling winds as part of the same action used to cast the spell. Until the beginning of your next turn, ranged weapon attacks made against you have disadvantage on the attack roll.</p>
+        </description>
+        <sheet>
+            <description>Whenever you cast a spell of 1st level or higher, you can surround yourself with whirling winds as part of the same action used to cast the spell. Until the beginning of your next turn, ranged weapon attacks made against you have disadvantage on the attack roll.</description>
+        </sheet>
+    </element>
+    <element name="Gale Mage" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_WINDBRINGER_GALE_MAGE">
+        <description>
+            <p>At 6th level, you have learned how to infuse your spells with mighty air. Whenever you cast a spell of 1st level or higher, you can use a bonus action to channel wind through the spell, choosing one of the following effects:</p>
+            <ul>
+                <li>If the spell targets one or more hostile creatures, each creature must make a Strength saving throw or be pushed back 15 feet by a mighty gust.</li>
+                <li>If the spell targets you or an ally, you or your ally’s movement speed increases by 10 feet until the end of their next turn. This increases to 20 feet at 14th level.</li>
+                <li>The spell’s range increases by 20 feet.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description action="Bonus Action" level="6">Whenever you cast a spell of 1st level or higher, you can use a bonus action to choose one of the following effects:
+            If the spell targets one or more hostile creatures, each creature must make a Strength saving throw or be pushed back 15 feet by a mighty gust.
+            If the spell targets you or an ally, you or your ally’s movement speed increases by 10 feet until the end of their next turn.
+            The spell’s range increases by 20 feet.</description>
+            <description action="Bonus Action" level="14">Whenever you cast a spell of 1st level or higher, you can use a bonus action to choose one of the following effects:
+            If the spell targets one or more hostile creatures, each creature must make a Strength saving throw or be pushed back 15 feet by a mighty gust.
+            If the spell targets you or an ally, you or your ally’s movement speed increases by 20 feet until the end of their next turn.
+            The spell’s range increases by 20 feet.</description>
+        </sheet>
+    </element>
+    <element name="Airborne Prodigy" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_WINDBRINGER_AIRBORNE_PRODIGY">
+        <description>
+            <p>By 10th level, you have become attuned to the strength of the winds. You can cast the levitate spell on yourself or a willing creature at will, without expending a spell slot. When you cast levitate in this way, you can move the target in any direction of your choice when you use an action to move it.</p>
+        </description>
+        <sheet>
+            <description>You can cast the levitate spell on yourself or a willing creature at will, without expending a spell slot. When you cast levitate in this way, you can move the target in any direction of your choice when you use an action to move it.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_LEVITATE" prepared="true" spellcasting="Wizard" />
+        </rules>
+    </element>
+    <element name="Wind Mastery" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_WINDBRINGER_WIND_MASTERY">
+        <description>
+            <p>At 14th level, you have gained mastery over wind. As an action, you can cast the investiture of wind spell on yourself without expending a spell slot. When you cast investiture of wind in this way, while the spell is active, creatures of your choice up to your Intelligence modifier within a 20-foot radius of you also gain a flying speed of 60 feet as long as you maintain concentration on the spell. If you or an ally land before the spell ends, you or your ally take no falling damage and can land on their feet.</p>
+            <p class="indent">Once you cast investiture of wind in this way, you can’t do so again until you finish a long rest, though you can still cast it normally using an available spell slot.</p>
+        </description>
+        <sheet>
+            <description action="Action" usage="1/Long Rest">As an action, you can cast the investiture of wind spell on yourself without expending a spell slot. When you cast investiture of wind in this way, while the spell is active, up to {{intelligence:modifier}} creatures of your choice within a 20-foot radius of you also gain a flying speed of 60 feet as long as you maintain concentration on the spell. If you or an ally land before the spell ends, you or your ally take no falling damage and can land on their feet.
+            Once you cast investiture of wind in this way, you can’t do so again until you finish a long rest, though you can still cast it normally using an available spell slot.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_XGTE_SPELL_INVESTITURE_OF_WIND" spellcasting="Wizard" />
+        </rules>
+    </element>
+    
+</elements>

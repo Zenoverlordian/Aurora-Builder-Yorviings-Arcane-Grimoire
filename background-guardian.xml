@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Guardian" type="Background" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_BACKGROUND_GUARDIAN">
+        <description>
+            <p>You were trained and provisioned to be a guardian to a special place. Whether you were brought up in a family that has always been guardians, or decided to become one out of choice, you are a staunch defender and warrior. Perhaps you guard a temple or sacred site from those who wish to take it. Or, you could have been a member of a royal guard or protected a city from invaders.</p>
+            <p class="indent">When you choose this background, work with your DM to determine what kind of organization you were a part of, how your training was, and what kind of place you swore to protect. Was it an ancient temple dedicated to the gods? Or was it a city which you loved dearly, and would give your life to protect?</p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> Intimidation, Perception</li>
+                <li><strong>Languages:</strong> Two of your choice</li>
+                <li><strong>Equipment:</strong> A set of common clothes, a set of medium armor, a simple or martial weapon of your choice, a banner, a ring of keys that go to where you are stationed, and a pouch containing 10 gp</li>
+            </ul>
+            <div element="ID_BACKGROUND_FEATURE_GUARDIANS_YAG_CONNECTIONS" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>For those who are guardians, the law and upholding of vows and honor are important, regardless of what, where, or whom you serve. Thus, guardians tend to be those with a firm understanding and respect for rules and structure, while also being people who are strong and brave.</p>
+        </description>
+        <setters>
+            <set name="short">Intimidation, Perception, 2 Languages</set>
+        </setters>
+        <rules>
+            <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_GUARDIANS_YAG_CONNECTIONS" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+            <select type="Language" name="Language, Guardian" supports="Standard||Exotic" number="2" />
+            <select type="List" name="Personality Trait" number="2">
+                <item id="1">I take great pride in guarding what I have sworn to protect.</item>
+                <item id="2">While I once had a passion for what I guard, it has been a rather dull experience so far.</item>
+                <item id="3">I tend to create little stories in my head to occupy my time.</item>
+                <item id="4">I may adhere to my post with honor and dignity, but I do enjoy a good distraction every now and then.</item>
+                <item id="5">I tend to enjoy the company of those who adhere to the law.</item>
+                <item id="6">Protecting the innocent is the most admirable thing that one can do.</item>
+                <item id="7">I know that the place I defend will play a role of great importance in the events to come.</item>
+                <item id="8">I guard one who is going to change the world.</item>
+            </select>
+            <select type="List" name="Ideal">
+                <item id="1">Honor. I adhere to the strict rules and requirements of being a guardian. (Lawful)</item>
+                <item id="2">Sacrifice. I will lay down my life if need be for those that I protect. (Good)</item>
+                <item id="3">Power. I know how to wield my position to obtain what I want. (Evil)</item>
+                <item id="4">Determination. I will stop at nothing and will do anything to protect that which I guard. (Chaotic)</item>
+                <item id="5">Defense. I chose this path, and it is one that I swear to uphold the tenets of. (Lawful)</item>
+                <item id="6">Protection. I will defend the one I am told to protect. (Any)</item>
+            </select>
+            <select type="List" name="Bond">
+                <item id="1">I am the guardian of an heir to a fallen empire. I will restore them to power, but until then I must keep them hidden and safe.</item>
+                <item id="2">My closest friends are the priests and priestesses of the temple I protect.</item>
+                <item id="3">I am the sole surviving guardian of an ancient and forgotten magical structure.</item>
+                <item id="4">An otherworldly entity instructed me with guarding a portal to their realm.</item>
+                <item id="5">I uphold the laws and tenets of the city I have vowed to defend.</item>
+                <item id="6">Through heat and rain and storm, I shall stand as a shield that protects my master.</item>
+            </select>
+            <select type="List" name="Flaw">
+                <item id="1">Those who break the law are the worst society has to offer, and I show them no pity or remorse.</item>
+                <item id="2">I often find myself wishing for a life of guarding something more worthwhile.</item>
+                <item id="3">I don’t often agree with how my charge acts and thinks, to their continuous consternation.</item>
+                <item id="4">I talk a big game, but deep down I doubt myself constantly.</item>
+                <item id="5">I am secretly scared of dying for my cause.</item>
+                <item id="6">I feel as though I will never be seen as worthy by those I protect, and thus I do anything I can to feel as though I have value.</item>
+            </select>
+        </rules>
+    </element>
+
+    <element name="Feature: Guardian's Connections" type="Background Feature" source="Yorviing's Arcane Grimoire" id="ID_BACKGROUND_FEATURE_GUARDIANS_YAG_CONNECTIONS">
+        <description>
+            <p>You have a special position due to your profession as a guardian. Other guardians, regardless of whether or not they work with you or not, recognize your nature as a guardian, and will show their respect. You can also invoke your status as a guardian to gain access to the occasional restricted area, provided that you have not shown yourself to be a threat. Additionally, you can requisition simple equipment from other guardians, so long as they are equipped to do so.</p>
+        </description>
+        <sheet alt="Guardian's Connections">
+            <description>You have a special position due to your profession as a guardian. Other guardians, regardless of whether or not they work with you or not, recognize your nature as a guardian, and will show their respect. You can also invoke your status as a guardian to gain access to the occasional restricted area, provided that you have not shown yourself to be a threat. Additionally, you can requisition simple equipment from other guardians, so long as they are equipped to do so.</description>
+        </sheet>
+    </element>
+    
+</elements>

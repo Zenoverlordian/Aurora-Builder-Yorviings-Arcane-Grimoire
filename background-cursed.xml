@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Cursed" type="Background" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_BACKGROUND_CURSED">
+        <description>
+            <p>Before you began your life as an adventurer, it was changed by a single event that caused you to be cursed. You now bear a curse that both magic and medicine alike have yet to lift, and you fear that you may never be rid of it. Because of this event, certain elements have great importance in your life. Choose a terrible event, a curse mark, and a curse breaker from the options below, or roll a 1d10 for each table.</p>
+            <p class="indent">When you choose this background, work with your DM to determine the nature of your curse, how you acquired it, and what kind of effects, both positive and negative, that the curse has upon you. Is it one that has been passed down through your family? Or is it one you acquired during your travels throughout the land?</p>
+            <table>
+                <thead>
+                    <tr><td>d10</td><td>Terrible Event</td></tr>
+                </thead>
+                <tr><td>1</td><td>You angered a local witch after double crossing her.</td></tr>
+                <tr><td>2</td><td>While out exploring, you stumbled upon a magical object. Touching it placed a curse upon you.</td></tr>
+                <tr><td>3</td><td>You and other members of your village performed a ritual that went horribly wrong. You all now bear a curse.</td></tr>
+                <tr><td>4</td><td>An otherworldly being descended upon your city. Those who survived were wracked with a terrible curse.</td></tr>
+                <tr><td>5</td><td>You had your fortune told, and ignored the omens.</td></tr>
+                <tr><td>6</td><td>While fighting an otherworldly or undead creature, you came in contact with them, and they placed a powerful enchantment upon you.</td></tr>
+                <tr><td>7</td><td>Whilst visiting in a vast library or museum, you broke your way into a restricted area, and found a forbidden tome that you proceeded to open.</td></tr>
+                <tr><td>8</td><td>You used to worship a particular god, but then angered them. They have since brought down their wrath upon you.</td></tr>
+                <tr><td>9</td><td>Your curse is hereditary, and was passed onto you without your will or say in the matter. Members of your family have been dealing with this curse for generations.</td></tr>
+                <tr><td>10</td><td>In a state of bitterness and anger, a former lover of yours went to a sorceress and had them place a harmful effect upon you.</td></tr>
+            </table>
+            <table>
+                <thead>
+                    <tr><td>d10</td><td>Curse Mark</td></tr>
+                </thead>
+                <tr><td>1</td><td>Your eyes are an unnatural color, such as purple or red, or appear like cat or reptile eyes.</td></tr>
+                <tr><td>2</td><td>Your body is covered in tattoos consisting of words and phrases in a forgotten language.</td></tr>
+                <tr><td>3</td><td>Your tongue is long and forked.</td></tr>
+                <tr><td>4</td><td>When you bleed, your blood appears black and thick.</td></tr>
+                <tr><td>5</td><td>Your hand has a small, black mark upon it that cannot be removed.</td></tr>
+                <tr><td>6</td><td>Your hair or fur is ashen colored, and cannot be dyed into a new color.</td></tr>
+                <tr><td>7</td><td>Your body is covered in burn marks that you cover in bandages and wraps.</td></tr>
+                <tr><td>8</td><td>When you speak, a second voice seems to follow yours, slightly echoing your words.</td></tr>
+                <tr><td>9</td><td>Your lips, tongue, teeth, eyes, fingers, hands, and feet appear blackened and constantly covered in black ash.</td></tr>
+                <tr><td>10</td><td>Somewhere on your body is a brand mark that appears to be some kind of magical seal.</td></tr>
+            </table>
+            <h5>Breaking the Curse</h5>
+            <p>Having a character that has a curse associated with them can lead to many fun and exciting moments, both for mechanics and for elements of plot and storytelling. However, should a player decide upon having their character have a curse, it is best to work out some degree of understanding regarding not only the nature of the curse and the ways in which it manifests itself, but also having an understanding of how to end the curse or break it.</p>
+            <p class="indent">Players, should you choose this background for a character, work with your DM to discuss how one would go about breaking your curse. Perhaps your character is fully aware of how to break it, yet the means with which to do so are incredibly difficult to obtain. Or, your character may know very little about the curse, and may only have a small clue or hint towards how to break it, or maybe no clue at all.</p>
+            <h5>CURSES</h5>
+            <p>A curse can manifest itself in a variety of different ways. Some are cursed with a disease that allows them to transform into different beings, such as lycanthropy or vampirism. Other curses can render one unable to properly use one or more of their senses, may cause one to live an unnaturally long life, or may never allow for someone to ever feel loved again. Talk with your DM about the nature of your character’s curse, and how it will best fit within the confines of your DM’s world and campaign.</p>
+                <li><strong>To DMs.</strong> Some curses are severe, while others are not. If a curse is severe, consider possibly giving your player a small bonus to them to compensate. For example, if a curse blinds the character, perhaps allow them to have advantage on Wisdom (Perception) checks that rely on hearing.</li>
+            <p class="indent"><strong>Skill Proficiencies:</strong> Arcana, Intimidation</p>
+            <ul class="unstyled">
+                <li><strong>Languages:</strong> One exotic language (Abyssal, Celestial, Deep Speech, Draconic, Infernal, Primordial, Sylvan, or Undercommon)</li>
+                <li><strong>Equipment:</strong> A memento from a time before you were cursed, a set of traveler’s clothes, a small bag of sage, a quill, an ink pot, a blank journal, a cloak, and a small coin sack of 5 gp</li>
+            </ul>
+            <div element="ID_BACKGROUND_FEATURE_YAG_CURSED_EXISTENCE" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>Those who are cursed can be varied in terms of their appearances, backgrounds, and professions. How they choose to interact with others, as well as how they handle their curses, can shape their outlook on their lives.</p>
+        </description>
+        <setters>
+            <set name="short">Arcana, Intimidation, One Exotic Language</set>
+        </setters>
+        <rules>
+            <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_YAG_CURSED_EXISTENCE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+            <select type="Language" name="Language, " supports="Exotic" />
+            <select type="List" name="Personality Trait" number="2" optional="true">
+                <item id="1">I try to focus on anything but my curse, hoping it will distract me from it.</item>
+                <item id="2">I speak often about my optimism on finding a cure, but secretly I doubt I will ever be rid of this curse.</item>
+                <item id="3">I try my best to hide the effects of my curse, so as to not alarm others.</item>
+                <item id="4">I embrace my curse as just another part of my personality and being. I want to find the cure, but am not sure if I would use it on myself.</item>
+                <item id="5">I have little memory of my life before I received this curse.</item>
+                <item id="6">I long to find a way to remove this curse so that others will not suffer from it.</item>
+                <item id="7">I have little care for the gods.</item>
+                <item id="8">I often put a lot of hope behind every clue I can regarding a cure for this curse.</item>
+            </select>
+            <select type="List" name="Ideal" optional="true">
+                <item id="1">Freedom. I long to be free of this curse. (Any).</item>
+                <item id="2">Redemption. It is my fault that I am cursed, thus it is my burden to remove myself of it’s grasp. (Lawful)</item>
+                <item id="3">Revenge. I swear to defeat the one who cursed me, no matter what. (Chaotic)</item>
+                <item id="4">Acceptance. I wish only to be accepted as a normal person, and not to let this curse define me. (Good)</item>
+                <item id="5">Distribution. I will have all who wronged me suffer from this same curse. (Evil)</item>
+                <item id="6">Purity. I long to not only rid myself of my curse, but the curses of others as well. (Good).</item>
+            </select>
+            <select type="List" name="Bond" optional="true">
+                <item id="1">Though I journey to rid my curse, I would gladly die for my friends.</item>
+                <item id="2">The gods cruelly manipulate people. I will stand against this.</item>
+                <item id="3">I will free my family from the curse that has haunted us.</item>
+                <item id="4">I can feel the curse tempting me with power every day, but I always deny it.</item>
+                <item id="5">I yearn for companionship, as my curse often drives others away.</item>
+                <item id="6">Having been cursed, I sympathize with those who fall upon terrible times or fortunes of which they have no control over.</item>
+            </select>
+            <select type="List" name="Flaw" optional="true">
+                <item id="1">I assume everyone thinks little of me.</item>
+                <item id="2">I jump at even bad gambles for any clue to a cure.</item>
+                <item id="3">When I am in pain, I never confide in others so as to not burden them with my troubles.</item>
+                <item id="4">My curse has a voice that only I can hear. I struggle to not listen to it.</item>
+                <item id="5">I care little for companionships, knowing that I won’t have them for long.</item>
+                <item id="6">I do anything I can to take my mind off of my curse. Anything.</item>
+            </select>
+        </rules>
+    </element>
+
+    <element name="Feature: Cursed Existence" type="Background Feature" source="Yorviing's Arcane Grimoire" id="ID_BACKGROUND_FEATURE_YAG_CURSED_EXISTENCE">
+        <description>
+            <p>The nature of your curse can change not only your appearance, but how others react to you as well. Your curse may cause others to take pity upon you, offering anything that they can to aid or help you. In doing so, they may give you advice or directions to people who might be able to help you more.</p>
+            <p class="indent">However, your curse may also cause others to fear you, and shut their doors and homes to you, fearing that you may bring your curse upon their family or home.</p>
+        </description>
+        <sheet alt="Cursed Existence">
+            <description>The nature of your curse can change not only your appearance, but how others react to you as well. Your curse may cause others to take pity upon you, offering anything that they can to aid or help you. In doing so, they may give you advice or directions to people who might be able to help you more. However, your curse may also cause others to fear you, and shut their doors and homes to you, fearing that you may bring your curse upon their family or home.</description>
+        </sheet>
+    </element>
+    
+</elements>

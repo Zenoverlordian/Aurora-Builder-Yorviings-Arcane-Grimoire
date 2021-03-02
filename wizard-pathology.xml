@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Pathology" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_PATHOLOGY">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>The world is full of sickness, plagues, poisons, and illnesses of all kinds. Those who follow the arcane tradition of Pathology know this very well, and choose to focus their studies on gaining knowledge of diseases and poisons, and how to both control their effects. Pathologists of ‘plague mages’, as they are called, favor spells that deal with poison and disease, and are often found working as doctors, medical experimenters, or wielding the strength of diseases for their own personal use.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PATHOLOGY_ILL_KNOWLEDGE" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PATHOLOGY_PLAGUE_MAGIC" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PATHOLOGY_SANITIZE_INFECT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PATHOLOGY_AFFLICTED_CONSTITUTION" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PATHOLOGY_MALADY_MASTERY" />
+        </description>
+        <sheet display="false">
+            <description>Those who follow the arcane tradition of Pathology know this very well, and choose to focus their studies on gaining knowledge of diseases and poisons, and how to both control their effects.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PATHOLOGY_ILL_KNOWLEDGE" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PATHOLOGY_PLAGUE_MAGIC" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PATHOLOGY_SANITIZE_INFECT" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PATHOLOGY_AFFLICTED_CONSTITUTION" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PATHOLOGY_MALADY_MASTERY" level="14" />
+        </rules>
+    </element>
+
+    <element name="Ill Knowledge" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PATHOLOGY_ILL_KNOWLEDGE">
+        <description>
+            <p>By 2nd level, you have gained additional knowledge regarding diseases and plagues. You gain proficiency in the Medicine skill and the Herbalism Kit, and you have advantage on saving throws against diseases.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on saving throws against diseases.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_MEDICINE" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+        </rules>
+    </element>
+    <element name="Plague Magic" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PATHOLOGY_PLAGUE_MAGIC">
+        <description>
+            <p>Beginning at 2nd level, you have begun your journey into plague magic. Whenever a creature fails a saving throw against a spell that you cast of 1st level or higher that deals either necrotic or poison damage, the creature becomes infected with a temporary disease. Until the end of its next turn, the creature suffers one of the following effects of your choice:</p>
+            <ul>
+                <li>The creature's movement speed is halved.</li>
+                <li>The creature has disadvantage on Constitution saving throws.</li>
+                <li>The creature must spend its bonus action retching and coughing, if it has a mouth.</li>
+                <li>The creature cannot gain temporary hit points.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description>Whenever a creature fails a saving throw against a spell that you cast of 1st level or higher that deals either necrotic or poison damage, the creature becomes infected with a temporary disease. Until the end of its next turn, the creature suffers one of the following effects of your choice:
+            The creature's movement speed is halved.
+            The creature has disadvantage on Constitution saving throws.
+            The creature must spend its bonus action retching and coughing, if it has a mouth.
+            The creature cannot gain temporary hit points.</description>
+        </sheet>
+    </element>
+    <element name="Sanitize &amp; Infect" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PATHOLOGY_SANITIZE_INFECT">
+        <description>
+            <p>At 6th level, you have learned how to both remove and bring disease. You add the lesser restoration and stinking cloud to your spellbook, and lesser restoration is considered a wizard spell for you. When you cast stinking cloud, you can choose to have the spell centered on yourself and move with you for the spell’s duration, and you are immune to the spell’s effects while it is active. The spell also does not require concentration when cast in this way.</p>
+            <p class="indent">Once you cast stinking cloud in this way, you can’t do so again until you finish a short or long rest, though you can still cast it normally using an available spell slot.</p>
+        </description>
+        <sheet>
+            <description usage="1/Short Rest">When you cast stinking cloud, you can choose to have the spell centered on yourself and move with you for the spell’s duration, and you are immune to the spell’s effects while it is active. The spell also does not require concentration when cast in this way.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_STINKING_CLOUD" spellcasting="Wizard" />
+            <grant type="Spell" id="ID_PHB_SPELL_LESSER_RESTORATION" spellcasting="Wizard" />
+        </rules>
+    </element>
+    <element name="Afflicted Constitution" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PATHOLOGY_AFFLICTED_CONSTITUTION">
+        <description>
+            <p>By 10th level, you have become attuned to the effects of disease. You gain immunity to the poisoned condition and disease.</p>
+            <p class="indent">In addition, you add the contagion spell into your spellbook. When you cast contagion, you can inflict a target with two effects instead of one.</p>
+            <p class="indent">Once you cast contagion in this way, you can’t do so again until you finish a short or long rest, though you can still cast it normally using an available spell slot.</p>
+        </description>
+        <sheet>
+            <description usage="1/Short Rest">You gain immunity to the poisoned condition and disease. Additionally, when you cast contagion, you can choose to inflict a target with two effects instead of one.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_CONTAGION" spellcasting="Wizard" />
+        </rules>
+    </element>
+    <element name="Malady Mastery" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PATHOLOGY_MALADY_MASTERY">
+        <description>
+            <p>At 14th level, the diseases and poisons you create have become dangerously efficient. Whenever a creature fails a saving throw against one of your spells that deals acid or poison damage or inflicts a disease, the creature’s maximum hit points are reduced by an amount equal to twice your wizard level plus your Intelligence modifier for the next year. A creature can only be affected by this ability once per year, and a creature affected by this ability cannot restore these lost hit points for the duration of the effect, aside from the greater restoration or wish spells.</p>
+        </description>
+        <sheet>
+            <description>Whenever a creature fails a saving throw against one of your spells that deals acid or poison damage or inflicts a disease, the creature’s maximum hit points are reduced by {{malady mastery:dmg}} for the next year. A creature can only be affected by this ability once per year, and a creature affected by this ability cannot restore these lost hit points for the duration of the effect, aside from the greater restoration or wish spells.</description>
+        </sheet>
+        <rules>
+            <stat name="malady mastery:dmg" value="level:wizard" />
+            <stat name="malady mastery:dmg" value="level:wizard" />
+            <stat name="malady mastery:dmg" value="intelligence:modifier" />
+        </rules>
+    </element>
+    
+</elements>

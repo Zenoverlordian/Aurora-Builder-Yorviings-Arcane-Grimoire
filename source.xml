@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Yorviing's Arcane Grimoire" type="Source" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_SOURCE_YORVIINGS_ARCANE_GRIMOIRE">
+        <description>
+            <![CDATA[<p>Welcome, dear reader, to Yorviing's Arcane Grimoire, a tome holding a large quantity of arcane themed player options for the greatest roleplaying game ever made. Inside these pages, you will find many Arcane Traditions for wizards, multiple spells, magical items, roll tables, backgrounds, and much, much more.</p>
+            <p>The contents within this book are meant to provide many different homebrew options for a game or campaign. There are subclasses for wizards (and even a few that are not for wizards) to create characters, spells to grant spellcasters and wielders of magic, magical items that can be found, purchased, or gifted to players, roll tables to help flesh out a character's backstory, personality, and worldview, and even setting neutral factions that a Dungeon Master can incorporate into their world or a campaign, either as a preexisting one or as one the players perhaps strive to create or bring back.</p>
+            <p>Yorviing's Arcane Grimoire, or YAG for short, is meant for both players and DMs to help them in creating more characters and character concepts and to bring more arcane elements into a story or world.</p>]]>
+        </description>
+        <setters>
+            <set name="abbreviation">YAG</set>
+            <set name="url">https://www.gmbinder.com/share/-Lx2r95-_Z8zlgFJHp4Z</set>
+            <set name="image">https://i.redd.it/ttp8vg722ya41.jpg</set>
+            <set name="author" abbreviation="Yorviing" url="https://www.reddit.com/user/Yorviing/submitted/">Yorviing</set>
+            <set name="official">false</set>
+            <set name="supplement">false</set>
+            <set name="playtest">false</set>
+            <set name="third-party">true</set>
+            <set name="homebrew">false</set>
+            <set name="league">false</set>
+            <set name="release">20200118</set>
+        </setters>
+    </element>
+    
+</elements>

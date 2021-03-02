@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Stormsinger" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_STORMSINGER">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>There are some wizards who understand that, after enough studying and practice, magical power can be harnessed from the raw power of storms. These wizards, known as 'Stormsingers', develop a unique form of magic known as the 'Stormsong', which grants them strength against lightning and thunder, as well as increased speed. Followers of this tradition often find peace and solitude in the presence of mighty tempests and gales, living in areas with where they occur frequently as they continue studying their behavior and perfecting the art of the Stormsong.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_STORMSINGER_THUNDEROUS_SAVANT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_STORMSINGER_STORMSONG" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_STORMSINGER_LIGHTNING_FLASH" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_STORMSINGER_BLITZKRIEG" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_STORMSINGER_MASTER_OF_THE_TEMPEST" />
+        </description>
+        <sheet display="false">
+            <description>There are some wizards who understand that, after enough studying and practice, magical power can be harnessed from the raw power of storms.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_STORMSINGER_THUNDEROUS_SAVANT" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_STORMSINGER_STORMSONG" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_STORMSINGER_LIGHTNING_FLASH" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_STORMSINGER_BLITZKRIEG" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_STORMSINGER_MASTER_OF_THE_TEMPEST" level="14" />
+        </rules>
+    </element>
+
+    <element name="Thunderous Savant" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_STORMSINGER_THUNDEROUS_SAVANT">
+        <description>
+            <p>Beginning when you choose this tradition at 2nd level, you have begun your studies of storms and stormy magic. You gain proficiency in the Nature skill.</p>
+            <p class="indent">In addition, the gold and time you must spend to copy a spell that can deal lightning or thunder damage is halved.</p>
+        </description>
+        <sheet>
+            <description>The gold and time you must spend to copy a spell that can deal lightning or thunder damage is halved.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_NATURE" />
+        </rules>
+    </element>
+    <element name="Stormsong" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_STORMSINGER_STORMSONG">
+        <description>
+            <p>Starting at 2nd level, you can channel the might of storms through a magical art called a Stormsong, provided you aren’t wearing medium or heavy armor or using a shield. The Stormsong creates rain and streaks of lightning that swirl around you and occupy your space, and it grants you enhanced defenses, movement, and strength.</p>
+            <p class="indent">You can use a bonus action to start the Stormsong, which lasts for 1 minute. It ends early if you are incapacitated, or if you don medium or heavy armor or a shield. You can also dismiss the Stormsong at any time you choose (no action required).</p>
+            <p class="indent">While your Stormsong is active, you gain the following benefits:</p>
+            <ul>
+                <li>You gain resistance to lightning and thunder damage.</li>
+                <li>Your voice booms and is audible from 150 feet away</li>
+                <li>Your movement speed increases by 10 feet.</li>
+                <li>Whenever you hit a creature with a weapon attack or spell attack, you can deal extra lightning or thunder damage (your choice) equal to your Intelligence modifier.</li>
+            </ul>
+            <p class="indent">You can use this feature twice. You regain all expended uses of it when you finish a short or long rest.</p>
+        </description>
+        <sheet>
+            <description usage="2/Short Rest" action="Bonus Action" level="2">You can use a bonus action to start the Stormsong, which lasts for 1 minute. It ends early if you are incapacitated, or if you don medium or heavy armor or a shield. You can also dismiss the Stormsong at any time you choose (no action required). While your Stormsong is active, you gain the following benefits:
+            You gain resistance to lightning and thunder damage.
+            Your voice booms and is audible from 150 feet away
+            Your movement speed increases by 10 feet.
+            Whenever you hit a creature with a weapon attack or spell attack, you can deal {{intelligence:modifier}} extra lightning or thunder damage (your choice).</description>
+            <description usage="2/Short Rest" action="Bonus Action" level="10">You can use a bonus action to start the Stormsong, which lasts for 1 minute. It ends early if you are incapacitated, or if you don medium or heavy armor or a shield. You can also dismiss the Stormsong at any time you choose (no action required). While your Stormsong is active, you gain the following benefits:
+            You gain resistance to lightning and thunder damage.
+            Your voice booms and is audible from 150 feet away
+            Your movement speed is doubled.
+            Whenever you hit a creature with a weapon attack or spell attack, you can deal {{intelligence:modifier}} extra lightning or thunder damage (your choice).</description>
+        </sheet>
+    </element>
+    <element name="Lightning Flash" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_STORMSINGER_LIGHTNING_FLASH">
+        <description>
+            <p>By 6th level, you have learned how to move as fast as lightning. Whenever you roll for initiative, you can add your Intelligence modifier to the result of the roll. You also add the thunder step spell to your spellbook, if it is not there already. When you cast thunder step, you can cast it as a bonus action, and you can choose for thunder step to deal lightning damage instead of thunder.</p>
+        </description>
+        <sheet>
+            <description>Whenever you roll for initiative, you can add {{intelligence:modifier}} to the result of the roll. When you cast thunder step, you can cast it as a bonus action, and you can choose for thunder step to deal lightning damage instead of thunder.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_XGTE_SPELL_THUNDER_STEP" spellcasting="Wizard" />
+        </rules>
+    </element>
+    <element name="Blitzkrieg" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_STORMSINGER_BLITZKRIEG">
+        <description>
+            <p>At 10th level, you can summon a storm wherever you are. You add the call lightning spell to your spellbook, and it counts as a wizard spell for you. Whenever you cast call lightning while your Stormsong is active, the rain and lightning surrounding you from the Stormsong counts as an existing storm for the purposes of the spell’s increased damage.</p>
+            <p class="indent">Additionally, you can no longer be blinded by lightning or deafened by thunder, and when using your Stormsong, your movement speed is doubled instead of being increased by 10 feet.</p>
+        </description>
+        <sheet>
+            <description>Whenever you cast call lightning while your Stormsong is active, the rain and lightning surrounding you from the Stormsong counts as an existing storm for the purposes of the spell’s increased damage. Additionally, you can no longer be blinded by lightning or deafened by thunder.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_CALL_LIGHTNING" spellcasting="Wizard" />
+        </rules>
+    </element>
+    <element name="Master of the Tempest" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_STORMSINGER_MASTER_OF_THE_TEMPEST">
+        <description>
+            <p>At 14th level, you have become as mighty as a storm. While your Stormsong is active, the rain and lightning surrounding you extends out to a 10-foot radius sphere around you. Whenever a hostile creature enters the area for the first time on a turn or starts its turn there, it takes lightning or thunder damage (your choice) equal to half your wizard level.</p>
+        </description>
+        <sheet>
+            <description>While your Stormsong is active, the rain and lightning surrounding you extends out to a 10-foot radius sphere around you. Whenever a hostile creature enters the area for the first time on a turn or starts its turn there, it takes {{level:wizard:half}} lightning or thunder damage (your choice).</description>
+        </sheet>
+    </element>
+    
+</elements>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Chessmaster" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_CHESSMASTER">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>For centuries, the game of chess has captivated the minds of players. A favorite game of wizards, a few have learned how to use chess as the basis for magical abilities. Known as chessmasters, these wizards view the battlefield as a chess board, wielding magic and wit to position the field to their advantage. Often found as commanders and military strategists, Chessmasters are powerful allies, favoring spells that can control movement and the flow of battle.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CHESSMASTER_WHITE_BLACK" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CHESSMASTER_TACTICAL_MAGIC" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CHESSMASTER_STAUNTON_STRATEGY" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CHESSMASTER_PATTERN_RECOGNITION" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CHESSMASTER_CHECKMATE" />
+        </description>
+        <sheet display="false">
+            <description>Known as chessmasters, these wizards view the battlefield as a chess board, wielding magic and wit to position the field to their advantage.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CHESSMASTER_WHITE_BLACK" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CHESSMASTER_TACTICAL_MAGIC" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CHESSMASTER_STAUNTON_STRATEGY" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CHESSMASTER_PATTERN_RECOGNITION" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CHESSMASTER_CHECKMATE" level="14" />
+        </rules>
+    </element>
+
+    <element name="White &amp; Black" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CHESSMASTER_WHITE_BLACK">
+        <description>
+            <p>Beginning at 2nd level, years of playing chess has made you both insightful and tactical. Your proficiency bonus is doubled for any check that uses the chess set. You also gain proficiency in the Insight skill.</p>
+            <p class="indent">Additionally, chess has taught you that you can win whether you are first into the fray or not. Whenever you roll for Initiative, you can choose to add or subract from the roll an amount equal to your Intelligence modifier.</p>
+        </description>
+        <sheet>
+            <description>Your proficiency bonus is doubled for any check that uses the chess set. Whenever you roll for Initiative, you can choose to add or subract {{intelligence:modifier}} from the roll.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_GAMING_SET_PROFICIENCY_DRAGONCHESS_SET" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+        </rules>
+    </element>
+    <element name="Tactical Magic" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CHESSMASTER_TACTICAL_MAGIC">
+        <description>
+            <p>Starting at 2nd level, you have learned how to position others as if they were pieces on a chessboard. Once per turn, whenever you cast a spell of 1st level or higher on a willing creature, they can move up to half their movement speed (no action required). Alternatively, if you cast such a spell on an unwilling creature, and you hit the creature with that spells' attack or the creature fails that spell's saving throw, you can forcibly move the creature up to half of their movement speed to an unoccupied space.</p>
+            <p class="indent">Once you affect a creature with this feature, it can't be affected by it again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description usage="1/Long Rest">Once per turn, whenever you cast a spell of 1st level or higher on a willing creature, they can move up to half their movement speed (no action required). Alternatively, if you cast such a spell on an unwilling creature, and you hit the creature with that spells' attack or the creature fails that spell's saving throw, you can forcibly move the creature up to half of their movement speed to an unoccupied space.</description>
+        </sheet>
+    </element>
+    <element name="Staunton Strategy" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CHESSMASTER_STAUNTON_STRATEGY">
+        <description>
+            <p>At 6th level, you have learned how to magically assist your allies by replicating the abilities of chess pieces. You can use your bonus action (or reaction for Protect the King) to activate one of the following effects. Each effect has a range of 30 feet, increasing to 60 feet at 14th level. You can use this feature a number of times equal to your Intelligence modifier (minimum of 1), and regain all uses once you finish a long rest. You can only have one effect active at a time.</p>
+            <p class="indent"><strong><em>Pawn Roller.</em></strong> Spectral pawns float near two allies of your choice within range. For the next minute, when a creature one of the allies can see attacks the other, they can use their reaction to impose disadvantage on the attack roll.</p>
+            <p class="indent"><strong><em>Rook's Charge.</em></strong> A spectral rook floats near an ally within range. Once before the end of its next turn, if the ally moves at least 10 feet straight toward a creature and hits it with a melee weapon attack, the target must make a Strength saving throw against your wizard spell save DC or be knocked prone.</p>
+            <p class="indent"><strong><em>Tactical Knight.</em></strong> The image of a knight piece floats near an ally within range. The creature can immediately use its reaction to move up to its speed, without provoking opportunity attacks.</p>
+            <p class="indent"><strong><em>Bishop's Blessing.</em></strong> A spectral bishop piece briefly appears near a number of allies equal to your Intelligence modifier within range. Each creature gains temporary hit points equal to half your wizard level + your Intelligence modifier.</p>
+            <p class="indent"><strong><em>Queen's Might.</em></strong> The image of a queen piece floats around the wrist of an ally within range. Once before the end of its next turn, when the ally hits a creature with a melee weapon attack, the creature must succeed on a Wisdom saving throw against your wizard spell save DC, or be frightened of your ally until the end of their next turn.</p>
+            <p class="indent"><strong><em>Protect the King.</em></strong> The image of a king piece floats above the head of you or an ally within range. For the next minute, whenever you or your ally is attacked or forced to make a saving throw while within range, you can use your reaction to impose disadvantage on the attack roll or grant the target advantage on their saving throw.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action" usage="{{intelligence:modifier}}/Long Rest" level="6">You can use your bonus action (or reaction for Protect the King) to activate one of the following effects. Each effect has a range of 30 feet. You can only have one effect active at a time.
+            For the next minute, when a creature one of the allies can see attacks the other, they can use their reaction to impose disadvantage on the attack roll.
+            Once before the end of its next turn, if the ally moves at least 10 feet straight toward a creature and hits it with a melee weapon attack, the target must make a Strength saving throw against your wizard spell save DC or be knocked prone.
+            An ally within range can immediately use its reaction to move up to its speed, without provoking opportunity attacks.
+            A spectral bishop piece briefly appears near {{intelligence:modifier}} allies within range. Each creature gains {{bishop blessing:hp}} temporary hit points.
+            Once before the end of its next turn, when the ally hits a creature with a melee weapon attack, the creature must succeed on a Wisdom saving throw against your wizard spell save DC, or be frightened of your ally until the end of their next turn.
+            For the next minute, whenever you or your ally is attacked or forced to make a saving throw while within range, you can use your reaction to impose disadvantage on the attack roll or grant the target advantage on their saving throw.</description>
+            <description action="Bonus Action" usage="{{intelligence:modifier}}/Long Rest" level="14">You can use your bonus action (or reaction for Protect the King) to activate one of the following effects. Each effect has a range of 60 feet. You can only have one effect active at a time.
+            For the next minute, when a creature one of the allies can see attacks the other, they can use their reaction to impose disadvantage on the attack roll.
+            Once before the end of its next turn, if the ally moves at least 10 feet straight toward a creature and hits it with a melee weapon attack, the target must make a Strength saving throw against your wizard spell save DC or be knocked prone.
+            An ally within range can immediately use its reaction to move up to its speed, without provoking opportunity attacks.
+            A spectral bishop piece briefly appears near {{intelligence:modifier}} allies within range. Each creature gains {{bishop blessing:hp}} temporary hit points.
+            Once before the end of its next turn, when the ally hits a creature with a melee weapon attack, the creature must succeed on a Wisdom saving throw against your wizard spell save DC, or be frightened of your ally until the end of their next turn.
+            For the next minute, whenever you or your ally is attacked or forced to make a saving throw while within range, you can use your reaction to impose disadvantage on the attack roll or grant the target advantage on their saving throw.</description>
+        </sheet>
+        <rules>
+            <stat name="bishop blessing:hp" value="level:wizard:half" />
+            <stat name="bishop blessing:hp" value="intelligence:modifier" />
+        </rules>
+    </element>
+    <element name="Pattern Recognition" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CHESSMASTER_PATTERN_RECOGNITION">
+        <description>
+            <p>At 10th level, your experience with chess and tactics has allowed you to recognize patterns your opponents make. Whenever you use your Tactical Magic feature on an unwilling creature, you can attempt to deduce its next course of action. Make a Wisdom (Insight) check, contested by the creature's choice of their Charisma (Deception) or Wisdom (Insight). If you succeed, you gain a +3 bonus to your AC and saving throws against effects that creature imposes on you until the start of your next turn.</p>
+        </description>
+        <sheet>
+            <description>Whenever you use your Tactical Magic feature on an unwilling creature, you can attempt to deduce its next course of action. Make a Wisdom (Insight) check, contested by the creature's choice of their Charisma (Deception) or Wisdom (Insight). If you succeed, you gain a +3 bonus to your AC and saving throws against effects that creature imposes on you until the start of your next turn.</description>
+        </sheet>
+    </element>
+    <element name="Checkmate" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CHESSMASTER_CHECKMATE">
+        <description>
+            <p>By 14th level, you have mastered the humiliating finishing move. As an action, you can see every possibility, identify the key target, and finalize their defeat. Choose a creature within 120 feet of you. That creature must make an Intelligence saving throw against your spell save DC to decipher your foolproof plan. On a failure, the target automatically fails the next saving throw you force them to make before the end of your next turn.</p>
+            <p class="indent">Once a creature fails this saving throw, you can't use this feature again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description action="Action" usage="1/Long Rest">As an action, you choose a creature within 120 feet of you. That creature must make an Intelligence saving throw against your spell save DC to decipher your foolproof plan. On a failure, the target automatically fails the next saving throw you force them to make before the end of your next turn. Once a creature fails this saving throw, you can't use this feature again until you finish a long rest.</description>
+        </sheet>
+    </element>
+    
+</elements>

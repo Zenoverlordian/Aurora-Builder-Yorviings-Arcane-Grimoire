@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Cryomancy" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_CRYOMANCY">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>You are a wizard who focuses their study on the magical properties of ice. Known as 'frost mages' or 'ice-benders', these wizards learn how to manipulate ice in ways that other wizards cannot. Many of these wizards begin their studies in taigas and frozen planes, developing their mastery of ice.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CRYOMANCY_FRIGID_SAVANT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CRYOMANCY_COLDBRINGER" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CRYOMANCY_ICE_MANIPULATION" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CRYOMANCY_FREEZING_FORM" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CRYOMANCY_FROST_MASTERY" />
+        </description>
+        <sheet display="false">
+            <description>You are a wizard who focuses their study on the magical properties of ice.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CRYOMANCY_FRIGID_SAVANT" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CRYOMANCY_COLDBRINGER" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CRYOMANCY_ICE_MANIPULATION" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CRYOMANCY_FREEZING_FORM" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CRYOMANCY_FROST_MASTERY" level="14" />
+        </rules>
+    </element>
+
+    <element name="Frigid Savant" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CRYOMANCY_FRIGID_SAVANT">
+        <description>
+            <p>Beginning when you select this tradition at 2nd level, you know how to draw upon the power of ice. You may prepare one additional spell per long rest, so long as the spell can deal cold damage, and you learn the shape water cantrip.</p>
+            <p class="indent">Additionally, the gold and time you must spend to copy a spell that can deal cold damage into your spellbook is halved.</p>
+        </description>
+        <sheet>
+            <description>You may prepare one additional spell per long rest, so long as the spell can deal cold damage. Additionally, the gold and time you must spend to copy a spell that can deal cold damage into your spellbook is halved.</description>
+        </sheet>
+        <rules>
+            <stat name="wizard:spellcasting:prepare" value="1" />
+        </rules>
+    </element>
+    <element name="Coldbringer" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CRYOMANCY_COLDBRINGER">
+        <description>
+            <p>Starting at 2nd level, the chilling strength of ice is always within your grasp. Once per turn when you cast a wizard spell of 1st level or higher, you can use your bonus action to create a hail of ice in a 5-foot radius centered on a point within 30 feet, that lasts until the start of your next turn. This area is considered difficult terrain until the beginning of your next turn, and creatures who begin their turn in this area take cold damage equal to your Intelligence modifier. This effect increases to a 10-foot radius at 10th level.</p>
+            <p class="indent">Additionally, you are considered adapted to cold and extreme cold climates and weather affects.</p>
+        </description>
+        <sheet>
+            <description level="2">Once per turn when you cast a wizard spell of 1st level or higher, you can use your bonus action to create a hail of ice in a 5-foot radius centered on a point within 30 feet, that lasts until the start of your next turn. This area is considered difficult terrain until the beginning of your next turn, and creatures who begin their turn in this area take {{intelligence:modifier}} cold damage. Additionally, you are considered adapted to cold and extreme cold climates and weather affects.</description>
+            <description level="10">Once per turn when you cast a wizard spell of 1st level or higher, you can use your bonus action to create a hail of ice in a 10-foot radius centered on a point within 30 feet, that lasts until the start of your next turn. This area is considered difficult terrain until the beginning of your next turn, and creatures who begin their turn in this area take {{intelligence:modifier}} cold damage. Additionally, you are considered adapted to cold and extreme cold climates and weather affects.</description>
+        </sheet>
+    </element>
+    <element name="Ice Manipulation" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CRYOMANCY_ICE_MANIPULATION">
+        <description>
+            <p>At 6th level, you have learned how to wield frost and ice in different ways. When you cast a spell with a spell slot, you can expend one additional spell slot to augment its effects for the casting with the power of ice. The effect depends on the spell slot you expend.</p>
+            <p class="indent">An additional <strong>1st-level spell slot</strong> can infuse a spell with the power of the ice. If you roll damage for the spell when you cast it and the spell deals cold damage, increase the damage against every target by 2d12 cold damage. If the spell can deal damage on more than one turn, it deals this extra cold damage only on the turn you cast the spell.</p>
+            <p class="indent">An additional <strong>2nd-level spell slot</strong> can increase the strength of the spell. If the spell you cast deals cold damage, the cold damage ignores resistance to cold damage and treats immunity to cold damage as resistance.</p>
+            <p class="indent">An additional <strong>3rd-level spell slot</strong> can increase the effectiveness of the spell. If the spell you cast deals cold damage and requires a spell attack roll, you have advantage on the spell attack roll. If the spell requires a target to make a saving throw, the target makes the saving throw against the spell at disadvantage.</p>
+        </description>
+        <sheet>
+            <description>When you cast a spell with a spell slot, you can expend one additional spell slot to augment its effects for the casting with the power of ice. The effect depends on the spell slot you expend.
+            An additional <strong>1st-level spell slot</strong> can infuse a spell with the power of the ice. If you roll damage for the spell when you cast it and the spell deals cold damage, increase the damage against every target by 2d12 cold damage. If the spell can deal damage on more than one turn, it deals this extra cold damage only on the turn you cast the spell.
+            An additional <strong>2nd-level spell slot</strong> can increase the strength of the spell. If the spell you cast deals cold damage, the cold damage ignores resistance to cold damage and treats immunity to cold damage as resistance.
+            An additional <strong>3rd-level spell slot</strong> can increase the effectiveness of the spell. If the spell you cast deals cold damage and requires a spell attack roll, you have advantage on the spell attack roll. If the spell requires a target to make a saving throw, the target makes the saving throw against the spell at disadvantage.</description>
+        </sheet>
+    </element>
+    <element name="Freezing Form" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CRYOMANCY_FREEZING_FORM">
+        <description>
+            <p>By 10th level, you have acclimated to frost. You have advantage on saving throws against spells or creature abilities that deal cold damage, and you ignore difficult terrain caused by snow or ice.</p>
+            <p class="indent">Additionally, your movement speed cannot be reduced as a result of taking cold damage.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on saving throws against spells or creature abilities that deal cold damage, and you ignore difficult terrain caused by snow or ice. Additionally, your movement speed cannot be reduced as a result of taking cold damage.</description>
+        </sheet>
+    </element>
+    <element name="Frost Mastery" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CRYOMANCY_FROST_MASTERY">
+        <description>
+            <p>At 14th level, you have mastered the power of ice. You add the investiture of ice spell to your spellbook, if it is not there already. You can cast investiture of ice without expending a spell slot. When you do so, the spell does not require concentration.</p>
+            <p class="indent">Once you cast investiture of ice in this way, you can’t do so again until you finish a short or long rest, though you can still cast it normally using an available spell slot.</p>
+        </description>
+        <sheet>
+            <description usage="1/Short Rest">You can cast investiture of ice without expending a spell slot. When you do so, the spell does not require concentration. Once you cast investiture of ice in this way, you can’t do so again until you finish a short or long rest, though you can still cast it normally using an available spell slot.</description>
+        </sheet>
+        <grant type="Spell" id="ID_XGTE_SPELL_INVESTITURE_OF_ICE" spellcasting="Wizard" />
+    </element>
+    
+</elements>

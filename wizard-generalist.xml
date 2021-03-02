@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Generalist" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_GENERALIST">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>While many wizards focus on mastering a particular school of magic, there are a handful of wizards who want to master as much of the arcane arts as they can. These wizards, often called ‘generalists’, focus on acquiring spells and learning as much as they can regarding the arcane. These wizards learn how to eventually change their prepared spells, cast more spells, and increase their focus with spellcasting.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_GENERALIST_ARCANE_REPERTOIRE" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_GENERALIST_REGENERATIVE_RESERVOIR" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_GENERALIST_ADAPTIVE_SPELLBOOK" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_GENERALIST_SPELL_DUET" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_GENERALIST_DETERMINED" />
+        </description>
+        <sheet display="false">
+            <description>While many wizards focus on mastering a particular school of magic, there are a handful of wizards who want to master as much of the arcane arts as they can.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_GENERALIST_ARCANE_REPERTOIRE" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_GENERALIST_REGENERATIVE_RESERVOIR" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_GENERALIST_ADAPTIVE_SPELLBOOK" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_GENERALIST_SPELL_DUET" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_GENERALIST_DETERMINED" level="14" />
+        </rules>
+    </element>
+
+    <element name="Arcane Repertoire" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_GENERALIST_ARCANE_REPERTOIRE">
+        <description>
+            <p>Beginning when you select this tradition at 2nd level, your knowledge of magic has increased, as well as your skills at acquiring magic. You gain proficiency in the Arcana skill, and whenever you gain a wizard level, you can increase the number of spells that you add to your spellbook by 1.</p>
+        </description>
+        <sheet>
+            <description>Whenever you gain a wizard level, you can increase the number of spells that you add to your spellbook by 1.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+            <select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="2" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="3" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="4" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="5" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="6" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="7" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="8" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="9" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="10" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="11" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="12" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="13" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="14" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="15" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="16" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="17" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="18" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="19" number="1" spellcasting="Wizard" />
+			<select type="Spell" name="Arcane Repertoire" supports="$(spellcasting:list), $(spellcasting:slots)" level="20" number="1" spellcasting="Wizard" />
+        </rules>
+    </element>
+    <element name="Regenerative Reservoir" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_GENERALIST_REGENERATIVE_RESERVOIR">
+        <description>
+            <p>Starting at 2nd level, you have learned how to replenish your magical reservoir. Once per turn when you reduce one or more creatures to 0 hit points with a spell of 1st level or higher, you can use your bonus action to regain an expended spell slot. The slot you regain must be no greater than half the spell’s level, rounded down (minimum 1st level spell slot).</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action">Once per turn when you reduce one or more creatures to 0 hit points with a spell of 1st level or higher, you can use your bonus action to regain an expended spell slot. The slot you regain must be no greater than half the spell’s level, rounded down (minimum 1st level spell slot).</description>
+        </sheet>
+    </element>
+    <element name="Adaptive Spellbook" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_GENERALIST_ADAPTIVE_SPELLBOOK">
+        <description>
+            <p>At 6th level, you have learned how to prepare at a moment's notice. As an action, you can swap out any number of your prepared spells for spells you do not have prepared.</p>
+            <p class="indent">Once you have used this feature, you cannot do so again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description action="Action" usage="1/Long Rest">As an action, you can swap out any number of your prepared spells for spells you do not have prepared.</description>
+        </sheet>
+    </element>
+    <element name="Spell Duet" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_GENERALIST_SPELL_DUET">
+        <description>
+            <p>By 10th level, you have learned enough about the mechanics behind spells to know how to push your limit with casting them. Whenever you cast a wizard spell of 1st level or higher, as part of the same action, you can cast another wizard spell of the same level or lower, provided that both spells do not require concentration and you have the appropriate spell slot necessary for the second spell.</p>
+            <p class="indent">Once you have used this feature, you cannot do so again until you finish a short or long rest.</p>
+        </description>
+        <sheet>
+            <description usage="1/Short Rest">Whenever you cast a wizard spell of 1st level or higher, as part of the same action, you can cast another wizard spell of the same level or lower, provided that both spells do not require concentration and you have the appropriate spell slot necessary for the second spell.</description>
+        </sheet>
+    </element>
+    <element name="Determined Mage" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_GENERALIST_DETERMINED">
+        <description>
+            <p>By 14th level, you have become a legendary spellcaster. Whenever you lose concentration on a spell, you can use your reaction to instead maintain your concentration by expending either a spell slot of equal to the spell’s level or a number of spell slots whose total value equals the level of the spell.</p>
+        </description>
+        <sheet>
+            <description action="Reaction">Whenever you lose concentration on a spell, you can use your reaction to instead maintain your concentration by expending either a spell slot of equal to the spell’s level or a number of spell slots whose total value equals the level of the spell.</description>
+        </sheet>
+    </element>
+    
+</elements>

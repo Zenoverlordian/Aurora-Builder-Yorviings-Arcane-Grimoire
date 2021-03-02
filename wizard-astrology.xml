@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Astrology" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_ASTROLOGY">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>There are wizards who focus their studies on the celestial bodies above, and how their alignment and positioning can influence the beings who live far below them. Called Astrologists or ‘star mages’, these wizards can wield the magics of the heavenly bodies, and are often called upon to read horoscopes or provide knowledge related to the celestial heavens, working as either astronomers, soothsayers, or navigators of the night sky.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ASTROLOGY_ASTROMANCY_SAVANT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ASTROLOGY_ASTROLOGICAL_CHARTS" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ASTROLOGY_ARCANE_STARLIGHT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ASTROLOGY_HEAVENLY_ATTUNEMENT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ASTROLOGY_CONSTELLATION_SPELL" />
+        </description>
+        <sheet display="false">
+            <description>There are wizards who focus their studies on the celestial bodies above, and how their alignment and positioning can influence the beings who live far below them.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ASTROLOGY_ASTROMANCY_SAVANT" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ASTROLOGY_ASTROLOGICAL_CHARTS" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ASTROLOGY_ARCANE_STARLIGHT" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ASTROLOGY_HEAVENLY_ATTUNEMENT" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ASTROLOGY_CONSTELLATION_SPELL" level="14" />
+        </rules>
+    </element>
+
+    <element name="Astromancy Savant" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ASTROLOGY_ASTROMANCY_SAVANT">
+        <description>
+            <p>Staring at 2nd level, you have begun your journey into understanding the heavens. You learn how to read, speak, and write Celestial.</p>
+            <p class="indent">Additionally, whenever you make an Intelligence (Nature) check related to stars, constellations, and other celestial bodies, or whenever you make a Wisdom (Survival) check related to navigating by the stars, you are considered proficient in the Nature or Survival skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus. You also learn the dancing lights cantrip, and you can cast it as a bonus action.</p>
+        </description>
+        <sheet>
+            <description>Whenever you make an Intelligence (Nature) check related to stars, constellations, and other celestial bodies, or whenever you make a Wisdom (Survival) check related to navigating by the stars, you are considered proficient in the Nature or Survival skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus. You also learn the dancing lights cantrip, and you can cast it as a bonus action.</description>
+        </sheet>
+        <rules>
+            <grant type="Language" id="ID_LANGUAGE_CELESTIAL" />
+            <grant type="Spell" id="ID_PHB_SPELL_DANCING_LIGHTS" spellcasting="Wizard" prepared="true" />
+        </rules>
+    </element>
+    <element name="Astrological Charts" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ASTROLOGY_ASTROLOGICAL_CHARTS">
+        <description>
+            <p>Beginning at 2nd level, you can read daily horoscopes for both yourself and others. By spending 10 minutes alone or with another creature, you can read either your own or the other creature’s horoscope for that day. Until the end of the next long rest, you or that creature can use an action to cast the <em>enhance ability</em> spell. Once a creature has used this benefit, they cannot do so again until they finish a long rest.</p>
+            <div class="reference">
+                <div element="ID_PHB_SPELL_ENHANCE_ABILITY" />
+            </div>
+        </description>
+        <sheet>
+            <description>By spending 10 minutes alone or with another creature, you can read either your own or the other creature’s horoscope for that day. Until the end of the next long rest, you or that creature can use an action to cast the enhance ability spell. Once a creature has used this benefit, they cannot do so again until they finish a long rest.</description>
+        </sheet>
+    </element>
+    <element name="Arcane Starlight" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ASTROLOGY_ARCANE_STARLIGHT">
+        <description>
+            <p>At 6th level, the light of the stars is yours to command. Whenever you successfully hit a creature with a spell attack roll, or a creature fails a saving throw against a spell you cast, you can use your bonus action to cause the creature to radiate starlight, and the creature is considered to be under the effects of the <em>faerie fire</em> spell until the beginning of your next turn. Once you have used this effect on a creature, that creature is immune to this effect for 24 hours.</p>
+            <p class="indent">You can use this feature a number of times equal to your Intelligence modifier per long rest.</p>
+            <div class="reference">
+                <div element="ID_PHB_SPELL_FAERIE_FIRE" />
+            </div>
+        </description>
+        <sheet>
+            <description usage="{{intelligence:modifier}}/Long Rest" action="Bonus Action">Whenever you successfully hit a creature with a spell attack roll, or a creature fails a saving throw against a spell you cast, you can use your bonus action to cause the creature to radiate starlight, and the creature is considered to be under the effects of the faerie fire spell until the beginning of your next turn. Once you have used this effect on a creature, that creature is immune to this effect for 24 hours.</description>
+        </sheet>
+    </element>
+    <element name="Heavenly Attunement" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ASTROLOGY_HEAVENLY_ATTUNEMENT">
+        <description>
+            <p>By 10th level, you have gained the ability to imitate the strength of heavenly bodies. When you finish a long rest, you can choose one of the following abilities, which lasts until you finish the next long rest:</p>
+            <p class="indent"><strong><em>Sun's Warmth.</em></strong> You gain resistance to fire damage, and you are immune to the blinded condition.</p>
+            <p class="indent"><strong><em>Moon's Grace.</em></strong> You gain resistance to cold damage, and you are immune to the charmed condition.</p>
+            <p class="indent"><strong><em>Star's Brilliance.</em></strong> You gain resistance to radiant damage, and you are immune to the frightened condition.</p>
+            <p class="indent"><strong><em>Planet's Might.</em></strong> You gain resistance to bludgeoning damage, and you cannot be knocked prone.</p>
+        </description>
+        <sheet>
+            <description>When you finish a long rest, you can choose one of the following abilities, which lasts until you finish the next long rest:
+            You gain resistance to fire damage, and you are immune to the blinded condition.
+            You gain resistance to cold damage, and you are immune to the charmed condition.
+            You gain resistance to radiant damage, and you are immune to the frightened condition.
+            You gain resistance to bludgeoning damage, and you cannot be knocked prone.</description>
+        </sheet>
+    </element>
+    <element name="Constellation Spell" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ASTROLOGY_CONSTELLATION_SPELL">
+        <description>
+            <p>At 14th level, you can connect others through your spells like stars connected through a constellation. Whenever you cast a spell of 1st level or higher that affects a single target and requires a spell attack roll and successfully hit a target, you can choose to direct the same spell at another target within the spell’s range, using the first target as the starting point for the spell. Roll another spell attack roll. If the spell successfully hits the second target, you can continue to repeat this process up to a number of creatures equal to your Intelligence modifier. If you manage to hit a number of creatures equal to your Intelligence modifier, you regain a spell slot equal to half the level of the spell slot used, rounded up (minimum 1).</p>
+            <p class="indent">Once you have used this feature, you cannot do so again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description>Whenever you cast a spell of 1st level or higher that affects a single target and requires a spell attack roll and successfully hit a target, you can choose to direct the same spell at another target within the spell’s range, using the first target as the starting point for the spell. Roll another spell attack roll. If the spell successfully hits the second target, you can continue to repeat this process up to {{intelligence:modifier}} creatures. If you manage to hit {{intelligence:modifier}} creatures, you regain a spell slot equal to half the level of the spell slot used, rounded up (minimum 1).</description>
+        </sheet>
+    </element>
+    
+</elements>

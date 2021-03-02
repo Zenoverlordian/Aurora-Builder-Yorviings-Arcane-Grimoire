@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Blue Magic" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_BLUE_MAGIC">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>The incredibly rare tradition known as Blue Magic requires a deep understanding of the arcane arts, to the point of being able to understand the mechanics behind a spell within moments of witnessing its casting. ‘Blue Mages’, as followers of this tradition are called, acquire abilities that allow them to learn and prepare spells from nearly any source, and their versatility in power and skill makes them deadly soldiers, efficient guards, and incredible allies.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_BLUE_ARCANE_EYES" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_BLUE_COPY_SPELL" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_BLUE_IMPROVED_COPY_SPELL" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_BLUE_REPLICATING_MAGE" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_BLUE_STOLEN_MAGIC" />
+        </description>
+        <sheet display="false">
+            <description>‘Blue Mages’, as followers of this tradition are called, acquire abilities that allow them to learn and prepare spells from nearly any source</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_BLUE_ARCANE_EYES" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_BLUE_COPY_SPELL" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_BLUE_IMPROVED_COPY_SPELL" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_BLUE_REPLICATING_MAGE" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_BLUE_STOLEN_MAGIC" level="14" />
+        </rules>
+    </element>
+
+    <element name="Arcane Eyes" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_BLUE_ARCANE_EYES">
+        <description>
+            <p>Starting at 2nd level, you have gained considerable knowledge about the mechanics of spells, and have a quick eye to notice them. You gain proficiency in the Arcana and Perception skills.</p>
+            <p class="indent">Your proficiency bonus is doubled for any ability check you make that uses either of those skills.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+            <grant type="Class Feature" id="ID_EXPERTISE_SKILL_ARCANA" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+            <grant type="Class Feature" id="ID_EXPERTISE_SKILL_PERCEPTION" />
+        </rules>
+    </element>
+    <element name="Copy Spell" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_BLUE_COPY_SPELL">
+        <description>
+            <p>Beginning when you select this tradition at 2nd level, you have acquired the ability to learn and replicate spells at a moment’s notice. When a spell is cast on you or an ally that you can see within 30 feet of you, you or an ally that you can see within 30 feet of you are targeted by an effect of a spell, or you see or hear another creature cast a spell, you can use your reaction to attempt to learn that spell by making an Intelligence (Arcana) check against a DC of 10 + the level of the spell slot used to cast the spell.</p>
+            <p class="indent">You do not learn the spell if the spell cast against you if it is of a level with which you have no spell slots to cast it. The spell must be of a level that you can cast it, and you must have an available spell slot of the spell's level in order to cast the spell. If the spell cast against you was upcasted, you treat the spell as being at its base spell level. You also cannot use this feature on cantrips.</p>
+            <p class="indent">When you succeed on the check, you learn the spell until the end of your next short rest, at which time you forget the spell. The spell is not added to your spellbook, though the spell is considered a wizard spell for you and is considered prepared, and does not count towards your total number of spells prepared. You can cast the spell as if it were a prepared spell for you, provided that you have the spell slots available to cast it.</p>
+            <p class="indent">You can use this feature successfully twice per long rest.</p>
+        </description>
+        <sheet>
+            <description action="Reaction" usage="2/Long Rest" level="2">When a spell is cast on you or an ally that you can see within 30 feet of you, you or an ally that you can see within 30 feet of you are targeted by an effect of a spell, or you see or hear another creature cast a spell, you can use your reaction to attempt to learn that spell by making an Intelligence (Arcana) check against a DC of 10 + the level of the spell slot used to cast the spell.
+            You do not learn the spell if the spell cast against you if it is of a level with which you have no spell slots to cast it. The spell must be of a level that you can cast it, and you must have an available spell slot of the spell's level in order to cast the spell. If the spell cast against you was upcasted, you treat the spell as being at its base spell level. You also cannot use this feature on cantrips.
+            When you succeed on the check, you learn the spell until the end of your next short rest, at which time you forget the spell. The spell is not added to your spellbook, though the spell is considered a wizard spell for you and is considered prepared, and does not count towards your total number of spells prepared. You can cast the spell as if it were a prepared spell for you, provided that you have the spell slots available to cast it.
+            You can use this feature successfully twice per long rest.</description>
+            <description action="Reaction" usage="{{intelligence:modifier}}/Long Rest" level="2">When a spell is cast on you or an ally that you can see within 30 feet of you, you or an ally that you can see within 30 feet of you are targeted by an effect of a spell, or you see or hear another creature cast a spell, you can use your reaction to attempt to learn that spell by making an Intelligence (Arcana) check against a DC of 10 + the level of the spell slot used to cast the spell.
+            You do not learn the spell if the spell cast against you if it is of a level with which you have no spell slots to cast it. The spell must be of a level that you can cast it, and you must have an available spell slot of the spell's level in order to cast the spell. If the spell cast against you was upcasted, you treat the spell as being at its base spell level. You also cannot use this feature on cantrips.
+            When you succeed on the check, you learn the spell until the end of your next long rest, at which time you forget the spell. The spell is not added to your spellbook, though the spell is considered a wizard spell for you and is considered prepared, and does not count towards your total number of spells prepared. You can cast the spell as if it were a prepared spell for you, provided that you have the spell slots available to cast it.
+            You can use this feature successfully twice per long rest.</description>
+        </sheet>
+    </element>
+    <element name="Improved Copy Spell" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_BLUE_IMPROVED_COPY_SPELL">
+        <description>
+            <p>At 6th level, your ability to acquire spells has improved. You can now use your Copy Spell feature a number of times per long rest equal to your Intelligence modifier, and you retain knowledge of any spell acquired via this feature until you complete a long rest.</p>
+        </description>
+        <sheet display="false" />
+    </element>
+    <element name="Replicating Mage" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_BLUE_REPLICATING_MAGE">
+        <description>
+            <p>By 10th level, you have become a master of learning spells unconventionally. Whenever you use your Copy Spell feature, you can choose to learn the spell permanently. The spell is considered a wizard spell for you, though you can only add it to your spellbook if it is a wizard spell. Otherwise, you learn the spell as if it were a wizard spell you always have prepared, and you can cast it provided that you have available spell slots with which to cast it.</p>
+            <p class="indent">You can learn up to four spells in this manner. If you attempt to use this feature again to learn a fifth spell, your oldest learned spell is forgotten by you.</p>
+        </description>
+        <sheet>
+            <description>Whenever you use your Copy Spell feature, you can choose to learn the spell permanently. The spell is considered a wizard spell for you, though you can only add it to your spellbook if it is a wizard spell. Otherwise, you learn the spell as if it were a wizard spell you always have prepared, and you can cast it provided that you have available spell slots with which to cast it. You can learn up to four spells in this manner. If you attempt to use this feature again to learn a fifth spell, your oldest learned spell is forgotten by you.</description>
+        </sheet>
+    </element>
+    <element name="Stolen Magic" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_BLUE_STOLEN_MAGIC">
+        <description>
+            <p>At 14th level, you have learned how to steal a spell away from its caster. Whenever a creature within 60 feet of you that you can see begins to cast a spell, you can use your reaction to force that creature to make an Intelligence saving throw against your wizard spell save DC. On a failed save, the creature loses control over the spell, and the spell slot is expended as if it had been cast by them. You can then immediately cast the spell by using the spell slot the original caster had expended to cast it.</p>
+            <p class="indent">Once you have used this feature, you cannot do so again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description usage="1/Long Rest" action="Reaction">Whenever a creature within 60 feet of you that you can see begins to cast a spell, you can use your reaction to force that creature to make an Intelligence saving throw against your wizard spell save DC. On a failed save, the creature loses control over the spell, and the spell slot is expended as if it had been cast by them. You can then immediately cast the spell by using the spell slot the original caster had expended to cast it.</description>
+        </sheet>
+    </element>
+    
+</elements>

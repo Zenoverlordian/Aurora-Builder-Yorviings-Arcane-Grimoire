@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Cartomancy" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_CARTOMANCY">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>The esoteric tradition of Cartomancy is an approach to magic where followers utilize elements of the existing schools of magic in order to produce unique effects of fortune and trickery. Spells associated with Cartomancy are all cast via the use of playing cards, and often take on the appearance of cards or card suits.</p>
+            <p class="indent">Followers of this tradition, known as ‘card mages’, can divine fate through cards and create unique effects by imbuing cards with magic, though the magic can be beneficial or dangerous, making card mages gamble with the fate of the cards.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CARTOMANCY_SAVANT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CARTOMANCY_CARDCASTING" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CARTOMANCY_CARDREADER" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CARTOMANCY_SHUFFLE_DRAW" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CARTOMANCY_OUTDRAW" />
+        </description>
+        <sheet display="false">
+            <description>Spells associated with Cartomancy are all cast via the use of playing cards, and often take on the appearance of cards or card suits.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CARTOMANCY_SAVANT" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CARTOMANCY_CARDCASTING" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CARTOMANCY_CARDREADER" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CARTOMANCY_SHUFFLE_DRAW" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CARTOMANCY_OUTDRAW" level="14" />
+        </rules>
+    </element>
+
+    <element name="Cartomancy Savant" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CARTOMANCY_SAVANT">
+        <description>
+            <p>Beginning when you select this school at 2nd level, the gold and time you must spend to copy a spell with the cartomancy tag into your spellbook is halved.</p>
+            <p class="indent">Additionally, you gain proficiency in the Playing Card Set, and can use one as an arcane focus, and you gain proficiency in the Sleight of Hand skill.</p>
+        </description>
+        <sheet>
+            <description>The gold and time you must spend to copy a spell with the cartomancy tag into your spellbook is halved. Additionally, you gain proficiency in the Playing Card Set, and can use one as an arcane focus.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_GAMING_SET_PROFICIENCY_PLAYING_CARD_SET" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SLEIGHTOFHAND" />
+        </rules>
+    </element>
+    <element name="Cardcasting" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CARTOMANCY_CARDCASTING">
+        <description>
+            <p>At 2nd level, you learn how to infuse cards with magic for unique effects, though the cards may not always lean in your favor. Whenever you cast a spell with the cartomancy tag that has a casting time of one action, you can draw one playing card as a bonus action. The card's rank determines the magical effect as shown on the Card Rank Table, and the card's suit determines who the effect can target as shown on the Card Suit Table. The effect takes place immediately, and the card is then put at the bottom of your deck. If you do not have a set of playing cards, you can roll a d4 on the Card Suit Table to determine the card's suit, and a d12 on the Card Rank Table to determine its rank.</p>
+            <p class="indent">You draw one additional card at 6th, 10th, and 14th level, choosing which card takes effect when you do so. <strong>Note:</strong> If you do not have a deck of 52 cards, you can roll on the tables below to produce the same effects, rolling a d12 and d4, respectively. You would not roll for the Joker card.</p>
+            <h5>Card Rank Table</h5>
+            <table>
+                <thead>
+                    <tr><td>Rank</td><td>Effect</td></tr>
+                </thead>
+                <tr><td>1/Ace</td><td>The target(s) has advantage on their next attack roll.</td></tr>
+                <tr><td>2</td><td>The target(s) has disadvantage on their next attack roll.</td></tr>
+                <tr><td>3</td><td>The target(s) has advantage on their next saving throw.</td></tr>
+                <tr><td>4</td><td>The target(s) has disadvantage on their next saving throw.</td></tr>
+                <tr><td>5</td><td>The target(s) becomes resistant to the damage type of the last damage it took until the end of their next turn.</td></tr>
+                <tr><td>6</td><td>The target(s) becomes invisible until the start of their next turn.</td></tr>
+                <tr><td>7</td><td>The target(s) has their speed reduced to 0 until the end of their next turn.</td></tr>
+                <tr><td>8</td><td>The target(s) has their speed doubled until the end of their next turn.</td></tr>
+                <tr><td>9</td><td>The target(s) cannot be targeted by an attack until the beginning of its next turn.</td></tr>
+                <tr><td>10/Jack</td><td>The target(s) gains a bonus to their AC equal to your Intelligence modifier until the beginning of their next turn.</td></tr>
+                <tr><td>11/Queen</td><td>The target(s) gains temporary hit points equal to half your wizard level that last for up to 1 minute.</td></tr>
+                <tr><td>12/King</td><td>The target(s) regains one expended spell slot of their lowest spell slot level or 1d10 hit points.</td></tr>
+                <tr><td>13/Joker</td><td>Draw another card.</td></tr>
+            </table>
+            <h5>CARD SUIT TABLE</h5>
+            <table>
+                <thead>
+                    <tr><td>Suit</td><td>Target</td></tr>
+                </thead>
+                <tr><td>Clubs</td><td>Enemy of your choice within 30 feet of you</td></tr>
+                <tr><td>Diamonds</td><td>Ally of your choice within 30 feet of you</td></tr>
+                <tr><td>Hearts</td><td>Self</td></tr>
+                <tr><td>Spades</td><td>A 10-foot radius centered on a point of your choice within 30 feet of you</td></tr>
+            </table>
+        </description>
+        <sheet>
+            <description level="2" action="Bonus Action">Whenever you cast a spell with the cartomancy tag that has a casting time of one action, you can draw one playing card as a bonus action. The card's rank determines the magical effect as shown on the Card Rank Table, and the card's suit determines who the effect can target as shown on the Card Suit Table. The effect takes place immediately, and the card is then put at the bottom of your deck.</description>
+            <description level="6" action="Bonus Action">Whenever you cast a spell with the cartomancy tag that has a casting time of one action, you can draw two playing cards as a bonus action. The card's rank determines the magical effect as shown on the Card Rank Table, and the card's suit determines who the effect can target as shown on the Card Suit Table. You choose which card takes effect of the ones you draw. The effect takes place immediately, and the cards are then put at the bottom of your deck.</description>
+            <description level="10" action="Bonus Action">Whenever you cast a spell with the cartomancy tag that has a casting time of one action, you can draw three playing cards as a bonus action. The card's rank determines the magical effect as shown on the Card Rank Table, and the card's suit determines who the effect can target as shown on the Card Suit Table. You choose which card takes effect of the ones you draw. The effect takes place immediately, and the cards are then put at the bottom of your deck.</description>
+            <description level="14" action="Bonus Action">Whenever you cast a spell with the cartomancy tag that has a casting time of one action, you can draw four playing cards as a bonus action. The card's rank determines the magical effect as shown on the Card Rank Table, and the card's suit determines who the effect can target as shown on the Card Suit Table. You choose which card takes effect of the ones you draw. The effect takes place immediately, and the cards are then put at the bottom of your deck.</description>
+        </sheet>
+    </element>
+    <element name="Cardreader" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CARTOMANCY_CARDREADER">
+        <description>
+            <p>At 6th level, you learn how to read the future via cartomancy. Over the course of 1 minute, you can read a creature's fortune using a set of playing cards. At the end of the minute, you draw a card, either at random from a deck of playing cards or by rolling a d12, and the creature is affected by a fortune based on the card's rank for the next hour, as seen on the Fortune Telling table.</p>
+            <p class="indent">Once you use this feature, you can't use it again until you finish a short or long rest.</p>
+            <h5>FORTUNE TELLING TABLE</h5>
+            <table>
+                <thead>
+                    <tr><td>Rank</td><td>Fortune</td></tr>
+                </thead>
+                <tr><td>1/Ace</td><td>The creature has advantage on Wisdom saving throws.</td></tr>
+                <tr><td>2</td><td>The creature has disadvantage on all Wisdom based skill checks.</td></tr>
+                <tr><td>3</td><td>The creature can reroll a 1 on an attack roll, using the result of the new roll.</td></tr>
+                <tr><td>4</td><td>The creature has disadvantage on saving throws against being charmed.</td></tr>
+                <tr><td>5</td><td>The creature gains temporary hit points equal to your wizard level plus your Intelligence modifier.</td></tr>
+                <tr><td>6</td><td>The creature halves the amount of all healing it receives, such as by a spell, special ability, or potion.</td></tr>
+                <tr><td>7</td><td>The creature has advantage on all Charisma based skill checks.</td></tr>
+                <tr><td>8</td><td>The creature cannot gain advantage on any skill check, ability check, attack roll, or saving throw.</td></tr>
+                <tr><td>9</td><td>The creature cannot suffer disadvantage on any skill check, ability check, attack roll, or saving throw.</td></tr>
+                <tr><td>10/Jack</td><td>The creature has advantage on Dexterity saving throws.</td></tr>
+                <tr><td>11/Queen</td><td>The creature treats rolls of a 19-20 on attack rolls as critical hits.</td></tr>
+                <tr><td>12/King</td><td>The creature treats rolls of a 7 or less on a saving throw as a 1.</td></tr>
+            </table>
+        </description>
+        <sheet>
+            <description usage="1/Short Rest">Over the course of 1 minute, you can read a creature's fortune using a set of playing cards. At the end of the minute, you draw a card, either at random from a deck of playing cards or by rolling a d12, and the creature is affected by a fortune based on the card's rank for the next hour, as seen on the Fortune Telling table.</description>
+        </sheet>
+    </element>
+    <element name="Shuffle &amp; Draw" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CARTOMANCY_SHUFFLE_DRAW">
+        <description>
+            <p>At 10th level, you can redraw your hand. Whenever you use your Cardcasting feature, as part of the same bonus action used to draw cards, you can reshuffle the cards drawn back into your deck, or reroll on the Card Rank and Card Suit tables. You must use cards from the new hand of cards drawn.</p>
+            <p class="indent">Additionally, when you use your Cardcasting feature, you can choose up to two of the cards drawn to take effect at once, and when you use your Cardreader feature, you can draw two cards or roll twice, choosing which card takes effect.</p>
+        </description>
+        <sheet>
+            <description>Whenever you use your Cardcasting feature, as part of the same bonus action used to draw cards, you can reshuffle the cards drawn back into your deck, or reroll on the Card Rank and Card Suit tables. You must use cards from the new hand of cards drawn. Additionally, when you use your Cardcasting feature, you can choose up to two of the cards drawn to take effect at once, and when you use your Cardreader feature, you can draw two cards or roll twice, choosing which card takes effect.</description>
+        </sheet>
+    </element>
+    <element name="Outdraw" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_CARTOMANCY_OUTDRAW">
+        <description>
+            <p>By 14th level, you have become attuned to card magic. Once per long rest, as an action, you can draw five cards from your deck of cards, or roll five times on both the Card Rank and Card Suit tables, as listed in your Cardcasting feature. When you do so, you can choose any number of the cards drawn to immediately take effect.</p>
+        </description>
+        <sheet>
+            <description usage="1/Long Rest" action="Action">Once per long rest, as an action, you can draw five cards from your deck of cards, or roll five times on both the Card Rank and Card Suit tables, as listed in your Cardcasting feature. When you do so, you can choose any number of the cards drawn to immediately take effect.</description>
+        </sheet>
+    </element>
+    
+</elements>

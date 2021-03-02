@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Pyromancy" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_PYROMANCY">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>Pyromancy is the art of creating and controlling flame, channeling the fire within the body to create powerful magic. Pyromancers study the flames they can wield, viewing this fire as an extension of their own selves, either as manifestations of anger, love, passion, or as a holy gift. Preferring spells of flame and ash, some Pyromancers use their knowledge of fire to work as fire breathers or dancers, battlemages in holy armies, blacksmiths, or as sinister arsonists.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PYROMANCY_KINDLING_SAVANT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PYROMANCY_FIRESTARTER" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PYROMANCY_ARSONS_TALENTS" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PYROMANCY_FLAMED_SKIN" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PYROMANCY_IMMOLATION_MASTERY" />
+        </description>
+        <sheet display="false">
+            <description>Pyromancy is the art of creating and controlling flame, channeling the fire within the body to create powerful magic.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PYROMANCY_KINDLING_SAVANT" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PYROMANCY_FIRESTARTER" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PYROMANCY_ARSONS_TALENTS" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PYROMANCY_FLAMED_SKIN" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PYROMANCY_IMMOLATION_MASTERY" level="14" />
+        </rules>
+    </element>
+
+    <element name="Kindling Savant" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PYROMANCY_KINDLING_SAVANT">
+        <description>
+            <p>By 2nd level, the gold and time you must spend to copy a spell that can deal fire damage into your spellbook is halved.</p>
+        </description>
+        <sheet>
+            <description>The gold and time you must spend to copy a spell that can deal fire damage into your spellbook is halved.</description>
+        </sheet>
+    </element>
+    <element name="Firestarter" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PYROMANCY_FIRESTARTER">
+        <description>
+            <p>Beginning at 2nd level, you have found comfort in knowing that fire is always within your reach. You can prepare one additional spell per long rest, so long as that spell can deal fire damage, and you learn the control flames cantrip, and you can cast it as a bonus action.</p>
+            <p class="indent">Additionally, you have learned how to keep your fires burning. Whenever you cast a spell that deals fire damage to more than one creature, each creature affected by the spell takes fire damage equal to half your wizard level at the start of their next turn, after which the effect ends.</p>
+        </description>
+        <sheet>
+            <description>You can prepare one additional spell per long rest, so long as that spell can deal fire damage, and you learn the control flames cantrip, and you can cast it as a bonus action.
+            Whenever you cast a spell that deals fire damage to more than one creature, each creature affected by the spell takes {{level:wizard}} fire damage at the start of their next turn, after which the effect ends.</description>
+        </sheet>
+        <rules>
+            <stat name="wizard:spellcasting:prepare" value="1" />
+            <grant type="Spell" id="ID_XGTE_SPELL_CONTROL_FLAMES" spellcasting="Wizard" />
+        </rules>
+    </element>
+    <element name="Arson's Talents" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PYROMANCY_ARSONS_TALENTS">
+        <description>
+            <p>By 6th level, you have become a mighty wielder of flame. Whenever you cast a spell that deals fire damage, you can expend one additional spell slot to enhance the power of the flame, the particular enhancing depending on the spell slot you use.</p>
+            <p class="indent">An additional 1st-level spell slot can increase the spell’s range. The spell’s range then doubles.</p>
+            <p class="indent">An additional 2nd-level spell slot can increase the strength of the spell. Choose one creature targeted by the spell. The fire damage dealt by your fire spell ignores resistance to fire damage and treats immunity to fire damage as resistance.</p>
+            <p class="indent">An additional 3rd-level spell slot can increase the spell’s potency. Each creature within 15 feet of the target of your fire spell must make a Dexterity saving throw, or take fire damage equal to half your wizard level.</p>
+        </description>
+        <sheet>
+            <description>Whenever you cast a spell that deals fire damage, you can expend one additional spell slot to enhance the power of the flame, the particular enhancing depending on the spell slot you use.
+            An additional 1st-level spell slot can increase the spell’s range. The spell’s range then doubles.
+            An additional 2nd-level spell slot can increase the strength of the spell. Choose one creature targeted by the spell. The fire damage dealt by your fire spell ignores resistance to fire damage and treats immunity to fire damage as resistance.
+            An additional 3rd-level spell slot can increase the spell’s potency. Each creature within 15 feet of the target of your fire spell must make a Dexterity saving throw, or take {{level:wizard:half}} fire damage.</description>
+        </sheet>
+    </element>
+    <element name="Flamed Skin" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PYROMANCY_FLAMED_SKIN">
+        <description>
+            <p>By 10th level, your body has become attuned to flame, and its warmth is always with you. You have advantage on saving throws against spells or other abilities effects that deal fire damage.</p>
+            <p class="indent">Additionally, if a creature would take no damage due to succeeding on a saving throw against a spell you cast that deals fire damage, they instead take half of the damage instead of none, but suffer no additional effect.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on saving throws against spells or other abilities effects that deal fire damage. Additionally, if a creature would take no damage due to succeeding on a saving throw against a spell you cast that deals fire damage, they instead take half of the damage instead of none, but suffer no additional effect.</description>
+        </sheet>
+    </element>
+    <element name="Immolation Mastery" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PYROMANCY_IMMOLATION_MASTERY">
+        <description>
+            <p>At 14th level, you have become a master of pyromancy. Whenever you cast a spell that deals fire damage, or succeed on a saving throw against a spell that deals fire damage, you can absorb some of the flames of the spell and have it coat your body. If you do so, a creature who enters for the first time on their turn an area within a 15 foot radius of you must make a Constitution saving throw or take fire damage equal to twice your wizard level on a failed save, and half as much on a success. This effect lasts for 1 minute.</p>
+            <p class="indent">Once you have used this feature, you cannot do so again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description usage="1/Long Rest">Whenever you cast a spell that deals fire damage, or succeed on a saving throw against a spell that deals fire damage, you can absorb some of the flames of the spell and have it coat your body. If you do so, a creature who enters for the first time on their turn an area within a 15 foot radius of you must make a Constitution saving throw or take {{immolation mastery:dmg}} fire damage on a failed save, and half as much on a success. This effect lasts for 1 minute.</description>
+        </sheet>
+        <rules>
+            <stat name="immolation mastery:dmg" value="level:wizard" />
+            <stat name="immolation mastery:dmg" value="level:wizard" />
+        </rules>
+    </element>
+    
+</elements>

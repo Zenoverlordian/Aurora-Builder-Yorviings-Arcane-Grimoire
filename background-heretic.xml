@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Heretic" type="Background" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_BACKGROUND_HERETIC">
+        <description>
+            <p>You are one who holds ideas that many have deemed as being both blasphemous and dangerous. As a heretic, your work and what you believe has grabbed the attention of the priests and temples of the gods, and thus many have begun to see you as a threat. Perhaps you believe that the gods are not gods at all, but merely powerful mortal beings. Or, it could be that your methods of worship and interpretations of holy texts are seen as too unorthodox.</p>
+            <p class="indent">When you choose this background, work with your DM to determine the nature of your heresy, how it differs from the established canonical faiths, and how these beliefs have been received by the populace. Is it the case that you are a devout worshipper who is alone in their style of worship? Or are you trying to lead others to see a greater truth?</p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> Religion, and your choice of either Deception, Intimidation, or Persuasion</li>
+                <li><strong>Languages:</strong> One exotic language (Abyssal, Celestial, Deep Speech, Draconic, Infernal, Primordial, Sylvan, or Undercommon)</li>
+                <li><strong>Equipment:</strong> A pouch containing 10 gp, book or scroll or holy text, a tome of notes and theories written by you, a torch, a quill, an ink pot, a small crate, and a set of traveler’s clothes</li>
+            </ul>
+            <div element="ID_BACKGROUND_FEATURE_YAG_HERETICAL_IDEOLOGY" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>While some may embrace your new theories or changes to a common ideology, many will find your heresies to be dangerous to the public. Thus, heretics have a certain perspective and attitude towards others and the world that reflects these situations.</p>
+        </description>
+        <setters>
+            <set name="short">Religion, Deception/Intimidation/Persuasion, Exotic Language</set>
+        </setters>
+        <rules>
+            <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_YAG_HERETICAL_IDEOLOGY" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_RELIGION" />
+            <select type="Proficiency" name="Skill Proficiency, Heretic" supports="ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_PERSUASION" />
+            <select type="Language" name="Language, Heretic" supports="Exotic" />
+            <select type="List" name="Personality Trait" number="2" optional="true">
+                <item id="1">I believe in what I think with every fiber of my being.</item>
+                <item id="2">I yearn for people to see the truth in what I say.</item>
+                <item id="3">My beliefs are not heresy, but proof that I have been called to serve a higher purpose.</item>
+                <item id="4">I am slow to trust many people.</item>
+                <item id="5">The gods are false, and it is my duty to prove it.</item>
+                <item id="6">Once I get going, it’s hard to get me to stop talking.</item>
+                <item id="7">I see what can change in people, as I have seen what can change in scripture.</item>
+                <item id="8">If I am to change the world, I must pick up my pen and write.</item>
+            </select>
+            <select type="List" name="Ideal" optional="true">
+                <item id="1">Enlightenment. I aim to show everyone the truth in what I say and believe. (Lawful)</item>
+                <item id="2">Leadership. I will rally the people behind my rule and revelations of the truth. (Any)</item>
+                <item id="3">Revenge. I will prove my heresies true to as to take down those who doubted me. (Evil)</item>
+                <item id="4">Affirmation. I know the gods to be the highest powers. (Any)</item>
+                <item id="5">Discord. I am to make my heresies cause disruption in the land. (Chaotic)</item>
+                <item id="6">Divinity. I will use my heresies to solidify the role of the gods. (Good)</item>
+            </select>
+            <select type="List" name="Bond" optional="true">
+                <item id="1">I worship a god that seeks to overthrow another.</item>
+                <item id="2">A colleague helped me with my theories, though it was not safe for them to do so.</item>
+                <item id="3">A mentor entrusted me with these heresies. Is I’ll honor their trust in me.</item>
+                <item id="4">I am fully alone in my thoughts and beliefs, and yearn for someone to share them with me.</item>
+                <item id="5">I await those who will hear my words.</item>
+                <item id="6">Many of my friends worry for my life given my outspokenness.</item>
+            </select>
+            <select type="List" name="Flaw" optional="true">
+                <item id="1">I often jump to conclusions.</item>
+                <item id="2">I sometimes doubt if what I believe is actually the truth.</item>
+                <item id="3">My friends think I’m obsessed with my theories.</item>
+                <item id="4">I think that if someone shows interest in what I think, that must mean they trust me completely.</item>
+                <item id="5">My beliefs are true, regardless of what others may think.</item>
+                <item id="6">I can sometimes cling to those who find my beliefs to be valid.</item>
+            </select>
+        </rules>
+    </element>
+
+    <element name="Feature: Heretical Ideology" type="Background Feature" source="Yorviing's Arcane Grimoire" id="ID_BACKGROUND_FEATURE_YAG_HERETICAL_IDEOLOGY">
+        <description>
+            <p>The nature of your study and worship has lead you to a conclusion that, to others, is seen as heretical. It might be a great truth about the gods or how a vast system of higher level clergy operate. It could also be that you have found a way to defy the gods, and thus you have become a threat to them. You might have uncovered a fact that has long been forgotten, or unearthed some relic of the past that could rewrite history. It might be information that would be damaging to the general public or to those who maintain high religious power.</p>
+            <p class="indent">Work with your DM to determine the details of your heresy and its impact on the campaign.</p>
+        </description>
+        <sheet alt="Heretical Ideology">
+            <description>The nature of your study and worship has lead you to a conclusion that, to others, is seen as heretical. It might be a great truth about the gods or how a vast system of higher level clergy operate. It could also be that you have found a way to defy the gods, and thus you have become a threat to them. You might have uncovered a fact that has long been forgotten, or unearthed some relic of the past that could rewrite history. It might be information that would be damaging to the general public or to those who maintain high religious power.</description>
+        </sheet>
+    </element>
+    
+</elements>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Arcane Marksman" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_ARCANE_MARKSMAN">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>With the ever advancing field of technology within warfare, some wizards have turned to merging weapons with their magical skills. Known as an Arcane Marksman, a wizard of this tradition can imbue special ranged weapons such as crossbows and firearms with spells to take down their foes, and prefer spells that can give them better mobility and tactical advantages, allowing them to be deadly combatants on the battlefield. Found amongst the ranks of soldiers as elite snipers or mage hunters, an Arcane Marksman is a powerful ally to have in times of war.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_MARKSMAN_ARCANE_FIREARM" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_MARKSMAN_MARKSMAN_ARCANA" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_MARKSMAN_IMPROVED_ARCANE_FIREARM" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_MARKSMAN_SPELLSLINGER" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_MARKSMAN_MASTER_MARKSMAN" />
+        </description>
+        <sheet display="false">
+            <description>Known as an Arcane Marksman, a wizard of this tradition can imbue special ranged weapons such as crossbows and firearms with spells to take down their foes</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_MARKSMAN_ARCANE_FIREARM" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_MARKSMAN_MARKSMAN_ARCANA" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_MARKSMAN_IMPROVED_ARCANE_FIREARM" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_MARKSMAN_SPELLSLINGER" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_MARKSMAN_MASTER_MARKSMAN" level="14" />
+        </rules>
+    </element>
+
+    <element name="Arcane Firearm" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_MARKSMAN_ARCANE_FIREARM">
+        <description>
+            <p>Starting at 2nd level, you have increased your knowledge of ranged weaponry. You gain proficiency in simple and martial ranged weapons. Choose one simple or martial ranged weapon. This weapon is considered your Arcane Firearm, and this weapon can be used as an arcane focus for your spells. You can only have one Arcane Firearm at a time, and over the course of a long rest, you can change your Arcane Firearm to that of another ranged weapon.</p>
+            <p class="indent">In addition, you gain proficiency in the Perception skill and tinker’s tools.</p>
+        </description>
+        <sheet>
+            <description>Choose one simple or martial ranged weapon. This weapon is considered your Arcane Firearm, and this weapon can be used as an arcane focus for your spells. You can only have one Arcane Firearm at a time, and over the course of a long rest, you can change your Arcane Firearm to that of another ranged weapon.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_RANGED_WEAPONS" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_RANGED_WEAPONS" />
+        </rules>
+    </element>
+    <element name="Marksman Arcana" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_MARKSMAN_MARKSMAN_ARCANA">
+        <description>
+            <p>Beginning at 2nd level, you have learned how to make the most out of your Arcane Firearm. Whenever you cast a spell that requires an attack roll through your Arcane Firearm, you can instead use the normal range of the Arcane Firearm for the range of the spell.</p>
+            <p class="indent">At 10th level, you can use the long range of the Arcane Firearm.</p>
+        </description>
+        <sheet>
+            <description level="2">Whenever you cast a spell that requires an attack roll through your Arcane Firearm, you can instead use the normal range of the Arcane Firearm for the range of the spell.</description>
+            <description level="10">Whenever you cast a spell that requires an attack roll through your Arcane Firearm, you can instead use the long range of the Arcane Firearm for the range of the spell.</description>
+        </sheet>
+    </element>
+    <element name="Improved Arcane Firearm" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_MARKSMAN_IMPROVED_ARCANE_FIREARM">
+        <description>
+            <p>At 6th level, you have learned how to improve upon your Arcane Firearm. Over the course of a long rest, using your tinker’s tools, you can change your Arcane Firearm to obtain one of the following properties. You can change the property applied to your Arcane Firearm over the course of another long rest.</p>
+            <p class="indent"><strong><em>Arcane Scope.</em></strong> You add a special scope or sight to your weapon. Whenever you cast a ranged spell attack through your Arcane Firearm, you add a +2 to the attack roll if the target of the spell is further than 60 feet away from you.</p>
+            <p class="indent"><strong><em>Arcane Silencer.</em></strong> You add a special device that muffles your weapon. Whenever you cast a ranged spell attack through your Arcane Firearm, the spell makes only a subtle noise, and casting the spell through your Arcane Firearm does not give away your position if you are hidden from a creature.</p>
+            <p class="indent"><strong><em>Arcane Repeater.</em></strong> You add a special mechanism to the body of the weapon that can fire off more shots. Whenever you cast a ranged spell attack through your Arcane Firearm, you can use your bonus action to make a normal ranged weapon attack using the weapon’s standard ammunition.</p>
+            <p class="indent"><strong><em>Arcane Barrel/Rest.</em></strong> You add a special mechanism to the body that can hold more ammunition at a time. Whenever you cast a cantrip through your Arcane Firearm that has a single target, you can target one additional creature within the spell’s range, and you split the damage between the two targets.</p>
+        </description>
+        <sheet>
+            <description level="6">Over the course of a long rest, using your tinker’s tools, you can change your Arcane Firearm to obtain one of the following properties. You can change the property applied to your Arcane Firearm over the course of another long rest.
+            You add a special scope or sight to your weapon. Whenever you cast a ranged spell attack through your Arcane Firearm, you add a +2 to the attack roll if the target of the spell is further than 60 feet away from you.
+            You add a special device that muffles your weapon. Whenever you cast a ranged spell attack through your Arcane Firearm, the spell makes only a subtle noise, and casting the spell through your Arcane Firearm does not give away your position if you are hidden from a creature.
+            You add a special mechanism to the body of the weapon that can fire off more shots. Whenever you cast a ranged spell attack through your Arcane Firearm, you can use your bonus action to make a normal ranged weapon attack using the weapon’s standard ammunition.
+            You add a special mechanism to the body that can hold more ammunition at a time. Whenever you cast a cantrip through your Arcane Firearm that has a single target, you can target one additional creature within the spell’s range, and you split the damage between the two targets.</description>
+            <description level="10">Over the course of a long rest, using your tinker’s tools, you can change your Arcane Firearm to obtain two of the following properties. You can change the properties applied to your Arcane Firearm over the course of another long rest.
+            You add a special scope or sight to your weapon. Whenever you cast a ranged spell attack through your Arcane Firearm, you add a +2 to the attack roll if the target of the spell is further than 60 feet away from you.
+            You add a special device that muffles your weapon. Whenever you cast a ranged spell attack through your Arcane Firearm, the spell makes only a subtle noise, and casting the spell through your Arcane Firearm does not give away your position if you are hidden from a creature.
+            You add a special mechanism to the body of the weapon that can fire off more shots. Whenever you cast a ranged spell attack through your Arcane Firearm, you can use your bonus action to make a normal ranged weapon attack using the weapon’s standard ammunition.
+            You add a special mechanism to the body that can hold more ammunition at a time. Whenever you cast a cantrip through your Arcane Firearm that has a single target, you can target one additional creature within the spell’s range, and you split the damage between the two targets.</description>
+        </sheet>
+    </element>
+    <element name="Magical Gunsmith" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_MARKSMAN_SPELLSLINGER">
+        <description>
+            <p>By 10th level, you have further improved your Arcane Firearm. You can now have up two different properties from your Improved Arcane Firearm feature on your Arcane Firearm at a time.</p>
+        </description>
+        <sheet display="false" />
+    </element>
+    <element name="Master Marksman" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARCANE_MARKSMAN_MASTER_MARKSMAN">
+        <description>
+            <p>At 14th level, you have learned how to call your shots. As a bonus action, you can choose one target within range of your Arcane Firearm that you can see. Should you hit the target with your next ranged spell attack through your Arcane Firearm, you can deal additional damage of the spell’s damage type equal to your wizard level.</p>
+            <p class="indent">You can use this feature a number of times equal to your Intelligence modifier per long rest.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action" usage="{{intelligence:modifier}}/Long Rest">As a bonus action, you can choose one target within range of your Arcane Firearm that you can see. Should you hit the target with your next ranged spell attack through your Arcane Firearm, you can deal {{level:wizard}} additional damage of the spell’s damage type.</description>
+        </sheet>
+    </element>
+    
+</elements>

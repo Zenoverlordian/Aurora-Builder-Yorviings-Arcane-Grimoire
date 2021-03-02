@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Tidecaller" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_TIDECALLER">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>Tidecallers are a rare kind of wizard, bravely exploring the vast seas of the world to learn about the magical wonders that lie beneath the waves. They are wizards who master techniques of sailing and maneuvering in water, wielding weapons of the sea, and draw strength from the cold depths of the oceans. Followers of this tradition are usually, found out near or on the seas, aiding ships in smooth sailing and helping to explore uncharted territories, often singing. It is not uncommon to see these wizards befriend some druids or storm sorcerers, or even see Tidecallers commanding ships or fleets themselves.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_OCEANIC_EXPLORER" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_SEA_SAVANT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_STAR_CHARTS" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_SEAWORTHY" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_NAUTICAL_MASTERY" />
+        </description>
+        <sheet display="false">
+            <description>Tidecallers are a rare kind of wizard, bravely exploring the vast seas of the world to learn about the magical wonders that lie beneath the waves.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_OCEANIC_EXPLORER" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_SEA_SAVANT" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_STAR_CHARTS" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_SEAWORTHY" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_NAUTICAL_MASTERY" level="14" />
+        </rules>
+    </element>
+
+    <element name="Oceanic Explorer" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_OCEANIC_EXPLORER">
+        <description>
+            <p>Beginning at 2nd level, you have spent enough time at the sea to know how to navigate through both water and on ships. You gain proficiency in water vehicles and navigator’s tools, and you gain a swimming speed equal to your movement speed, if you do not already have it. You also gain proficiency in either the Investigation or Perception skill.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_NAVIGATORS_TOOLS" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_VEHICLES_WATER" />
+            <stat name="speed:swim" value="speed" bonus="base" />
+            <select type="Proficiency" name="Skill Proficiency, Oceanic Explorer" supports="ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_PERCEPTION" />
+        </rules>
+    </element>
+    <element name="Sea Savant" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_SEA_SAVANT">
+        <description>
+            <p>By 2nd level, you have become adept at wielding magic related to water and maelstroms. The gold and time you must spend to copy a spell that includes the words water, wave, tidal, and anchor in its name into your spellbook is halved.</p>
+        </description>
+        <sheet>
+            <description>The gold and time you must spend to copy a spell that includes the words water, wave, tidal, and anchor in its name into your spellbook is halved.</description>
+        </sheet>
+    </element>
+    <element name="Star Charts" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_STAR_CHARTS">
+        <description>
+            <p>By 6th level, you have learned how to use navigational star charts to aid you in your journeys. Over the course of a long rest, you can obtain one of the following benefits. You can only be attuned to one of these constellations at a time. As a bonus action, you can swap out your Star Chart for another. You can use this swap feature a number of times equal to your Intelligence modifier per long rest.</p>
+            <p class="indent"><strong><em>The Northern Star.</em></strong> You cannot become lost, both magically and non magically, and you have advantage on Wisdom (Survival) checks. Additionally, you always know which direction is north.</p>
+            <p class="indent"><strong><em>The Great Turtle.</em></strong> You are always under the effects of the spell mage armor while not wearing armor or wielding a shield. Additionally, your swim speed increases by 30 feet, and you can breathe both air and water.</p>
+            <p class="indent"><strong><em>The Lighthouse.</em></strong> You gain darkvision out to 60, if you already have darkvision it increases by 30 feet, and fog or mist do not impose disadvantage on Wisdom (Perception) checks. Additionally, choose a number of friendly creatures up to your Intelligence modifier. These creature always know your exact location so long as you are both on the same plane of existence.</p>
+            <p class="indent"><strong><em>The Sea Dragon.</em></strong> Whenever you cast a spell that deals cold or lightning damage, you can add your Intelligence modifier to one damage roll.</p>
+            <p class="indent"><strong><em>The Lovely Siren.</em></strong> You have immunity to being charmed and can add your Intelligence modifier to Charisma (Persuasion) checks.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action" usage="{{intelligence:modifier}}/Long Rest">Over the course of a long rest, you can obtain one of the following benefits. You can only be attuned to one of these constellations at a time. As a bonus action, you can swap out your Star Chart for another. You can use this swap feature {{intelligence:modifier}} times per long rest.
+            You are always under the effects of the spell mage armor while not wearing armor or wielding a shield. Additionally, your swim speed increases by 30 feet, and you can breathe both air and water.
+            You gain darkvision out to 60, if you already have darkvision it increases by 30 feet, and fog or mist do not impose disadvantage on Wisdom (Perception) checks. Additionally, choose up to {{intelligence:modifier}} friendly creatures. These creature always know your exact location so long as you are both on the same plane of existence.
+            Whenever you cast a spell that deals cold or lightning damage, you can add {{intelligence:modifier}} to one damage roll.
+            You have immunity to being charmed and can add {{intelligence:modifier}} to Charisma (Persuasion) checks.</description>
+        </sheet>
+    </element>
+    <element name="Seaworthy" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_SEAWORTHY">
+        <description>
+            <p>By 10th level, you have learned how adapt to the weather on the seas. You gain resistance to cold and lightning damage.</p>
+            <p class="indent">Additionally, years of studying magic out at sea has taught you how to anchor yourself against being moved. When you are subject to either a spell or other effect that would move you or knock you prone, you have advantage on the saving throw to resist the effects.</p>
+        </description>
+        <sheet>
+            <description>When you are subject to either a spell or other effect that would move you or knock you prone, you have advantage on the saving throw to resist the effects.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+        </rules>
+    </element>
+    <element name="Nautical Mastery" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_NAUTICAL_MASTERY">
+        <description>
+            <p>At 14th level, you have become a true navigator and oceanic sage. Choose one constellation from your Star Charts feature. You gain its benefits permanently. When you gain a level in this class, you can replace your chosen constellation with another one.</p>
+            <p class="indent">Additionally, you can call upon the true might of the sea. You add the tidal wave spell to your spellbook, if it is not there already. You can cast the tidal wave spell without expending a spell slot. When you cast tidal wave in this way, the area can be up to 90 feet long, up to 30 feet wide, and up to 30 feet tall, and creatures who fail their saving throw against this spell take additional bludgeoning damage equal to your wizard level.</p>
+            <p class="indent">Once you cast tidal wave in this way, you can’t do so again until you finish a short or long rest, though you can still cast it normally using an available spell slot.</p>
+        </description>
+        <sheet>
+            <description usage="1/Short Rest">You can cast the tidal wave spell without expending a spell slot. When you cast tidal wave in this way, the area can be up to 90 feet long, up to 30 feet wide, and up to 30 feet tall, and creatures who fail their saving throw against this spell take {{level:wizard}} additional bludgeoning damage.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_XGTE_SPELL_TIDAL_WAVE" spellcasting="Wizard" />
+            <select type="Archetype Feature" name="Nautical Mastery Constellation" supports="YAG Constellation" />
+        </rules>
+    </element>
+
+    <element name="The Northern Star" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_NAUTICAL_MASTERY_NORTHERN_STAR">
+        <supports>YAG Constellation</supports>
+        <description>
+            <p>You cannot become lost, both magically and non magically, and you have advantage on Wisdom (Survival) checks. Additionally, you always know which direction is north.</p>
+        </description>
+        <sheet>
+            <description>You cannot become lost, both magically and non magically, and you have advantage on Wisdom (Survival) checks. Additionally, you always know which direction is north.</description>
+        </sheet>
+    </element>
+    <element name="The Great Turtle" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_NAUTICAL_MASTERY_GREAT_TURTLE">
+        <supports>YAG Constellation</supports>
+        <description>
+            <p>You are always under the effects of the spell mage armor while not wearing armor or wielding a shield. Additionally, your swim speed increases by 30 feet, and you can breathe both air and water.</p>
+        </description>
+        <sheet>
+            <description>You can breathe both air and water. You are always under the effects of the spell mage armor while not wearing armor or wielding a shield.</description>
+        </sheet>
+        <rules>
+            <stat name="speed:swim" value="30" />
+            <stat name="ac:great turtle" value="13" />
+            <stat name="ac:great turtle" value="dexterity:modifier" />
+            <stat name="ac:calculation" value="ac:great turtle" bonus="calculation" equipped="[armor:none],[shield:none]" alt="Mage Armor (The Great Turtle)" />
+        </rules>
+    </element>
+    <element name="The Lighthouse" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_NAUTICAL_MASTERY_LIGHTHOUSE">
+        <supports>YAG Constellation</supports>
+        <description>
+            <p>You gain darkvision out to 60, if you already have darkvision it increases by 30 feet, and fog or mist do not impose disadvantage on Wisdom (Perception) checks. Additionally, choose a number of friendly creatures up to your Intelligence modifier. These creature always know your exact location so long as you are both on the same plane of existence.</p>
+        </description>
+        <sheet>
+            <description>You gain darkvision out to 60, if you already have darkvision it increases by 30 feet, and fog or mist do not impose disadvantage on Wisdom (Perception) checks. Additionally, choose up to {{intelligence:modifier}} friendly creatures. These creature always know your exact location so long as you are both on the same plane of existence.</description>
+        </sheet>
+        <rules>
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+        </rules>
+    </element>
+    <element name="The Sea Dragon" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_NAUTICAL_MASTERY_SEA_DRAGON">
+        <supports>YAG Constellation</supports>
+        <description>
+            <p>Whenever you cast a spell that deals cold or lightning damage, you can add your Intelligence modifier to one damage roll.</p>
+        </description>
+        <sheet>
+            <description>Whenever you cast a spell that deals cold or lightning damage, you can add {{intelligence:modifier}} to one damage roll.</description>
+        </sheet>
+    </element>
+    <element name="The Lovely Siren" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_TIDECALLER_NAUTICAL_MASTERY_LOVELY_SIREN">
+        <supports>YAG Constellation</supports>
+        <description>
+            <p>You have immunity to being charmed and can add your Intelligence modifier to Charisma (Persuasion) checks.</p>
+        </description>
+        <sheet>
+            <description>You have immunity to being charmed and can add {{intelligence:modifier}} to Charisma (Persuasion) checks.</description>
+        </sheet>
+    </element>
+    
+</elements>

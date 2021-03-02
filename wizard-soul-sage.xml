@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Soul Sage" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_SOUL_SAGE">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>You focus your studies on magic that comes from the soul, bringing forth abilities that revolves around drawing out the strength of souls to aid you and to speak with the souls of the departed. A rare tradition to see practiced, most soul sages are often mistaken as necromancers, but that is far from the truth; soul sages rarely focus on bringing a body back to life, but instead choose to speak with souls and spirits, and are often found as shamans, spiritual counselors, or are simply seekers of understanding the afterlife or immortality.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_SOUL_SAGE_SPECTRAL_FAMILIARITY" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_SOUL_SAGE_SOUL_SIPHON" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_SOUL_SAGE_SEANCE" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_SOUL_SAGE_ELDRITCH_ATTUNEMENT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_SOUL_SAGE_HARVESTER_OF_SOULS" />
+        </description>
+        <sheet display="false">
+            <description>You focus your studies on magic that comes from the soul, bringing forth abilities that revolves around drawing out the strength of souls to aid you and to speak with the souls of the departed.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_SOUL_SAGE_SPECTRAL_FAMILIARITY" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_SOUL_SAGE_SOUL_SIPHON" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_SOUL_SAGE_SEANCE" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_SOUL_SAGE_ELDRITCH_ATTUNEMENT" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_SOUL_SAGE_HARVESTER_OF_SOULS" level="14" />
+        </rules>
+    </element>
+
+    <element name="Spectral Familiarity" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_SOUL_SAGE_SPECTRAL_FAMILIARITY">
+        <description>
+            <p>Starting at 2nd level, the time you have spent with the souls of the departed and other spirits has increased both your familiarity to their presence and communicating with them. Whenever you make a Charisma check when interacting with undead, your Proficiency bonus is doubled if it applies to the check. You also have advantage on saving throws against being charmed or frightened by undead. You also gain proficiency in the Religion skill.</p>
+            <p class="indent">Additionally, when you cast either the find familiar or Yune's find greater familiar spell, your familiar can appear to have a spectral or ghostly appearance.</p>
+        </description>
+        <sheet>
+            <description>Whenever you make a Charisma check when interacting with undead, your Proficiency bonus is doubled if it applies to the check. You also have advantage on saving throws against being charmed or frightened by undead.
+            Additionally, when you cast either the find familiar or Yune's find greater familiar spell, your familiar can appear to have a spectral or ghostly appearance.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_RELIGION" />
+        </rules>
+    </element>
+    <element name="Soul Siphon" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_SOUL_SAGE_SOUL_SIPHON">
+        <description>
+            <p>Beginning at 2nd level, you have learned how to drain the souls of the deceased to rejuvenate you and your allies. You have a pool of healing energy that replenishes whenever you acquire souls, and this pool resets to 0 on a long rest. With this pool, you can hold an amount of soul energy equal to your wizard level x 2. This pool of soul energy lasts until you finish a long rest.</p>
+            <p class="indent">Whenever you or an ally within 60 feet of you reduces a creature to 0 hit points, you can use your bonus action or reaction to absorb the soul of the creature, adding an amount of energy to the pool equal to your wizard level.</p>
+            <p class="indent">As a bonus action, you can expend an amount of energy up to the maximum amount remaining in your pool to restore an equal amount of hit points to you or an ally that you touch.</p>
+            <p class="indent">This feature has no effect on constructs or creatures that lack a soul.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action">You have a pool of healing energy that replenishes whenever you acquire souls, and this pool resets to 0 on a long rest. With this pool, you can hold {{soul siphon:pool}} units of soul energy. This pool of soul energy lasts until you finish a long rest. Whenever you or an ally within 60 feet of you reduces a creature to 0 hit points, you can use your bonus action or reaction to absorb the soul of the creature, adding {{level:wizard}} energy to the pool.
+            As a bonus action, you can expend an amount of energy up to the maximum amount remaining in your pool to restore an equal amount of hit points to you or an ally that you touch. This feature has no effect on constructs or creatures that lack a soul.</description>
+        </sheet>
+        <rules>
+            <stat name="soul siphon:pool" value="level:wizard" />
+            <stat name="soul siphon:pool" value="level:wizard" />
+        </rules>
+    </element>
+    <element name="Seance" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_SOUL_SAGE_SEANCE">
+        <description>
+            <p>By 6th level, you have learned how to better consult with the souls of the departed. You add the speak with dead spell to your spellbook, and it is considered a wizard spell for you. You may cast this spell as a ritual spell. When you cast speak with dead, any corpse you speak with views you as an ally, and tries to offer truthful answers to you, though the corpse will consider you and your allies as hostile if either you or one of your allies was the one who killed it.</p>
+        </description>
+        <sheet>
+            <description>You may cast the speak with dead spell as a ritual spell. When you cast speak with dead, any corpse you speak with views you as an ally, and tries to offer truthful answers to you, though the corpse will consider you and your allies as hostile if either you or one of your allies was the one who killed it.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_DEAD" spellcasting="Wizard" />
+        </rules>
+    </element>
+    <element name="Eldritch Attunement" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_SOUL_SAGE_ELDRITCH_ATTUNEMENT">
+        <description>
+            <p>At 10th level, the time you have spent with spirits and souls has changed your body. You have resistance to necrotic damage, and you can see out into the Ethereal Plane within 30 feet of you.</p>
+            <p class="indent">Additionally, your time spent with those beyond the grave has made you become accustomed to where they may be. You cannot be surprised by undead.</p>
+        </description>
+        <sheet>
+            <description>You can see out into the Ethereal Plane within 30 feet of you. Additionally, you cannot be surprised by undead.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" />
+        </rules>
+    </element>
+    <element name="Harvester of Souls" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_SOUL_SAGE_HARVESTER_OF_SOULS">
+        <description>
+            <p>At 14th level, you have mastered the study of souls. You add the soul cage spell to your spellbook, if it is not there already. Whenever you cast soul cage, you can capture the soul of a celestial, dragon, fey, or fiend in addition to humanoid, and you can use the trapped soul an additional number of times equal to your Intelligence modifier.</p>
+            <p class="indent">In addition, your soul has become strengthened. You have advantage on saving throws against spells that would remove or imprison your soul.</p>
+        </description>
+        <sheet>
+            <description>Whenever you cast soul cage, you can capture the soul of a celestial, dragon, fey, or fiend in addition to humanoid, and you can use the trapped soul an additional {{intelligence:modifier}} times. In addition, your soul has become strengthened. You have advantage on saving throws against spells that would remove or imprison your soul.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_XGTE_SPELL_SOUL_CAGE" spellcasting="Wizard" />
+        </rules>
+    </element>
+    
+</elements>

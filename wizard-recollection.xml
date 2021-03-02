@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Recollection" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_RECOLLECTION">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>Wizards who follow the tradition of Recollection believe that powerful magic lies within the memories of all things, from the creatures of the lands to the objects and places of the world. These wizards, known as ‘recollectionists’ or ‘memorists’, study ways of tapping into the power that lies in memories, and learn how to see visions of the past, recall spells and magic, and can even cause others to relive their memories, be they pleasant or foul. One can often find followers of this tradition working as historians, archaeologists, or even as guardians of ancient items and structures lost to time.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_RECOLLECTION_SAVANT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_RECOLLECTION_RELIVE_MEMORIES" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_RECOLLECTION_REMINDING_SPELL" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_RECOLLECTION_THOUGHT_IMPRESSION" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_RECOLLECTION_ESOTERIC_REMINISCENCE" />
+        </description>
+        <sheet display="false">
+            <description>Wizards who follow the tradition of Recollection believe that powerful magic lies within the memories of all things, from the creatures of the lands to the objects and places of the world.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_RECOLLECTION_SAVANT" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_RECOLLECTION_RELIVE_MEMORIES" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_RECOLLECTION_REMINDING_SPELL" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_RECOLLECTION_THOUGHT_IMPRESSION" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_RECOLLECTION_ESOTERIC_REMINISCENCE" level="14" />
+        </rules>
+    </element>
+
+    <element name="Recollection Savant" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_RECOLLECTION_SAVANT">
+        <description>
+            <p>Beginning when you choose this tradition at 2nd level, you have unlocked a way to recall your arcane abilities. You can use this feature to cast a spell from your spellbook that you don't have prepared and that has a casting time of 1 action or 1 bonus action.</p>
+            <p class="indent">You can use this feature twice. You regain all expended uses of it when you finish a short or long rest.</p>
+        </description>
+        <sheet>
+            <description usage="2/Short Rest">You can use this feature to cast a spell from your spellbook that you don't have prepared and that has a casting time of 1 action or 1 bonus action.</description>
+        </sheet>
+    </element>
+    <element name="Relive Memories" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_RECOLLECTION_RELIVE_MEMORIES">
+        <description>
+            <p>Starting at 2nd level, you have attuned yourself to the memories you have seen, and those you will see. You gain proficiency in the History skill.</p>
+            <p class="indent">Also, as an action, you can touch one living creature, corpse, item, object, or part of a terrain or structure to see its memories. While maintaining touch, you see visions of events that the creature has or had seen or visions of events that took place regarding the item, object, part of a terrain, or structure. These visions can include wispy images of creatures that have interacted with what you are touching, voices of creature or who have spoken near or to what you are touching, or images of what you are touching has seen or what it used to look like. If you choose to not focus on a particular vision, you gain a summary of basic information that transpired related to what you are touching, such as simple weather events, physical depictions of people who interacted with what you are touching, or pieces of events that happened. If you choose to focus on a particular element of the visions, such as a particular person or event, all other visions appear blurred and muffled to you, and you see clearer depositions of the vision you are focusing on.</p>
+            <p class="indent">For every minute you spend maintaining touch, you can see one hour’s worth of visions. This amount increases to days at 6th level, months at 10th level, and years at 14th level.</p>
+        </description>
+        <sheet>
+            <description action="Action" level="2">As an action, you can touch one living creature, corpse, item, object, or part of a terrain or structure to see its memories. While maintaining touch, you see visions of events that the creature has or had seen or visions of events that took place regarding the item, object, part of a terrain, or structure. These visions can include wispy images of creatures that have interacted with what you are touching, voices of creature or who have spoken near or to what you are touching, or images of what you are touching has seen or what it used to look like. If you choose to not focus on a particular vision, you gain a summary of basic information that transpired related to what you are touching, such as simple weather events, physical depictions of people who interacted with what you are touching, or pieces of events that happened. If you choose to focus on a particular element of the visions, such as a particular person or event, all other visions appear blurred and muffled to you, and you see clearer depositions of the vision you are focusing on. For every minute you spend maintaining touch, you can see one hour’s worth of visions.</description>
+            <description action="Action" level="6">As an action, you can touch one living creature, corpse, item, object, or part of a terrain or structure to see its memories. While maintaining touch, you see visions of events that the creature has or had seen or visions of events that took place regarding the item, object, part of a terrain, or structure. These visions can include wispy images of creatures that have interacted with what you are touching, voices of creature or who have spoken near or to what you are touching, or images of what you are touching has seen or what it used to look like. If you choose to not focus on a particular vision, you gain a summary of basic information that transpired related to what you are touching, such as simple weather events, physical depictions of people who interacted with what you are touching, or pieces of events that happened. If you choose to focus on a particular element of the visions, such as a particular person or event, all other visions appear blurred and muffled to you, and you see clearer depositions of the vision you are focusing on. For every minute you spend maintaining touch, you can see one day's worth of visions.</description>
+            <description action="Action" level="10">As an action, you can touch one living creature, corpse, item, object, or part of a terrain or structure to see its memories. While maintaining touch, you see visions of events that the creature has or had seen or visions of events that took place regarding the item, object, part of a terrain, or structure. These visions can include wispy images of creatures that have interacted with what you are touching, voices of creature or who have spoken near or to what you are touching, or images of what you are touching has seen or what it used to look like. If you choose to not focus on a particular vision, you gain a summary of basic information that transpired related to what you are touching, such as simple weather events, physical depictions of people who interacted with what you are touching, or pieces of events that happened. If you choose to focus on a particular element of the visions, such as a particular person or event, all other visions appear blurred and muffled to you, and you see clearer depositions of the vision you are focusing on. For every minute you spend maintaining touch, you can see one month's worth of visions.</description>
+            <description action="Action" level="14">As an action, you can touch one living creature, corpse, item, object, or part of a terrain or structure to see its memories. While maintaining touch, you see visions of events that the creature has or had seen or visions of events that took place regarding the item, object, part of a terrain, or structure. These visions can include wispy images of creatures that have interacted with what you are touching, voices of creature or who have spoken near or to what you are touching, or images of what you are touching has seen or what it used to look like. If you choose to not focus on a particular vision, you gain a summary of basic information that transpired related to what you are touching, such as simple weather events, physical depictions of people who interacted with what you are touching, or pieces of events that happened. If you choose to focus on a particular element of the visions, such as a particular person or event, all other visions appear blurred and muffled to you, and you see clearer depositions of the vision you are focusing on. For every minute you spend maintaining touch, you can see one year's worth of visions.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+        </rules>
+    </element>
+    <element name="Reminding Spell" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_RECOLLECTION_REMINDING_SPELL">
+        <description>
+            <p>By 6th level, you have learned how to cause a creature to remember a spell that it had cast upon it. As an action, choose a creature that you can see within 30 feet of you. If the creature is unwilling, it must make a Wisdom saving throw against your wizard spell save DC. On a failed save, or if the creature is willing, it experiences one spell of your choice that affected it within the past day. The spell must have been cast by you or a creature that is friendly to you, and you must have seen the creature be affected by the spell in order to choose it. The creature then magically remembers what it experienced under the effects of that spell, and it begins to experience spell’s effects as if it had just been cast on them again. A spell with a duration longer than 1 round lasts until the end of the creature's next turn.</p>
+            <p class="indent">You can use this feature a number of times equal to your Intelligence modifier per long rest.</p>
+        </description>
+        <sheet>
+            <description usage="{{intelligence:modifier}}/Long Rest" action="Action">As an action, choose a creature that you can see within 30 feet of you. If the creature is unwilling, it must make a Wisdom saving throw against your wizard spell save DC. On a failed save, or if the creature is willing, it experiences one spell of your choice that affected it within the past day. The spell must have been cast by you or a creature that is friendly to you, and you must have seen the creature be affected by the spell in order to choose it. The creature then magically remembers what it experienced under the effects of that spell, and it begins to experience spell’s effects as if it had just been cast on them again. A spell with a duration longer than 1 round lasts until the end of the creature's next turn.</description>
+        </sheet>
+    </element>
+    <element name="Thought Impression" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_RECOLLECTION_THOUGHT_IMPRESSION">
+        <description>
+            <p>At 10th level, your memories and thoughts have become firmly lodged in your mind, and your mind has strengthened even further. You gain resistance to psychic damage, and you can no longer forget any event, conversation, emotion, or experience that you witness, and any experiences that you had forgotten come back to you, and you can remember them with perfect clarity.</p>
+        </description>
+        <sheet>
+            <description>You can no longer forget any event, conversation, emotion, or experience that you witness, and any experiences that you had forgotten come back to you, and you can remember them with perfect clarity.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC" />
+        </rules>
+    </element>
+    <element name="Esoteric Reminiscence" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_RECOLLECTION_ESOTERIC_REMINISCENCE">
+        <description>
+            <p>At 14th level, you can recall a particular spell that you had seen cast before and cast it as if you know it. Choose one spell that you had seen cast before. You then begin casting the spell using the same action or time of the spell’s casting time, such as an action, bonus action, or one minute. The spell must be of a level that you can cast, though the spell does not have to be on the wizard’s spell list for you to cast it. You can then cast the spell without material components or expending a spell slot, though all other parameters of the spell remain, such as making an attack roll or forcing a creature to make a saving throw.</p>
+            <p class="indent">Once you have used this feature, you cannot do so again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description usage="1/Long Rest">Choose one spell that you had seen cast before. You then begin casting the spell using the same action or time of the spell’s casting time, such as an action, bonus action, or one minute. The spell must be of a level that you can cast, though the spell does not have to be on the wizard’s spell list for you to cast it. You can then cast the spell without material components or expending a spell slot, though all other parameters of the spell remain, such as making an attack roll or forcing a creature to make a saving throw.</description>
+        </sheet>
+    </element>
+    
+</elements>

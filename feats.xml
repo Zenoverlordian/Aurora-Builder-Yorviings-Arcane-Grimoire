@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Botanist" type="Feat" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_FEAT_BOTANIST">
+        <description>
+            <p>You have studied the secrets of botany and are an expert in its craft and application, gaining the following benefits:</p>
+            <ul>
+                <li>Increase your Intelligence score by 1, to a maximum of 20.</li>
+                <li>You gain proficiency with the Herbalism Kit. If you are already proficient with them, you add double your proficiency bonus to checks you make with them.</li>
+                <li>As an action, you can identify one plant within 5 feet of you, as if you had tasted it. You must see the plant for this benefit to work. You learn what kind of plant it is, and what types of properties it has, such as if it is used for medical purposes or is edible.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description action="Action">As an action, you can identify one plant within 5 feet of you, as if you had tasted it. You must see the plant for this benefit to work. You learn what kind of plant it is, and what types of properties it has, such as if it is used for medical purposes or is edible.</description>
+        </sheet>
+        <rules>
+            <stat name="intelligence" value="1" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+        </rules>
+    </element>
+    <element name="Poisoner" type="Feat" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_FEAT_POISONER">
+        <description>
+            <p>You have studied the secrets of poison crafting and are an expert in its use, gaining the following benefits:</p>
+            <ul>
+                <li>Increase your Intelligence score by 1, to a maximum of 20.</li>
+                <li>You gain proficiency with the Poisoner’s Kit. If you are already proficient with them, you add double your proficiency bonus to checks you make with them.</li>
+                <li>As an action, you can identify one poison within 5 feet of you, as if you had tasted it. You must see the poison for this benefit to work. You learn what kind of poison it is, and what types of properties it has, such as how quickly it’s effects take hold, and if there is a cure for the poison, and how to make it.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description action="Action">As an action, you can identify one poison within 5 feet of you, as if you had tasted it. You must see the poison for this benefit to work. You learn what kind of poison it is, and what types of properties it has, such as how quickly it’s effects take hold, and if there is a cure for the poison, and how to make it.</description>
+        </sheet>
+        <rules>
+            <stat name="intelligence" value="1" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_POISONERS_KIT" />
+        </rules>
+    </element>
+    <element name="Battlemage" type="Feat" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_FEAT_BATTLEMAGE">
+        <prerequisite>The ability to cast at least one spell</prerequisite>
+		<requirements>[type:spell]</requirements>
+		<description>
+			<p><i>Prerequisite: The ability to cast at least one spell</i></p>
+            <p>You have mastered techniques of fighting and wielding magic at close range, gaining the following benefits:</p>
+            <ul>
+                <li>Your spellcasting ability increases by 1, to a maximum of 20.</li>
+                <li>When a creature within 5 feet of you casts a spell, you can use your reaction to cast a cantrip against that creature.</li>
+                <li>You have advantage on attack rolls against creatures within 5 feet of you who are concentrating on a spell.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description>When a creature within 5 feet of you casts a spell, you can use your reaction to cast a cantrip against that creature.
+            You have advantage on attack rolls against creatures within 5 feet of you who are concentrating on a spell.</description>
+        </sheet>
+        <rules>
+            <select type="Ability Score Improvement" name="Ability Score Increase (Battlemage)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+        </rules>
+    </element>
+    <element name="Familiar Adept" type="Feat" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_FEAT_FAMILIAR_ADEPT">
+        <prerequisite>The ability to cast at least one spell</prerequisite>
+		<requirements>[type:spell]</requirements>
+		<description>
+			<p><i>Prerequisite: The ability to cast at least one spell</i></p>
+            <p>You have learned how to allow your familiar to gain higher forms of communication, gaining the following benefits:</p>
+            <ul>
+                <li>You learn the find familiar spell, or add it to your spellbook, if it is not there already.</li>
+                <li>Your familiar gains the ability to speak and read every language that you know, though it cannot write.</li>
+                <li>Your familiar’s Intelligence score increases to 12.</li>
+                <li>You can communicate with your familiar while it is within 500 feet of you.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description>Your familiar gains the ability to speak and read every language that you know, though it cannot write.
+            Your familiar’s Intelligence score increases to 12.
+            You can communicate with your familiar while it is within 500 feet of you.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_FIND_FAMILIAR" />
+        </rules>
+    </element>
+    <element name="Masterful Teacher" type="Feat" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_FEAT_MASTERFUL_TEACHER">
+        <prerequisite>Intelligence score of 13</prerequisite>
+		<requirements>[intelligence:13]</requirements>
+		<description>
+			<p><i>Prerequisite: Intelligence score of 13</i></p>
+            <p>You can spend 10 minutes teaching or assisting your companions in problem solving and logic, increasing their skills as reasoning. When you do so, choose up to six friendly creatures (which can include yourself) within 30 feet of you who can see or hear you and who can understand you. Each creature gains a bonus equal to your Intelligence modifier to the first Intelligence based skill roll they make within the next minute. A creature can't benefit from this feat again until it has finished a short or long rest.</p>
+        </description>
+        <sheet>
+            <description>You can spend 10 minutes teaching or assisting your companions in problem solving and logic, increasing their skills as reasoning. When you do so, choose up to six friendly creatures (which can include yourself) within 30 feet of you who can see or hear you and who can understand you. Each creature gains a bonus of {{intelligence:modifier}} to the first Intelligence based skill roll they make within the next minute. A creature can't benefit from this feat again until it has finished a short or long rest.</description>
+        </sheet>
+    </element>
+    <element name="Witchblood" type="Feat" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_FEAT_WITCHBLOOD1">
+        <description>
+            <p>You have the blood of witches running through your veins, granting you the following benefits:</p>
+            <ul>
+                <li>Your Charisma increases by 1, to a maximum of 20.</li>
+                <li>You gain proficiency in one of the following skills: Deception, Intimidation, or Persuasion.</li>
+                <li>You gain one Invocation on the warlock Invocation’s list, provided you meet any prerequisites or requirements.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <stat name="charisma" value="1" />
+            <select type="Proficiency" name="Skill Proficiency, Witchblood" supports="ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_PERSUASION" />
+            <select type="Class Feature" name="Eldritch Invocation, Eldritch Adept" supports="Eldritch Invocation" requirements="ID_WOTC_PHB_CLASS_WARLOCK||ID_WOTC_PHB_MULTICLASS_WARLOCK"/>
+			<select type="Class Feature" name="Eldritch Invocation, Eldritch Adept" supports="Eldritch Adept" requirements="!(ID_WOTC_PHB_CLASS_WARLOCK|ID_WOTC_PHB_MULTICLASS_WARLOCK)"/>
+        </rules>
+    </element>
+    <element name="Witchblood" type="Feat" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_FEAT_WITCHBLOOD2">
+        <requirements>ID_YORVIING_YAG_FEAT_WITCHBLOOD1</requirements>
+        <description>
+            <p>You have the blood of witches running through your veins, granting you the following benefits:</p>
+            <ul>
+                <li>Your Charisma increases by 1, to a maximum of 20.</li>
+                <li>You gain proficiency in one of the following skills: Deception, Intimidation, or Persuasion.</li>
+                <li>You gain one Invocation on the warlock Invocation’s list, provided you meet any prerequisites or requirements.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <stat name="charisma" value="1" />
+            <select type="Proficiency" name="Skill Proficiency, Witchblood" supports="ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_PERSUASION" />
+            <select type="Class Feature" name="Eldritch Invocation, Eldritch Adept" supports="Eldritch Invocation" requirements="ID_WOTC_PHB_CLASS_WARLOCK||ID_WOTC_PHB_MULTICLASS_WARLOCK"/>
+			<select type="Class Feature" name="Eldritch Invocation, Eldritch Adept" supports="Eldritch Adept" requirements="!(ID_WOTC_PHB_CLASS_WARLOCK|ID_WOTC_PHB_MULTICLASS_WARLOCK)"/>
+        </rules>
+    </element>
+    
+</elements>

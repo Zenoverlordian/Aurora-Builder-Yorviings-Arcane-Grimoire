@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Arbormancy" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_ARBORMANCY">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>There exist a handful of wizards who believe that there exists a fifth element, wood, that stands alongside the traditional elements of fire, air, earth, and water. Known as arbormancers or wood mages, these wizards view wood as embodying warmth, cooperation, and strength, and favor spells that incorporate wood. Many of these wizards study in forests, sometimes working alongside druids or fey.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARBORMANCY_WOODEN_FAMILIARITY" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARBORMANCY_ARBOROUS_MAGIC" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARBORMANCY_FORESTED_STRENGTH" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARBORMANCY_WOODEN_ELEMENTAL" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARBORMANCY_WOODCRAFT_MASTERY" />
+        </description>
+        <sheet display="false">
+            <description>Known as arbormancers or wood mages, these wizards view wood as embodying warmth, cooperation, and strength, and favor spells that incorporate wood.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARBORMANCY_WOODEN_FAMILIARITY" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARBORMANCY_ARBOROUS_MAGIC" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARBORMANCY_FORESTED_STRENGTH" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARBORMANCY_WOODEN_ELEMENTAL" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARBORMANCY_WOODCRAFT_MASTERY" level="14" />
+        </rules>
+    </element>
+
+    <element name="Wooden Familiarity" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARBORMANCY_WOODEN_FAMILIARITY">
+        <description>
+            <p>Starting at 2nd level, you have spent a considerable time studying the power of the element of wood. You gain proficiency in woodcarver's tools and you learn the shillelagh cantrip, and it does not count towards the total number of wizard cantrips that you know.</p>
+            <p class="indent">Additionally, whenever you summon a familiar, either by way of the find familiar or Yune's find greater familiar spell, you can choose to have your familiar's type become plant.</p>
+        </description>
+        <sheet>
+            <description>Whenever you summon a familiar, either by way of the find familiar or Yune's find greater familiar spell, you can choose to have your familiar's type become plant.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_WOODCARVERS_TOOLS" />
+            <grant type="Spell" id="ID_PHB_SPELL_SHILLELAGH" prepared="true" spellcasting="Wizard" />
+        </rules>
+    </element>
+    <element name="Arborous Magic" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARBORMANCY_ARBOROUS_MAGIC">
+        <description>
+            <p>Beginning at 2nd level, you have unlocked the magic of nature and wood. Whenever you gain a wizard level, you can replace one of the wizard spells you add to your spellbook with a druid spell, provided that it belongs to the schools of conjuration or transmutation. The spell must be of a level for which you have spell slots.</p>
+            <p class="indent">Any druid spell you gain from this feature is considered a wizard spell for you, but other wizards can't copy druid spells from your spellbook into their own spellbooks. Note: You cannot aquire the healing spirit spell with this feature.</p>
+            <p class="indent">Whenever you cast a druid spell acquired from this feature, your AC increases by 2 until the beginning of your next turn, as magical wooden bark covers you. You cannot gain this benefit while wearing medium or heavy armor or be wielding a shield.</p>
+        </description>
+        <sheet>
+            <description>Whenever you gain a wizard level, you can replace one of the wizard spells you add to your spellbook with a druid spell, provided that it belongs to the schools of conjuration or transmutation. The spell must be of a level for which you have spell slots.
+            Any druid spell you gain from this feature is considered a wizard spell for you, but other wizards can't copy druid spells from your spellbook into their own spellbooks. Note: You cannot aquire the healing spirit spell with this feature.
+            Whenever you cast a druid spell acquired from this feature, your AC increases by 2 until the beginning of your next turn, as magical wooden bark covers you. You cannot gain this benefit while wearing medium or heavy armor or be wielding a shield.</description>
+        </sheet>
+        <spellcasting name="Wizard" extend="true">
+            <extend>Druid, (Conjuration||Transmutation)</extend>
+        </spellcasting>
+    </element>
+    <element name="Forested Strength" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARBORMANCY_FORESTED_STRENGTH">
+        <description>
+            <p>By 6th level, much like the trees in the forests, you work best when in cooperation with your allies. Whenever you or one or more of your allies within 15 feet of you is subject to an Intelligence, Wisdom, or Charisma saving throw, you can use your reaction to grant you or your allies to add your Intelligence modifier to the saving throw.</p>
+            <p class="indent">You can use this ability a number of times per long rest equal to your Intelligence modifier. This range ncreases to 30 feet at 10th level.</p>
+        </description>
+        <sheet>
+            <description usage="{{intelligence:modifier}}/Long Rest" level="6">Whenever you or one or more of your allies within 15 feet of you is subject to an Intelligence, Wisdom, or Charisma saving throw, you can use your reaction to grant you or your allies to add {{intelligence:modifier}} to the saving throw.</description>
+            <description usage="{{intelligence:modifier}}/Long Rest" level="10">Whenever you or one or more of your allies within 30 feet of you is subject to an Intelligence, Wisdom, or Charisma saving throw, you can use your reaction to grant you or your allies to add {{intelligence:modifier}} to the saving throw.</description>
+        </sheet>
+    </element>
+    <element name="Wooden Elemental" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARBORMANCY_WOODEN_ELEMENTAL">
+        <description>
+            <p>At 10th level, you have learned how to summon creatures made of wood and bark to aid you in battle. Over the course of 1 minute, you use several pieces of bark and leaves as the material components to summon either a shambling mound or a wood woad. This summoned creature cooperates with you and your allies with the same rules for conjure elemental. At 14th level, you can use this feature to summon a treant.</p>
+            <p class="indent">Once you have used this feature, you cannot do so again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description usage="1/Long Rest" level="10">Over the course of 1 minute, you use several pieces of bark and leaves as the material components to summon either a shambling mound or a wood woad. This summoned creature cooperates with you and your allies with the same rules for conjure elemental.</description>
+            <description usage="1/Long Rest" level="14">Over the course of 1 minute, you use several pieces of bark and leaves as the material components to summon either a shambling mound, a wood woad, or a treant. This summoned creature cooperates with you and your allies with the same rules for conjure elemental.</description>
+        </sheet>
+    </element>
+    <element name="Woodcraft Mastery" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ARBORMANCY_WOODCRAFT_MASTERY">
+        <description>
+            <p>At 14th level, you have a mastery over the element of wood. Whenever you use your Forested Strength feature, you and your allies become covered in a protective layer of bark that provides them with a bonus to their AC equal to your Intelligence modifier until the end of their next turn.</p>
+        </description>
+        <sheet>
+            <description>Whenever you use your Forested Strength feature, you and your allies become covered in a protective layer of bark that provides them with a bonus to their AC of {{intelligence:modifier}} until the end of their next turn.</description>
+        </sheet>
+    </element>
+    
+</elements>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Philosophy" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_PHILOSOPHY">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>Your studies focus on trying to understand magic at the most fundamental level; ‘what is the true, philosophical purpose of magic in the world?’ ‘In what ways are magic best suited to serve society, the world, and the universe itself?’ Your pursuit of magical inquiry delves into both the practical use of magic and the esoteric value of it.</p>
+            <p class="indent">Followers of the tradition of Philosophy are wielders of extraordinary magic, and are often found in counsel to magical universities, royal courts, or teaching magic to both rich and common folk alike. However, various worldviews, ethical theories and conclusions can lead philosophers down any moral or occupational path in life.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PHILOSOPHY_MAGICAL_LOGICIAN" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PHILOSOPHY_PHILOSOPHICAL_INQUIRY" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PHILOSOPHY_SCHOOL_OF_THOUGHT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PHILOSOPHY_QUESTIONING_MIND" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PHILOSOPHY_MASTER_PHILOSOPHER" />
+        </description>
+        <sheet display="false">
+            <description>Your pursuit of magical inquiry delves into both the practical use of magic and the esoteric value of it.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PHILOSOPHY_MAGICAL_LOGICIAN" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PHILOSOPHY_PHILOSOPHICAL_INQUIRY" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PHILOSOPHY_SCHOOL_OF_THOUGHT" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PHILOSOPHY_QUESTIONING_MIND" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PHILOSOPHY_MASTER_PHILOSOPHER" level="14" />
+        </rules>
+    </element>
+
+    <element name="Magical Logician" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PHILOSOPHY_MAGICAL_LOGICIAN">
+        <description>
+            <p>Beginning at 2nd level, you have gained considerable knowledge about magic and debating skills. You gain proficiency in Arcana and Persuasion, and you can use your Intelligence for Persuasion instead of Charisma.</p>
+            <p class="indent">Your philosophical pursuits have also made your mind sharper. You have advantage on Intelligence checks related to solving puzzles and riddles, and on devising strategies for games.</p>
+        </description>
+        <sheet>
+            <description>You can use your Intelligence for Persuasion instead of Charisma. You have advantage on Intelligence checks related to solving puzzles and riddles, and on devising strategies for games.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+        </rules>
+    </element>
+    <element name="Philosophical Inquiry" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PHILOSOPHY_PHILOSOPHICAL_INQUIRY">
+        <description>
+            <p>Starting at 2nd level, you have learned how to ask questions that render others stunned from the inquiry. As a bonus action, choose a creature that can hear you that shares at least one language with you. That creature must make an Intelligence saving throw against your wizard spell save DC. A creature with an Intelligence of 4 or lower automatically succeeds on this saving throw. On a failed save, the creature must use its action to ponder the question that you asked of them and listen to you speak.</p>
+            <p class="indent">On a subsequent turns, you can use your bonus action to maintain this effect, extending its duration until the end of your next turn. A creature affected by this can repeat the saving throw at the end of their turn, ending the effect. This effect also ends early if the creature takes damage or can no longer hear you.</p>
+            <p class="indent">Once the effect ends, or if the creature succeeds on its initial saving throw against this effect, you can’t use this feature on that creature again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action">As a bonus action, choose a creature that can hear you that shares at least one language with you. That creature must make an Intelligence saving throw against your wizard spell save DC. A creature with an Intelligence of 4 or lower automatically succeeds on this saving throw. On a failed save, the creature must use its action to ponder the question that you asked of them and listen to you speak.
+            On a subsequent turns, you can use your bonus action to maintain this effect, extending its duration until the end of your next turn. A creature affected by this can repeat the saving throw at the end of their turn, ending the effect. This effect also ends early if the creature takes damage or can no longer hear you.
+            Once the effect ends, or if the creature succeeds on its initial saving throw against this effect, you can’t use this feature on that creature again until you finish a long rest.</description>
+        </sheet>
+    </element>
+    <element name="School of Thought" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PHILOSOPHY_SCHOOL_OF_THOUGHT">
+        <description>
+            <p>At 6th level, you have gained knowledge of various schools of thought. At the end of a long rest, you can adhere yourself to a school of philosophical thought that grants you a certain benefit. Choose the benefit from the following options. Once you have adhered to one school, you cannot adhere to another school again until you finish a long rest.</p>
+            <p class="indent"><strong><em>Existentialism.</em></strong> <em>The study of the individual’s free will.</em> You have advantage on saving throws against spells or other magical effects that would force you act against your will, such as hold person or command.</p>
+            <p class="indent"><strong><em>Nihilism.</em></strong> <em>The belief that moral facts cannot exist.</em> Once per long rest, you can cast the protection from evil and good spell on yourself without expending a spell slot.</p>
+            <p class="indent"><strong><em>Skepticism.</em></strong> <em>The practice of questioning or expressing doubt.</em> You have advantage on saving throws against illusions, and you have advantage on Wisdom (Insight) checks.</p>
+            <p class="indent"><strong><em>Stoicism.</em></strong> <em>The practice of self control and endurance.</em> You have advantage on saving throws against being charmed or frightened, and you have advantage on Strength checks and saving throws.</p>
+        </description>
+        <sheet>
+            <description>At the end of a long rest, you can adhere yourself to a school of philosophical thought that grants you a certain benefit. Choose the benefit from the following options. Once you have adhered to one school, you cannot adhere to another school again until you finish a long rest.
+            You have advantage on saving throws against spells or other magical effects that would force you act against your will, such as hold person or command.
+            Once per long rest, you can cast the protection from evil and good spell on yourself without expending a spell slot.
+            You have advantage on saving throws against illusions, and you have advantage on Wisdom (Insight) checks.
+            You have advantage on saving throws against being charmed or frightened, and you have advantage on Strength checks and saving throws.</description>
+        </sheet>
+    </element>
+    <element name="Questioning Mind" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PHILOSOPHY_QUESTIONING_MIND">
+        <description>
+            <p>By 10th level, your mind has strengthened from your time thinking and debating. You gain resistance to psychic damage.</p>
+            <p class="indent">Additionally, once per long rest, you can reroll one Intelligence, Wisdom and Charisma saving throw. You can reroll once per each saving throw.</p>
+        </description>
+        <sheet>
+            <description usage="1/Long Rest">You can reroll one Intelligence, Wisdom and Charisma saving throw. You can reroll once per each saving throw.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC" />
+        </rules>
+    </element>
+    <element name="Master Philosopher" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PHILOSOPHY_MASTER_PHILOSOPHER">
+        <description>
+            <p>By 14th level, you have become a legendary philosopher, able to sway anyone to see your reason and logic. When you use your Philosophical Inquiry feature, you can choose to use the abilility as an action, choosing any number of creatures of your choice within a 30 foot radius centered on you that can hear you to make an Intelligence saving throw against the effect, though they do not have to share a language with you.</p>
+            <p class="indent">On a subsequent turns, you can use your action to maintain this effect on each creature affected, extending its duration until the end of your next turn. A creature affected by this can repeat the saving throw at the end of their turn, ending the effect. This effect also ends early on a creature if the creature takes damage or can no longer hear you.</p>
+            <p class="indent">Once you have used your Philosophical Inquiry feature in this way, you cannot do so again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description action="Action" usage="1/Long Rest">When you use your Philosophical Inquiry feature, you can choose to use the abilility as an action, choosing any number of creatures of your choice within a 30 foot radius centered on you that can hear you to make an Intelligence saving throw against the effect, though they do not have to share a language with you.
+            On a subsequent turns, you can use your action to maintain this effect on each creature affected, extending its duration until the end of your next turn. A creature affected by this can repeat the saving throw at the end of their turn, ending the effect. This effect also ends early on a creature if the creature takes damage or can no longer hear you.</description>
+        </sheet>
+    </element>
+    
+</elements>

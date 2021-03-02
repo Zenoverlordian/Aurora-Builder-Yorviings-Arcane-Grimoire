@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="School of Acoustics" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_ACOUSTICS">
+        <supports>Arcane Tradition</supports>
+        <description>
+            <p>You are a wizard who focuses on the study of sound, and tries to understand the nature of sound waves and vibrations that are present in all things. Followers of this tradition of Acoustics, often called Acousticians or Sound Sages, often prefer spells that can manipulate sound, and believe that all things have a ‘perfect harmony’ that they aim to tune themselves to, and that the incorrect vibrations within the heart or soul can lead to imbalance. Many of these wizards are musicians, avid linguists, or public speakers, but can also be found in unique roles within a military, or trying to mold the earth with the power of sound and vibrations.</p>
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ACOUSTICS_VOCAL_SAVANT" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ACOUSTICS_DISCOMBOBULATION" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ACOUSTICS_ECHOLOCATION" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FINE_TUNING" />
+            <div element="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PIANO_FORTE" />
+        </description>
+        <sheet display="false">
+            <description>You are a wizard who focuses on the study of sound, and tries to understand the nature of sound waves and vibrations that are present in all things.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ACOUSTICS_VOCAL_SAVANT" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ACOUSTICS_DISCOMBOBULATION" level="2" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ACOUSTICS_ECHOLOCATION" level="6" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FINE_TUNING" level="10" />
+            <grant type="Archetype Feature" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PIANO_FORTE" level="14" />
+        </rules>
+    </element>
+
+    <element name="Vocal Savant" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ACOUSTICS_VOCAL_SAVANT">
+        <description>
+            <p>Starting at 2nd level, you have became adept at manipulating sound. You learn the thaumaturgy cantrip.</p>
+            <p class="indent">Additionally, whenever you cast a spell of 1st level or higher, you can expend one additional 1st level spell slot to cast the spell without using verbal components.</p>
+        </description>
+        <sheet>
+            <description>Whenever you cast a spell of 1st level or higher, you can expend one additional 1st level spell slot to cast the spell without using verbal components.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_THAUMATURGY" prepared="true" spellcasting="Wizard" />
+        </rules>
+    </element>
+    <element name="Discombobulation" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ACOUSTICS_DISCOMBOBULATION">
+        <description>
+            <p>Starting at 2nd level, you have learned how to affect a creature’s center of balance by manipulating sound. As an action, choose a number of creatures that you can see within 10 feet of you. If the target can hear you, it must succeed on a Constitution saving throw against your wizard spell save DC or be deafened until the end of your next turn, as you emit a noise that discombobulates it. Each deafened creature's speed drops to 0, and each creature drops any items or objects that it is carrying.</p>
+            <p class="indent">On subsequent turns, you can use your action to maintain this effect, extending its duration until the end of your next turn. However, the effect ends if you move more than 5 feet away from the creature, if the creature can neither see nor hear you, or if the creature takes damage.</p>
+            <p class="indent">Once the effect ends, or if the creature succeeds on its initial saving throw against this effect, you can't use this feature on that creature again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description action="Action">As an action, choose a number of creatures that you can see within 10 feet of you. If the target can hear you, it must succeed on a Constitution saving throw against your wizard spell save DC or be deafened until the end of your next turn, as you emit a noise that discombobulates it. Each deafened creature's speed drops to 0, and each creature drops any items or objects that it is carrying.
+            On subsequent turns, you can use your action to maintain this effect, extending its duration until the end of your next turn. However, the effect ends if you move more than 5 feet away from the creature, if the creature can neither see nor hear you, or if the creature takes damage.
+            Once the effect ends, or if the creature succeeds on its initial saving throw against this effect, you can't use this feature on that creature again until you finish a long rest.</description>
+        </sheet>
+    </element>
+    <element name="Echolocation" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_ACOUSTICS_ECHOLOCATION">
+        <description>
+            <p>At 6th level, you have learned how to locate creatures via sound. As a bonus action, you can gain blindsight up to 60 feet by attuning to sounds and vibrations. This effect lasts until the beginning of your next turn, and you cannot use this effect while deafened.</p>
+            <p class="indent">You can use this ability a number of times equal to your Intelligence modifier per long rest.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action" usage="{{intelligence:modifier}}/Long Rest">As a bonus action, you can gain blindsight up to 60 feet by attuning to sounds and vibrations. This effect lasts until the beginning of your next turn, and you cannot use this effect while deafened.</description>
+        </sheet>
+    </element>
+    <element name="Fine Tuning" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_FINE_TUNING">
+        <description>
+            <p>By 10th level, you have attuned to the might of sonic waves. You gain resistance to thunder damage, and you gain immunity to the deafened condition.</p>
+            <p class="indent">Additionally, you add the silence spell to your spellbook, if it is not there already. You can cast silence without expending a spell slot. When you do so, you cast the spell centered on you and it moves with you, though you can still cast spells with verbal components while this spell is active. Casting silence in this way shortens the duration of the spell to 1 minute while maintaining concentration.</p>
+            <p class="indent">Once you cast silence in this way, you can't do so again until you finish a short or long rest, though you can still cast it normally using an available spell slot.</p>
+        </description>
+        <sheet>
+            <description usage="1/Short Rest">You gain immunity to the deafened condition. You can cast silence without expending a spell slot. When you do so, you cast the spell centered on you and it moves with you, though you can still cast spells with verbal components while this spell is active. Casting silence in this way shortens the duration of the spell to 1 minute while maintaining concentration.
+            Once you cast silence in this way, you can't do so again until you finish a short or long rest, though you can still cast it normally using an available spell slot.</description>
+        </sheet>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_THUNDER" />
+            <grant type="Spell" id="ID_PHB_SPELL_SILENCE" spellcasting="Wizard" />
+        </rules>
+    </element>
+    <element name="Piano &amp; Forte" type="Archetype Feature" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_FEATURE_PIANO_FORTE">
+        <description>
+            <p>At 14th level, you have mastered the art of sound manipulation. Whenever you cast a spell of 1st level or higher that deals damage, you can remove or amplify the sound the spell makes.</p>
+            <p class="indent">If you remove the sound, the spell is cast silently.</p>
+            <p class="indent">If you amplify the sound, creatures hit by the spell must make a Constitution saving throw. On a failed save, a creature takes thunder damage equal to your wizard level and is deafened until the end of their next turn, and takes half as much damage on a success. Creatures within 300 feet can hear the spell.</p>
+            <p class="indent">You can use both of these features once per short or long rest.</p>
+        </description>
+        <sheet>
+            <description usage="1/Short Rest">Whenever you cast a spell of 1st level or higher that deals damage, you can remove or amplify the sound the spell makes. If you remove the sound, the spell is cast silently. If you amplify the sound, creatures hit by the spell must make a Constitution saving throw. On a failed save, a creature takes {{level:wizard}} thunder damage and is deafened until the end of their next turn, and takes half as much damage on a success. Creatures within 300 feet can hear the spell. You can use both of these features once per short or long rest.</description>
+        </sheet>
+    </element>
+    
+</elements>

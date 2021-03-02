@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    
+    <element name="Exile" type="Background" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_BACKGROUND_EXILE">
+        <description>
+            <p>Through a series of events, you became an exile to your homeland. Banished and forbidden to ever return, you have set off on a journey to find a new home. It could have been that you committed some terrible act, or were wrongly accused of doing so. Or perhaps it was a mass banishment decreed by a new leadership in your homeland.</p>
+            <p class="indent">When you choose this background, work with your DM to determine what exactly caused you to become an exile, how those events took place, and what the terms of your banishment are. Was it the case that you rightfully deserved to be exiled from your home? Or were you innocent, and wrongfully accused of acts you were told you committed?</p>
+            <ul class="unstyled">
+                <li><strong>Skill Proficiencies:</strong> Survival, and one other skill of your choice</li>
+                <li><strong>Tool Proficiencies:</strong> One tool of your choice</li>
+                <li><strong>Languages:</strong> One language from your homeland</li>
+                <li><strong>Equipment:</strong> A walking stick, a set of travelers clothes, one week’s supply of rations, a backpack, a small knife, a tankard, and a small pouch containing 5 gp</li>
+            </ul>
+            <div element="ID_BACKGROUND_FEATURE_YAG_EXILED_LIFE" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+            <p>The life of an exile is a tough one, and is often filled with strife and change. They are unmoored from the only life they have ever known, which could radically change them from the person they used to be.</p>
+        </description>
+        <setters>
+            <set name="short">Survival, 1 Skill, 1 Tool, 1 Language</set>
+        </setters>
+        <rules>
+            <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_YAG_EXILED_LIFE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+            <select type="Proficiency" name="Skill Proficiency, Exile" supports="Skill" />
+            <select type="Language" name="Language, Exile" supports="Standard" />
+            <select type="Proficiency" name="Tool Proficiency, Exile" supports="Tool" />
+            <select type="List" name="Personality Trait" number="2" optional="true">
+                <item id="1">Though I am exiled, I remember my homeland fondly.</item>
+                <item id="2">I am glad to be gone from the hellish conditions that were plaguing my home.</item>
+                <item id="3">I yearn to one day return to my homeland to prove my innocence.</item>
+                <item id="4">I openly admit to others what caused me to be banished. I am proud of what I did.</item>
+                <item id="5">While I do miss my homeland, I don’t mind learning of and experiencing other lands and cultures.</item>
+                <item id="6">I often cook dishes or read books that were prominent in my homeland.</item>
+                <item id="7">I try to hide why I was exiled, as it brings me great shame.</item>
+                <item id="8">I long to bring both myself and others back to my homeland to live as we once did.</item>
+            </select>
+            <select type="List" name="Ideal" optional="true">
+                <item id="1">Revenge. I know I was wrongly accused, and those who accused me will pay. (Chaotic)</item>
+                <item id="2">Return. I want to do all that I can to right make things right again so that I can return home. (Good)</item>
+                <item id="3">Renewal. I will find a new home for myself and others in a place where we can be free. (Lawful)</item>
+                <item id="4">Redemption. I know I was wrong with my actions, yet I will prove that I am worthy of a second chance. (Good)</item>
+                <item id="5">Retribution. I will bring all of the might and power that I can against those who exiled me. (Evil)</item>
+                <item id="6">Retrospection. At the time, I did not know why I was exiled. However, I will try to learn from my actions. (Any)</item>
+            </select>
+            <select type="List" name="Bond" optional="true">
+                <item id="1">I take those who were exiled alongside me.</item>
+                <item id="2">I have someone I care deeply about back home.</item>
+                <item id="3">My new friends are who I care about now in my journeys.</item>
+                <item id="4">I found comfort in knowing that there are others in similar predicaments as me.</item>
+                <item id="5">I had a dear friend who was exiled with me. I will learn to at least give them a way to return home.</item>
+                <item id="6">The new rules of my homeland will stop at nothing to hunt down exiles. I will find a way to stop them.</item>
+            </select>
+            <select type="List" name="Flaw" optional="true">
+                <item id="1">I am slow to trust anyone after my trials.</item>
+                <item id="2">I often speak too harshly about those who exiled me.</item>
+                <item id="3">I become sad very easily when I think or speak about my home.</item>
+                <item id="4">Even though I know I deserved to be exiled, I still want to take it out on those who banished me.</item>
+                <item id="5">I often belittle other cultures and countries for minor cultural habits.</item>
+                <item id="6">I lash out with anger at anyone who belittles my homeland.</item>
+            </select>
+        </rules>
+    </element>
+
+    <element name="Feature: Exiled Life" type="Background Feature" source="Yorviing's Arcane Grimoire" id="ID_BACKGROUND_FEATURE_YAG_EXILED_LIFE">
+        <description>
+            <p>Whatever your prior standing was in your homeland, you are now an exile. You are able to find refuge with others who are exiled, as well as those who sympathize with your situation. Generally, this means that you can find a place to bed down, recover, and hide from any potential followers or trackers attempting to hunt you down. People from where you hail from are less willing to assist you if it means putting themselves in harms way.</p>
+        </description>
+        <sheet alt="Exiled Life">
+            <description>Whatever your prior standing was in your homeland, you are now an exile. You are able to find refuge with others who are exiled, as well as those who sympathize with your situation. Generally, this means that you can find a place to bed down, recover, and hide from any potential followers or trackers attempting to hunt you down. People from where you hail from are less willing to assist you if it means putting themselves in harms way.</description>
+        </sheet>
+    </element>
+    
+</elements>
