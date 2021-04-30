@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<index>
+    <info>
+        <name>Yourviings Arcane Grimoire</name>
+        <update version="0.0.1">
+            <file name="yorviings-arcane-grimoire.index" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/yorviings-arcane-grimoire.index" />
+        </update>
+    </info>
+    <files>
+        <!--BACKGROUND-->
+        <file name="background-combat-medic.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-combat-medic.xml" />
+        <file name="background-cursed.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-cursed.xml" />
+        <file name="background-engineer.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-engineer.xml" />
+        <file name="background-exile.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-exile.xml" />
+        <file name="background-guardian.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-guardian.xml" />
+        <file name="background-heretic.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-heretic.xml" />
+        <file name="background-occult-detective.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-occult-detective.xml" />
+        <file name="background-prodigy.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-prodigy.xml" />
+        <file name="background-revolutionary.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-revolutionary.xml" />
+        <file name="background-witch-doctor.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-witch-doctor.xml" />
+        
+        <!--WIZARD-->
+        
+        <!--SUBCLASSES-->
+        <file name="filename.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master//Untitled-1/filename.xml" />
+
+        <!--MISC-->
+        <file name="feats.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/feats.xml" />
+        <file name="source.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/source.xml" />
+        <file name="spells.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/spells.xml" />
+    </files>
+</index>
