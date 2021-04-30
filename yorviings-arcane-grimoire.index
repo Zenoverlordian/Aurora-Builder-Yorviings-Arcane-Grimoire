@@ -22,7 +22,7 @@
         <!--WIZARD-->
         
         <!--SUBCLASSES-->
-        <file name="filename.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master//Untitled-1/filename.xml" />
+        <file name="barbarian-manastorm.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/barbarian-manastorm.xml" />
 
         <!--MISC-->
         <file name="feats.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/feats.xml" />
