@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+	<info>
+		<name>Yorviings Arcane Grimoire</name>
+		<description>Yorviings Arcane Grimoire by Yorviing on Reddit</description>
+		<author url="https://www.reddit.com/user/Yorviing">Yorviing</author>
+		<update version="0.0.7">
+			<file name="yorviings-arcane-grimoire.index" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/yorviings-arcane-grimoire.index" />
+		</update>
+	</info>
+	<files>
+		<file name="source.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/source.xml" />
+    <file name="feats.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/feats.xml />
+    
+    		<!-- Spell -->
+		<file name="spells.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/spells.xml" />
+    
+    <!-- background -->
+		<file name="background-combat-medic.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-combat-medic.xml" />
+    <file name="background-cursed.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-cursed.xml" />
+    <file name="background-engineer.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-engineer.xml" />
+    <file name="background-exile.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-exile.xml" />
+    <file name="background-guardian.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-guardian.xml" />
+    <file name="background-heretic.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-heretic.xml" />
+    <file name="background-occult-detective.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-occult-detective.xml" />
+    <file name="background-prodigy.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-prodigy.xml" />
+    <file name="background-revolutionary.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-revolutionary.xml" />
+    <file name="background-witch-doctor.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-witch-doctor.xml" />
+		
+		<!-- non wizard -->
+		<file name="barbarian-manastorm.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/barbarian-manastorm.xml" />
+    <file name="paladin-arcana.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/paladin-arcana.xml" />
+    <file name="ranger-witch-hunter.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/ranger-witch-hunter.xml" />
+    
+    <!-- wizard -->
+		<file name="wizard-acoustics.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-acoustics.xml" />
+    <file name="wizard-arbormancy.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-arbormancy.xml" />
+    <file name="wizard-arcane-knight.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-arcane-knight.xml" />
+    <file name="wizard-arcane-marksman.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-arcane-marksman.xml" />
+    <file name="wizard-astrology.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-astrology.xml" />
+    <file name="wizard-blue_magic.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-blue_magic.xml" />
+    <file name="wizard-cartomancy.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-cartomancy.xml" />
+    <file name="wizard-chessmaster.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-chessmaster.xml" />
+    <file name="wizard-concealment.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-concealment.xml" />
+    <file name="wizard-cryomancy.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-cryomancy.xml" />
+    <file name="wizard-dimensionalism.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-dimensionalism.xml" />
+    <file name="wizard-doomsayer.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-doomsayer.xml" />
+    <file name="wizard-fleshwarping.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-fleshwarping.xml" />
+    <file name="wizard-generalist.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-generalist.xml" />
+    <file name="wizard-haemomancy.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-haemomancy.xml" />
+    <file name="wizard-hexmastery.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-hexmastery.xml" />
+    <file name="wizard-incarceration.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-incarceration.xml" />
+    <file name="wizard-metallurgy.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-metallurgy.xml" />
+    <file name="wizard-quantumurgy.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-quantumurgy.xml" />
+    <file name="wizard-pathology.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-pathology.xml" />
+    <file name="wizard-philosophy.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-philosophy.xml" />
+    <file name="wizard-pyromancy.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-pyromancy.xml" />
+    <file name="wizard-gravity-wielder.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-gravity-wielder.xml" />
+    <file name="wizard-recollection.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-recollection.xml" />
+    <file name="wizard-soul-sage.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-soul-sage.xml" />
+    <file name="wizard-stormsinger.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-stormsinger.xml" />
+    <file name="wizard-tidecaller.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-tidecaller.xml" />
+    <file name="wizard-windbringer.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-windbringer.xml" />
+    <file name="wizard-witchcraft.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-witchcraft.xml" />
+    
+	</files>
+</index>
