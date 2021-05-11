@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+        <name></name>
+        <update version="1.0.0">
+            <file name="wizard-arbormancy.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-arbormancy.xml" />
+        </update>
+    </info>
     
     <element name="School of Arbormancy" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_ARBORMANCY">
         <supports>Arcane Tradition</supports>

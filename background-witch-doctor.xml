@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+        <name></name>
+        <update version="1.0.0">
+            <file name="background-witch-doctor.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-witch-doctor.xml" />
+        </update>
+    </info>
     
     <element name="Witch Doctor" type="Background" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_BACKGROUND_WITCH_DOCTOR">
         <description>

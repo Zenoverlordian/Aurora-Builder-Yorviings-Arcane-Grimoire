@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+        <name></name>
+        <update version="1.0.0">
+            <file name="barbarian-manastorm.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/barbarian-manastorm.xml" />
+        </update>
+    </info>
     
     <element name="Path of the Manastorm" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_BARBARIAN_MANASTORM">
         <supports>Primal Path</supports>

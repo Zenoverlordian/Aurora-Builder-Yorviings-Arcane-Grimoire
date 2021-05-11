@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+        <name></name>
+        <update version="1.0.0">
+            <file name="source.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/source.xml" />
+        </update>
+    </info>
     
     <element name="Yorviing's Arcane Grimoire" type="Source" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_SOURCE_YORVIINGS_ARCANE_GRIMOIRE">
         <description>

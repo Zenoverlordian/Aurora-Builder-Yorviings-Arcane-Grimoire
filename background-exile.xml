@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+        <name></name>
+        <update version="1.0.0">
+            <file name="background-exile.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-exile.xml" />
+        </update>
+    </info>
     
     <element name="Exile" type="Background" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_BACKGROUND_EXILE">
         <description>

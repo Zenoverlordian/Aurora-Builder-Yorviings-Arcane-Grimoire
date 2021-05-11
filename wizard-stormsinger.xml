@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+        <name></name>
+        <update version="1.0.0">
+            <file name="wizard-stormsinger.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/wizard-stormsinger.xml" />
+        </update>
+    </info>
     
     <element name="Stormsinger" type="Archetype" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_ARCHETYPE_WIZARD_STORMSINGER">
         <supports>Arcane Tradition</supports>

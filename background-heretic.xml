@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
+    <info>
+        <name></name>
+        <update version="1.0.0">
+            <file name="background-heretic.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-heretic.xml" />
+        </update>
+    </info>
     
     <element name="Heretic" type="Background" source="Yorviing's Arcane Grimoire" id="ID_YORVIING_YAG_BACKGROUND_HERETIC">
         <description>
