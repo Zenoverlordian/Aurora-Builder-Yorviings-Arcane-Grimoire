@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name></name>
-        <update version="1.0.0">
+        <update version="1.0.1">
             <file name="background-occult-detective.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-Yorviings-Arcane-Grimoire/main/background-occult-detective.xml" />
         </update>
     </info>
@@ -24,7 +24,7 @@
             <set name="short">Investigation, Arcana/Religion/Survival, 2 Exotic Languages</set>
         </setters>
         <rules>
-            <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_YAG_OCCULT_AWARENESS" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
             <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
             <select type="Language" name="Language, Occult Detective" supports="Exotic" number="2" />
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
